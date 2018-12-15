@@ -1,1 +1,0 @@
-jsonToLineChart('/json/debtdata.json','debtdata','year','total_debt','T','publicdebtchart','publicdebtlink');
