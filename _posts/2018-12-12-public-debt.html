@@ -4,7 +4,7 @@ author: Paul
 unit: (KSh)
 ---
 <div class="ct-chart ct-minor-sixth" id="publicdebtchart"></div>
-<small>Data Source: <a href="" id="publicdebtlink" target="_blank"></a></small>
+<small class="data-source">Data Source: <a href="" id="publicdebtlink" target="_blank"></a></small>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         jsonToLineChart('/json/debtdata.json','debtdata','year','total_debt','T','publicdebtchart','publicdebtlink');

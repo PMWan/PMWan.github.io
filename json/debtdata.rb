@@ -15,7 +15,7 @@ parsed_content = Nokogiri::HTML(content)
 
 rows = [0,12,24,36,48,60,72,84,96,108,120]
 
-data = { source: 'Central Bank of Kenya', source_url: url, debtdata: [] }
+data = { source: 'CBK', source_url: url, debtdata: [] }
 
 count = 0
 

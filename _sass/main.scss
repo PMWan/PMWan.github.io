@@ -1,16 +1,7 @@
 body {
-    // font-family: Helvetica, Arial, sans-serif;
-    // font-family: sans-serif;
-
-    h2,h3,h4,h5 {
+    h2,h3,h4,h5,.data-source {
         font-family: monospace;
     }
-    // font-family: 'Fira Sans', sans-serif;
-
-    // a {
-    //     // color: darkgreen;
-    //     text-decoration: none;
-    // }
 
     a:hover {
         text-decoration: none;
@@ -22,35 +13,19 @@ body {
 }
 
 #logo {
-    margin-top: 0.7em;
-    margin-bottom: 0.7em;
     font-weight: 800;
-    // a {
-    //     color: grey
-    // }
+    margin-bottom: 0;
+}
+
+nav {
+    margin-bottom: 2.5em;
+    margin-top: 2.5em;
 }
 
 .footer {
-    // background-color:gray;
-    // border-top-color: grey !important;
-    // border-top: 1px;
     border-top: 1px solid lightgray;
     margin-top: 1em;
     text-align: center;
     padding-top: 1em;
     padding-bottom: 1em;
 }
-
-// nav {
-//     // margin-top: 0.em;
-//     margin-bottom: 1em;
-//     ul {
-//         list-style-type: none;
-//         margin: 0;
-//         padding: 0;
-//         li {
-//             display: inline;
-//             margin-right: 1em;
-//         }
-//     }
-// }

@@ -1,1 +1,1 @@
-Stats website :chart_with_upwards_trend:
+A project to develop and maintain a performance dashboard for Kenya.
