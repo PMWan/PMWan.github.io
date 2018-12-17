@@ -12,12 +12,10 @@
     <title>{{ page.title }}</title>
   </head>
   <body>
-      <div class="container-fluid">
+      <div class="container">
         {% include navigation.html %}
         {{ content }}
-        <footer class="footer text-muted">
-          <small>by Paul M Wandimi</small>
-        </footer>
+        {% include footer.html %}
       </div>
       <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
       <script src="/assets/javascript/main.js"></script>
