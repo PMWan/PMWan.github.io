@@ -1,11 +1,12 @@
 ---
-layout: post
+layout: chart
 author: Paul
 unit: (KSh)
 topic: publicdebt
+tags: [economy, debt]
 ---
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
-<p class="data-source">Data Source: <a href="" id="{{ page.topic }}link" target="_blank"></a></p>
+<div class="data-source">Data Source: <a href="" id="{{ page.topic }}link" target="_blank"></a></div>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         jsonToLineChart('/json/debtdata.json','debtdata','year','total_debt','T','publicdebtchart','publicdebtlink');

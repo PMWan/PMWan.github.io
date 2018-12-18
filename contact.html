@@ -1,9 +1,11 @@
 ---
 layout: default
 title: Get in touch
+permalink: /contact
 ---
 
 <h2>{{ page.title}}</h2>
+<p class="text-muted">Will be happy to hear from you!</p>
 
 <form method="POST" action="https://formspree.io/{{ site.email }}">
     <div class="form-group">
@@ -18,5 +20,5 @@ title: Get in touch
         <label for="message">Message:</label>
         <textarea name="message" class="form-control" rows="3"></textarea>
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="btn btn-outline-success">Submit</button>
 </form>

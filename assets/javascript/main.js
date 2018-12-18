@@ -1,6 +1,6 @@
 function jsonToLineChart(requestURL,dataKey,xKey,yKey,yNumbers,chartDivId,chartLinkId) {
-    
-    if (window.matchMedia("(min-width: 576px)").matches && window.location.pathname !== "/") {
+
+    if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
         chartDiv.classList.remove('ct-minor-sixth');
         chartDiv.classList.add('ct-double-octave');

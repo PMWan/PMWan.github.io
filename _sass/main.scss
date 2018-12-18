@@ -1,31 +1,51 @@
-body {
-    h2,h3,h4,h5,.data-source {
-        font-family: monospace;
-    }
-
-    a:hover {
-        text-decoration: none;
-    }
+html {
+    overflow-y: scroll;
 }
 
-.posts-index {
-    margin-bottom: 1em;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    a:hover {
+        color: darkgreen;
+        text-decoration: none;
+    }
+    a {
+        color: green;
+    }
 }
 
 #logo {
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 0;
+    a {
+        color: darkgreen;
+    }
 }
 
 nav {
-    margin-bottom: 2.5em;
-    margin-top: 2.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    .navlinks {
+        padding-top: 1em;
+        a {
+            padding-right: 1.5em;
+        }
+    }
+}
+
+.filter-dropdown {
+    margin-bottom: 1em;    
+}
+
+.content-wrapper {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #ffffff;
 }
 
 .footer {
-    border-top: 1px solid lightgray;
-    margin-top: 1em;
     padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 #four-oh-four {
