@@ -1,5 +1,5 @@
 <div class="dropright filter-dropdown">
-    <button class="btn btn-outline-dark btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Category
     </button>
 
@@ -11,7 +11,7 @@
 
     {% for category in site.data.categories %}
         {% if page.url == category.link %}
-            <span id="category-text">{{ category.name }}</span>
+            <span id="category-text" class="badge badge-pill badge-light">{{ category.name }}</span>
         {% endif %}
     {% endfor%}
 </div>
