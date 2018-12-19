@@ -3,23 +3,20 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     background-color: #f5f5f5;
     a:hover {
-        color: darkgreen;
         text-decoration: none;
     }
-    a {
-        color: green;
-    }
+}
+
+.ct-chart {
+    font-family: 'Roboto', sans-serif;
 }
 
 #logo {
     font-weight: 700;
     margin-bottom: 0;
-    a {
-        color: darkgreen;
-    }
 }
 
 nav {
