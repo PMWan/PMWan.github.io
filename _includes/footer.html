@@ -1,14 +1,17 @@
 <footer class="footer">
     <div class="container">
         <p>
-            {% if page.url == "/contact" %}
-                <span class="text-muted">Contact</span>
-            {% else %}
-                <a href="/contact">Contact</a>
-            {% endif %}
-        </p>
-        <p>
-            <a href="http://twitter.com/{{ site.project_twitter_username }}" target=_blank>Follow @{{ site.title }} on Twitter</a>
+            <span>
+                {% if page.url == "/contact" %}
+                    <span class="text-muted">Contact</span>
+                {% else %}
+                    <a href="/contact">Contact</a>
+                {% endif %}
+            </span>
+            <span class="footer-divider">/</span>
+            <span>
+                <a href="http://twitter.com/{{ site.project_twitter_username }}" target=_blank>@{{ site.title }} on Twitter</a>
+            </span>
         </p>
         <small>
             <span>
