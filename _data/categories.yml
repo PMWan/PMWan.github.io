@@ -1,0 +1,8 @@
+- name: All
+  link: /
+
+- name: Economy
+  link: /categories/economy
+
+# - name: Education
+#   link: /categories/education

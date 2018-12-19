@@ -3,30 +3,31 @@ html {
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #282C32;
     a:hover {
         text-decoration: none;
+        color: darkgreen;
+    }
+    font-family: 'Roboto', sans-serif;
+    a {
+        color: green;
     }
 }
 
-.ct-chart {
-    font-family: 'Roboto', sans-serif;
-}
-
 #logo {
-    font-weight: 700;
+    font-weight: 900;
     margin-bottom: 0;
+    a {
+        color: #282C32;
+    }
 }
 
 nav {
     padding-top: 1em;
     padding-bottom: 1em;
+    background-color: #ffffff;
     .navlinks {
         padding-top: 1em;
-        a {
-            padding-right: 1.5em;
-        }
     }
 }
 
@@ -43,11 +44,21 @@ nav {
 .footer {
     padding-top: 1em;
     padding-bottom: 1em;
+    color: silver;
+    a {
+        color: #f5f5f5;
+    }
+    a:hover {
+        color: white;
+    }
 }
 
-#four-oh-four {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
+#category-text {
+    padding-left: 0.4em;
+    font-size: 0.9em
+}
+
+#linktodashboard-link {
+    border-bottom: 1px dotted gray;
+    font-size: 0.9em;
 }
