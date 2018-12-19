@@ -1,7 +1,7 @@
 ---
 layout: chart
 author: Paul
-unit: (KSh)
+unit: (KSh tn)
 topic: publicdebt
 categories: [economy, debt]
 ---
@@ -9,6 +9,6 @@ categories: [economy, debt]
 <small class="data-source">Data Source: <a href="" id="{{ page.topic }}link" target="_blank"></a></small>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/debtdata.json','debtdata','year','total_debt','T','publicdebtchart','publicdebtlink');
+        jsonToLineChart('/json/debtdata.json','debtdata','year','total_debt','publicdebtchart','publicdebtlink');
     });
 </script>
