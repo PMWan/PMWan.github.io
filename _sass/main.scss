@@ -7,10 +7,6 @@ body {
     font-family: 'Roboto', sans-serif;
     a:hover {
         text-decoration: none;
-        color: darkgreen;
-    }
-    a {
-        color: green;
     }
 }
 
@@ -25,19 +21,32 @@ body {
 nav {
     padding-top: 1em;
     padding-bottom: 1em;
-    background-color: #ffffff;
-    .navlinks {
-        padding-top: 1em;
-    }
+    background-color: #F2F1F2;
 }
 
 .filter-dropdown {
-    margin-bottom: 1em;    
+    margin-bottom: 1em;
+}
+
+.filter-link {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+}
+
+#filter-category-name {
+    margin-left: 0.5em;
+    font-size: 0.9em;
+}
+
+#link-to-home {
+    margin-bottom: 1em;
+    font-size: 0.9em;
 }
 
 .content-wrapper {
     padding-top: 1em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     background-color: #ffffff;
 }
 
@@ -51,18 +60,5 @@ nav {
     a:hover {
         color: white;
     }
-    .footer-divider {
-        padding: 0em 1em;
-    }
     text-align: center;
-}
-
-#category-text {
-    padding-left: 0.4em;
-    font-size: 0.9em
-}
-
-#linktohome {
-    border-bottom: 1px dotted gray;
-    // font-size: 0.9em;
 }
