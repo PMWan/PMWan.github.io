@@ -11,7 +11,7 @@
 
     {% for category in site.data.categories %}
         {% if page.url == category.link %}
-            <span id="category-text" class="badge badge-pill badge-light">{{ category.name }}</span>
+            <span id="category-text">{{ category.name }}</span>
         {% endif %}
     {% endfor%}
 </div>

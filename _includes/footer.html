@@ -2,15 +2,15 @@
     <div class="container">
         <p>
             <span>
-                {% if page.url == "/contact" %}
-                    <span class="text-muted">Contact</span>
+                {% if page.url == "/get-in-touch" %}
+                    <span class="text-muted">Get in touch</span>
                 {% else %}
-                    <a href="/contact">Contact</a>
+                    <a href="/get-in-touch">Get in touch</a>
                 {% endif %}
             </span>
             <span class="footer-divider">/</span>
             <span>
-                <a href="http://twitter.com/{{ site.project_twitter_username }}" target=_blank>@{{ site.title }} on Twitter</a>
+                <a href="http://twitter.com/{{ site.project_twitter_username }}" target=_blank>Follow @{{ site.title }}</a>
             </span>
         </p>
         <small>
