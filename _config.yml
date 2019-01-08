@@ -16,7 +16,7 @@
 title: Dashibodi
 email: paul@dashibodi.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A performance dashboard for Kenya.
+  Kenya's perfomance dashboard
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dashibodi.com" # the base hostname & protocol for your site, e.g. http://example.com
 project_twitter_username: Dashibodi
