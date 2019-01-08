@@ -31,17 +31,14 @@ nav {
 .filter-link {
     margin: 0;
     padding: 0;
-    // font-size: 0.9em;
 }
 
 #filter-category-name {
     margin-left: 0.5em;
-    // font-size: 0.9em;
 }
 
 #link-to-home {
     margin-bottom: 1em;
-    // font-size: 0.9em;
 }
 
 .content-wrapper {
@@ -51,8 +48,8 @@ nav {
 }
 
 .footer {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     color: silver;
     a {
         color: #f5f5f5;
@@ -60,5 +57,5 @@ nav {
     a:hover {
         color: white;
     }
-    text-align: center;
+    // text-align: center;
 }
