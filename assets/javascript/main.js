@@ -25,8 +25,14 @@ function jsonToLineChart(requestURL,dataKey,xKey,yKey,chartDivId,chartLinkId) {
         series: [values]
         };
         var options = {
+            showPoint: false,
             axisY: {
-                offset: 30
+                offset: 30,
+            },
+            axisX: {
+                labelInterpolationFnc: function(value) {
+                    return "'" + value;
+                }
             }
         };
         // Create a new line chart object where as first parameter we pass in a selector
