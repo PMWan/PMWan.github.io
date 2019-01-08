@@ -7,7 +7,7 @@ categories: [economy]
 description: Kenya's public debt chart
 ---
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
-<small class="data-source">Data Source: <a href="" id="{{ page.topic }}link" target="_blank"></a></small>
+<small class="data-source">Source: <a href="" id="{{ page.topic }}link" target="_blank"></a></small>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         jsonToLineChart('/json/debtdata.json','debtdata','year','total_debt','publicdebtchart','publicdebtlink');
