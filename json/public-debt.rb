@@ -40,4 +40,4 @@ rows.each do |row|
     count += 1
 end
 
-File.write('debtdata.json', data.to_json)
+File.write('public-debt.json', data.to_json)
