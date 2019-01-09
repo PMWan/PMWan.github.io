@@ -1,15 +1,43 @@
 ---
 layout: chart
 author: Paul
-unit: (KSh tn)
+unit: (KSh trillion)
 topic: publicdebt
 categories: [economy]
 description: Kenya's public debt chart
 ---
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
-<small class="data-source">Source: <a href="" id="{{ page.topic }}link" target="_blank"></a></small>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/debtdata.json','debtdata','year','total_debt','publicdebtchart','publicdebtlink');
+        jsonToLineChart('/json/public-debt.json','debtdata','year','total_debt','publicdebtchart','publicdebtlink');
     });
 </script>
+
+<div class="data-table">
+    {% assign debtdata = site.data.debts.debtdata %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Year</th>
+                <th scope="col">Month</th>
+                <th scope="col">Public Debt {{ page.unit }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in debtdata %}
+                <tr>
+                    <td>{{ data.year | prepend: 20 }}</td>
+                    <td>{{ data.month }}</td>
+                    {% assign total_debt_length = data.total_debt | size | minus: 2 %}
+                    {% if data.total_debt contains 'e0' %}
+                        <td>{{ data.total_debt | slice: 0, total_debt_length }}</td>
+                    {% elsif data.total_debt contains 'e1' %}
+                        <td>{{ data.total_debt | slice: 0, total_debt_length | times: 10 }}</td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<p>Source: <a href="" id="{{ page.topic }}link" target="_blank"></a></p>

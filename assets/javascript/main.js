@@ -26,6 +26,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,yKey,chartDivId,chartLinkId) {
         };
         var options = {
             showPoint: false,
+            showArea: true,
             axisY: {
                 offset: 30,
             },
