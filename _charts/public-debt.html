@@ -14,7 +14,7 @@ description: Kenya's public debt chart
 </script>
 
 <div class="data-table">
-    {% assign debtdata = site.data.debts.debtdata %}
+    {% assign debtdata = site.data.public-debt.debtdata %}
     <table class="table">
         <thead>
             <tr>
@@ -26,7 +26,7 @@ description: Kenya's public debt chart
         <tbody>
             {% for data in debtdata %}
                 <tr>
-                    <td>{{ data.year | prepend: 20 }}</td>
+                    <td>{{ data.year }}</td>
                     <td>{{ data.month | slice: 0, 3 }}</td>
                     {% assign total_debt_length = data.total_debt | size | minus: 2 %}
                     {% if data.total_debt contains 'e0' %}

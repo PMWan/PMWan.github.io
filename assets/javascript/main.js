@@ -15,7 +15,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,yKey,chartDivId,chartLinkId) {
         var years = [];
         var values = [];
         for (var step = 10; step >= 0; step--) {
-            years.push(jsonObj[dataKey][step][xKey]);
+            years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
             values.push(jsonObj[dataKey][step][yKey]);
         }
         var data = {

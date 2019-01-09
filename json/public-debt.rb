@@ -25,7 +25,7 @@ rows.each do |row|
         row_data.push(val.inner_text)
     end
 
-    year = row_data[0][2..3]
+    year = row_data[0]
     domestic_debt = BigDecimal.new(row_data[2].gsub(",", ""))/1e6
     external_debt = BigDecimal.new(row_data[3].gsub(",", ""))/1e6
     total_debt = BigDecimal.new(row_data[4].gsub(",", ""))/1e6
