@@ -28,11 +28,10 @@ description: Kenya's public debt chart
                 <tr>
                     <td>{{ data.year }}</td>
                     <td>{{ data.month | slice: 0, 3 }}</td>
-                    {% assign total_debt_length = data.total_debt | size | minus: 2 %}
                     {% if data.total_debt contains 'e0' %}
-                        <td>{{ data.total_debt | slice: 0, total_debt_length | round: 2 }}</td>
+                        <td>{{ data.total_debt | slice: 0, 4 }}</td>
                     {% elsif data.total_debt contains 'e1' %}
-                        <td>{{ data.total_debt | slice: 0, total_debt_length | times: 10 | round: 2 }}</td>
+                        <td>{{ data.total_debt | slice: 0, 5 | times: 10 }}</td>
                     {% endif %}
                 </tr>
             {% endfor %}
