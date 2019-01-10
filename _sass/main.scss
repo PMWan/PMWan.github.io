@@ -61,4 +61,40 @@ nav {
 
 .data-table {
     padding-top: 1em;
+    text-align: center;
+}
+
+.ct-series-a .ct-line,
+.ct-series-a .ct-point {
+  stroke: red;
+}
+
+.ct-series-b .ct-line,
+.ct-series-b .ct-point {
+  stroke: black;
+}
+
+.series-a-key {
+    background-color: red;
+    height: 1em;
+    width: 1em;
+    display:inline-block;
+}
+
+.series-b-key {
+    background-color: black;
+    height: 1em;
+    width: 1em;
+    display:inline-block;
+}
+
+.key-wrapper {
+    text-align: center;
+    width: 100%;
+    font-size: 0.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    span {
+        padding-right: 1em;
+    }
 }

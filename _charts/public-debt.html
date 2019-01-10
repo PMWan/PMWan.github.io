@@ -5,6 +5,8 @@ unit: (KSh tn)
 topic: publicdebt
 categories: [economy]
 description: Kenya's public debt chart
+title: Public Debt
+excerpt_separator: <!--more-->
 ---
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
 <script>
@@ -13,7 +15,9 @@ description: Kenya's public debt chart
     });
 </script>
 
-<div class="data-table">
+<!--more-->
+
+<div class="data-table table-responsive">
     {% assign debtdata = site.data.public-debt.debtdata %}
     <table class="table">
         <thead>

@@ -1,0 +1,56 @@
+---
+layout: chart
+author: Paul
+unit: (KSh tn)
+topic: domesticvsexternaldebt
+categories: [economy]
+description: Kenya's domestic vs external public debt chart
+title: Public Debt - Domestic vs External
+excerpt_separator: <!--more-->
+series-a: Domestic Debt
+series-b: External Debt
+---
+{% include key.html %}
+<div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        jsonToComparisonLineChart('/json/public-debt.json','debtdata','year','domestic_debt','external_debt','domesticvsexternaldebtchart','domesticvsexternaldebtlink');
+    });
+</script>
+
+<!--more-->
+
+<div class="data-table table-responsive">
+    {% assign debtdata = site.data.public-debt.debtdata %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Year</th>
+                <th scope="col">Month</th>
+                <th scope="col">Domestic Debt {{ page.unit }}</th>
+                <th scope="col">External Debt {{ page.unit }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in debtdata %}
+                <tr>
+                    <td>{{ data.year }}</td>
+                    <td>{{ data.month | slice: 0, 3 }}</td>
+                    {% if data.domestic_debt contains 'e0' %}
+                        <td>{{ data.domestic_debt | slice: 0, 4 }}</td>
+                    {% elsif data.domestic_debt contains 'e1' %}
+                        <td>{{ data.domestic_debt | slice: 0, 5 | times: 10 }}</td>
+                    {% endif %}
+                    {% if data.external_debt contains 'e0' %}
+                        <td>{{ data.external_debt | slice: 0, 4 }}</td>
+                    {% elsif data.external_debt contains 'e1' %}
+                        <td>{{ data.external_debt | slice: 0, 5 | times: 10 }}</td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<p>Source: <a href="" id="{{ page.topic }}link" target="_blank"></a></p>
