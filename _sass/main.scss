@@ -3,18 +3,22 @@ html {
 }
 
 body {
-    background-color: #363C42;
+    background-color: #25292D;
     font-family: 'Roboto', sans-serif;
     a:hover {
-        text-decoration: none;
+        // text-decoration: none;
+        // color: darkgreen;
     }
+    // a {
+    //     color: green;
+    // }
 }
 
 #logo {
     font-weight: 900;
     margin-bottom: 0;
     a {
-        color: #363C42;
+        color: #25292D;
     }
 }
 
@@ -64,25 +68,25 @@ nav {
     text-align: center;
 }
 
-.ct-series-a .ct-line,
-.ct-series-a .ct-point {
-  stroke: red;
-}
+// .ct-series-a .ct-line,
+// .ct-series-a .ct-point {
+//   stroke: #FEDD00;
+// }
 
 .ct-series-b .ct-line,
 .ct-series-b .ct-point {
-  stroke: black;
+  stroke: #25292D;
 }
 
 .series-a-key {
-    background-color: red;
+    background-color: #e90000;
     height: 1em;
     width: 1em;
     display:inline-block;
 }
 
 .series-b-key {
-    background-color: black;
+    background-color: #25292D;
     height: 1em;
     width: 1em;
     display:inline-block;
