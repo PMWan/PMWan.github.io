@@ -6,12 +6,9 @@ permalink: /economy
 description: Kenya's performance dashboard (Economy)
 ---
 
-<div class="row">
+<div class="card-columns chartlist">
     {% assign charts = site.charts | where: "categories", page.category %}
     {% for chart in charts %}
-        <div class="col-lg-4 col-md-6 col-xs-12 chartlist">
-            <h5><a href="{{ chart.url }}">{{ chart.title }} {{ chart.unit }}</a></h5>
-            <div>{{ chart.excerpt }}</div>
-        </div>
+        {% include chart.html %}
     {% endfor %}
 </div>
