@@ -10,7 +10,6 @@ excerpt_separator: <!--more-->
 series-a: Domestic Debt
 series-b: External Debt
 ---
-{% include key.html %}
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
 
 <script>
@@ -18,6 +17,8 @@ series-b: External Debt
         jsonToComparisonLineChart('/json/public-debt.json','debtdata','year','domestic_debt','external_debt','domesticvsexternaldebtchart','domesticvsexternaldebtlink');
     });
 </script>
+
+{% include key.html %}
 
 <!--more-->
 
