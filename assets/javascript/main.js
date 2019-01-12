@@ -28,6 +28,11 @@ function jsonToLineChart(requestURL,dataKey,xKey,yKey,chartDivId,chartLinkId) {
             showPoint: false,
             axisY: {
                 offset: 30,
+            },
+            axisX: {
+                labelInterpolationFnc: function(value) {
+                    return "'" + value;
+                }
             }
         };
         // Create a new line chart object where as first parameter we pass in a selector
@@ -77,6 +82,11 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,yKey1,yKey2,chartDivI
             showPoint: false,
             axisY: {
                 offset: 30,
+            },
+            axisX: {
+                labelInterpolationFnc: function(value) {
+                    return "'" + value;
+                }
             }
         };
         // Create a new line chart object where as first parameter we pass in a selector
