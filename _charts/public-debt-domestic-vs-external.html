@@ -1,7 +1,7 @@
 ---
 layout: chart
 author: Paul
-unit: (KSh tn)
+unit: (KSh, trillion)
 topic: domesticvsexternaldebt
 categories: [economy]
 description: Kenya's domestic vs external public debt chart
@@ -14,16 +14,18 @@ series-b: External
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToComparisonLineChart('/json/public-debt.json','debtdata','year','domestic_debt','external_debt','domesticvsexternaldebtchart','domesticvsexternaldebtlink');
+        jsonToComparisonLineChart('/json/public-debt.json','debt_data','year','domestic_debt','external_debt','domesticvsexternaldebtchart','domesticvsexternaldebtlink');
     });
 </script>
 
 {% include key.html %}
 
+{% include source.html %}
+
 <!--more-->
 
 <div class="data-table table-responsive">
-    {% assign debtdata = site.data.public-debt.debtdata %}
+    {% assign debt_data = site.data.public-debt.debt_data %}
     <table class="table">
         <thead>
             <tr>
@@ -34,7 +36,7 @@ series-b: External
             </tr>
         </thead>
         <tbody>
-            {% for data in debtdata %}
+            {% for data in debt_data %}
                 <tr>
                     <td>{{ data.year }}</td>
                     <td>{{ data.month | slice: 0, 3 }}</td>
@@ -53,5 +55,3 @@ series-b: External
         </tbody>
     </table>
 </div>
-
-<p>Source: <a href="" id="{{ page.topic }}link" target="_blank"></a></p>

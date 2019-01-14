@@ -1,7 +1,7 @@
 ---
 layout: chart
 author: Paul
-unit: (KSh tn)
+unit: (KSh, trillion)
 topic: publicdebt
 categories: [economy]
 description: Kenya's public debt chart
@@ -11,14 +11,16 @@ excerpt_separator: <!--more-->
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/public-debt.json','debtdata','year','total_debt','publicdebtchart','publicdebtlink');
+        jsonToLineChart('/json/public-debt.json','debt_data','year',true,'total_debt',null,10,0,'publicdebtchart','publicdebtlink');
     });
 </script>
+
+{% include source.html %}
 
 <!--more-->
 
 <div class="data-table table-responsive">
-    {% assign debtdata = site.data.public-debt.debtdata %}
+    {% assign debt_data = site.data.public-debt.debt_data %}
     <table class="table">
         <thead>
             <tr>
@@ -28,7 +30,7 @@ excerpt_separator: <!--more-->
             </tr>
         </thead>
         <tbody>
-            {% for data in debtdata %}
+            {% for data in debt_data %}
                 <tr>
                     <td>{{ data.year }}</td>
                     <td>{{ data.month | slice: 0, 3 }}</td>
@@ -42,5 +44,3 @@ excerpt_separator: <!--more-->
         </tbody>
     </table>
 </div>
-
-<p>Source: <a href="" id="{{ page.topic }}link" target="_blank"></a></p>

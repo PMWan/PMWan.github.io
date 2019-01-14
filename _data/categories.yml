@@ -4,5 +4,5 @@
 - name: Economy
   link: /economy
 
-# - name: Education
-#   link: /education
+- name: Demographics
+  link: /demographics

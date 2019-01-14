@@ -1,0 +1,48 @@
+---
+layout: chart
+author: Paul
+unit: (People, million)
+topic: population
+categories: [demographics]
+description: Kenya's population estimates and projections
+title: Population
+excerpt_separator: <!--more-->
+---
+<div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        jsonToLineChart('/json/kenya-population.json','population_data','year',false,'population',1e6,15,25,'populationchart','populationlink');
+    });
+</script>
+
+{% include source.html %}
+
+<!--more-->
+
+<div class="data-table table-responsive">
+    {% assign population_data = site.data.kenya-population.population_data %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Year</th>
+                <th scope="col">Population {{ page.unit }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in (15..25) %}
+                <tr>
+                    <td>{{ population_data[i].year }} </td>
+                    <td>{{ population_data[i].population | divided_by: 1000000.0 | slice: 0, 5 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<h6>Notes:</h6>
+<ul>
+    <li>
+        The data above was sourced from the 2017 revision of the UN World Population Prospects (UN WPP). It is the twenty-fifth round of official United Nations population <strong>estimates</strong> and <strong>projections</strong> that have been prepared by the Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat.
+    </li>
+</ul>

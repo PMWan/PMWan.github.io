@@ -1,4 +1,4 @@
-function jsonToLineChart(requestURL,dataKey,xKey,yKey,chartDivId,chartLinkId) {
+function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startStep,endStep,chartDivId,chartLinkId) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -14,10 +14,26 @@ function jsonToLineChart(requestURL,dataKey,xKey,yKey,chartDivId,chartLinkId) {
         var jsonObj = request.response;
         var years = [];
         var values = [];
-        for (var step = 10; step >= 0; step--) {
-            years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
-            values.push(jsonObj[dataKey][step][yKey]);
+        if (xReverse == true) {
+            for (var step = startStep; step >= endStep; step--) {
+                years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
+                if (yDivisor) {
+                    values.push((jsonObj[dataKey][step][yKey])/yDivisor);
+                } else {
+                    values.push(jsonObj[dataKey][step][yKey]);
+                }
+            }
+        } else {
+            for (var step = startStep; step <= endStep; step++) {
+                years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
+                if (yDivisor) {
+                    values.push((jsonObj[dataKey][step][yKey])/yDivisor);
+                } else {
+                    values.push(jsonObj[dataKey][step][yKey]);
+                }
+            }
         }
+        
         var data = {
         // A labels array that can contain any sort of values
         labels: years,
@@ -28,6 +44,11 @@ function jsonToLineChart(requestURL,dataKey,xKey,yKey,chartDivId,chartLinkId) {
             showPoint: false,
             axisY: {
                 offset: 30,
+            },
+            axisX: {
+                labelInterpolationFnc: function (value) {
+                  return "'" + value;
+                }
             }
         };
         // Create a new line chart object where as first parameter we pass in a selector
@@ -35,13 +56,11 @@ function jsonToLineChart(requestURL,dataKey,xKey,yKey,chartDivId,chartLinkId) {
         // is the actual data object.
         new Chartist.Line("#" + chartDivId, data, options);
 
-        if (!document.querySelector('.chartlist')) {
-            var source = jsonObj['source'];
-            var sourceUrl = jsonObj['source_url'];
-            var a = document.getElementById(chartLinkId)
-            a.innerText = source;
-            a.href = sourceUrl;
-        }
+        var source = jsonObj['source'];
+        var sourceUrl = jsonObj['source_url'];
+        var a = document.getElementById(chartLinkId)
+        a.innerText = source;
+        a.href = sourceUrl;
     }
 }
 
@@ -77,6 +96,11 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,yKey1,yKey2,chartDivI
             showPoint: false,
             axisY: {
                 offset: 30,
+            },
+            axisX: {
+                labelInterpolationFnc: function (value) {
+                  return "'" + value;
+                }
             }
         };
         // Create a new line chart object where as first parameter we pass in a selector
@@ -84,12 +108,10 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,yKey1,yKey2,chartDivI
         // is the actual data object.
         new Chartist.Line("#" + chartDivId, data, options);
 
-        if (!document.querySelector('.chartlist')) {
-            var source = jsonObj['source'];
-            var sourceUrl = jsonObj['source_url'];
-            var a = document.getElementById(chartLinkId)
-            a.innerText = source;
-            a.href = sourceUrl;
-        }
+        var source = jsonObj['source'];
+        var sourceUrl = jsonObj['source_url'];
+        var a = document.getElementById(chartLinkId)
+        a.innerText = source;
+        a.href = sourceUrl;
     }
 }
