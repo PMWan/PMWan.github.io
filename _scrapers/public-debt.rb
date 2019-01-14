@@ -15,7 +15,7 @@ parsed_content = Nokogiri::HTML(content)
 
 rows = [0,12,24,36,48,60,72,84,96,108,120]
 
-data = { source: 'CBK', source_url: url, debtdata: [] }
+data = { source: 'CBK', source_url: url, debt_data: [] }
 
 count = 0
 
@@ -31,7 +31,7 @@ rows.each do |row|
     external_debt = BigDecimal.new(row_data[3].gsub(",", ""))/1e6
     total_debt = BigDecimal.new(row_data[4].gsub(",", ""))/1e6
 
-    data[:debtdata][count] = { 
+    data[:debt_data][count] = { 
         year: year, 
         month: row_data[1], 
         domestic_debt: domestic_debt,
