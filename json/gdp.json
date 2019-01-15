@@ -1,0 +1,108 @@
+{
+  "source": "CBK",
+  "source_url": "https://www.centralbank.go.ke/annual-gdp/",
+  "gdp_data": [
+    {
+      "year": "2001",
+      "nominal_gdp": 1020022000000,
+      "gdp_growth": 3.8,
+      "real_gdp": 1020111000000
+    },
+    {
+      "year": "2002",
+      "nominal_gdp": 1035374000000,
+      "gdp_growth": 0.5,
+      "real_gdp": 1025583000000
+    },
+    {
+      "year": "2003",
+      "nominal_gdp": 1131783000000,
+      "gdp_growth": 2.9,
+      "real_gdp": 1055658000000
+    },
+    {
+      "year": "2004",
+      "nominal_gdp": 1274328000000,
+      "gdp_growth": 5.1,
+      "real_gdp": 1109338000000
+    },
+    {
+      "year": "2005",
+      "nominal_gdp": 1415823000000,
+      "gdp_growth": 5.7,
+      "real_gdp": 1172784000000
+    },
+    {
+      "year": "2006",
+      "nominal_gdp": 1622565000000,
+      "gdp_growth": 6.5,
+      "real_gdp": 1249470000000
+    },
+    {
+      "year": "2007",
+      "nominal_gdp": 1833511000000,
+      "gdp_growth": 6.9,
+      "real_gdp": 1336849000000
+    },
+    {
+      "year": "2008",
+      "nominal_gdp": 2107589000000,
+      "gdp_growth": 1.5,
+      "real_gdp": 1357262000000
+    },
+    {
+      "year": "2009",
+      "nominal_gdp": 2863690000000,
+      "gdp_growth": 2.7,
+      "real_gdp": 2863689000000
+    },
+    {
+      "year": "2010",
+      "nominal_gdp": 3169300000000,
+      "gdp_growth": 8.4,
+      "real_gdp": 3104303000000
+    },
+    {
+      "year": "2011",
+      "nominal_gdp": 3725918000000,
+      "gdp_growth": 6.1,
+      "real_gdp": 3294026000000
+    },
+    {
+      "year": "2012",
+      "nominal_gdp": 4261370000000,
+      "gdp_growth": 4.6,
+      "real_gdp": 3444339000000
+    },
+    {
+      "year": "2013",
+      "nominal_gdp": 4745090000000,
+      "gdp_growth": 5.9,
+      "real_gdp": 3646821000000
+    },
+    {
+      "year": "2014",
+      "nominal_gdp": 5402647000000,
+      "gdp_growth": 5.4,
+      "real_gdp": 3842186000000
+    },
+    {
+      "year": "2015",
+      "nominal_gdp": 6284185000000,
+      "gdp_growth": 5.7,
+      "real_gdp": 4061901000000
+    },
+    {
+      "year": "2016",
+      "nominal_gdp": 7194147000000,
+      "gdp_growth": 5.9,
+      "real_gdp": 4300302000000
+    },
+    {
+      "year": "2017",
+      "nominal_gdp": 7749426000000,
+      "gdp_growth": 4.9,
+      "real_gdp": 4510391000000
+    }
+  ]
+}

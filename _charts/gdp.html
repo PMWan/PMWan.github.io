@@ -1,0 +1,46 @@
+---
+layout: chart
+author: Paul
+unit: (KSh, trillion)
+topic: gdp
+categories: [economy]
+description: Kenya's nominal GDP from 2008 to 2017.
+title: Nominal GDP
+excerpt_separator: <!--more-->
+---
+
+<div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        jsonToBarChart('/json/gdp.json','gdp_data','year',false,'nominal_gdp',1e12,7,16,'gdpchart');
+    });
+</script>
+
+{% include chart-description.html %}
+
+{% assign source = site.data.gdp.source %}
+{% assign source_url = site.data.gdp.source_url %}
+{% include source.html %}
+
+<!--more-->
+
+<div class="data-table table-responsive">
+    {% assign gdp_data = site.data.gdp.gdp_data %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Year</th>
+                <th scope="col">Nominal GDP {{ page.unit }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in (7..16) %}
+                <tr>
+                    <td>{{ gdp_data[i].year }} </td>
+                    <td>{{ gdp_data[i].nominal_gdp | divided_by: site.data.large-numbers.trillion | slice: 0, 5 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

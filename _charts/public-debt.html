@@ -4,7 +4,7 @@ author: Paul
 unit: (KSh, trillion)
 topic: publicdebt
 categories: [economy]
-description: Kenya's total public debt over the last 10 years.
+description: Kenya's total public debt from 2008 to 2018.
 title: Public Debt
 excerpt_separator: <!--more-->
 ---
@@ -12,7 +12,7 @@ excerpt_separator: <!--more-->
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/public-debt.json','debt_data','year',true,'total_debt',1e12,10,0,'publicdebtchart');
+        jsonToLineChart('/json/public-debt.json','debt_data','year',false,'total_debt',1e12,0,10,'publicdebtchart');
     });
 </script>
 

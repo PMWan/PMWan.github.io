@@ -4,7 +4,7 @@ author: Paul
 unit: (KSh, trillion)
 topic: domesticvsexternaldebt
 categories: [economy]
-description: Kenya's domestic versus external public debt over the last 10 years.
+description: Kenya's domestic versus external public debt from 2008 to 2018.
 title: Public Debt - Domestic vs External
 excerpt_separator: <!--more-->
 series-a: Domestic
@@ -14,7 +14,7 @@ series-b: External
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToComparisonLineChart('/json/public-debt.json','debt_data','year',true,'domestic_debt','external_debt',1e12,10,0,'domesticvsexternaldebtchart');
+        jsonToComparisonLineChart('/json/public-debt.json','debt_data','year',false,'domestic_debt','external_debt',1e12,0,10,'domesticvsexternaldebtchart');
     });
 </script>
 
