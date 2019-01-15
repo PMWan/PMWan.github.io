@@ -221,9 +221,18 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,y
                 offset: 30,
             }
         };
+
+        var responsiveOptions = [
+            ['screen and (min-width: 641px) and (max-width: 1024px)', {
+              seriesBarDistance: 10
+            }],
+            ['screen and (max-width: 640px)', {
+              seriesBarDistance: 5
+            }]
+        ];
         // Create a new line chart object where as first parameter we pass in a selector
         // that is resolving to our chart container element. The Second parameter
         // is the actual data object.
-        new Chartist.Bar("#" + chartDivId, data, options);
+        new Chartist.Bar("#" + chartDivId, data, options, responsiveOptions);
     }
 }
