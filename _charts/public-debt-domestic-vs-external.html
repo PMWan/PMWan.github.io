@@ -14,7 +14,7 @@ series-b: External
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToComparisonLineChart('/json/public-debt.json','debt_data','year','domestic_debt','external_debt','domesticvsexternaldebtchart','domesticvsexternaldebtlink');
+        jsonToComparisonLineChart('/json/public-debt.json','debt_data','year',true,'domestic_debt','external_debt',1e12,10,0,'domesticvsexternaldebtchart');
     });
 </script>
 
@@ -44,16 +44,8 @@ series-b: External
                 <tr>
                     <td>{{ data.year }}</td>
                     <td>{{ data.month | slice: 0, 3 }}</td>
-                    {% if data.domestic_debt contains 'e0' %}
-                        <td>{{ data.domestic_debt | slice: 0, 4 }}</td>
-                    {% elsif data.domestic_debt contains 'e1' %}
-                        <td>{{ data.domestic_debt | slice: 0, 5 | times: 10 }}</td>
-                    {% endif %}
-                    {% if data.external_debt contains 'e0' %}
-                        <td>{{ data.external_debt | slice: 0, 4 }}</td>
-                    {% elsif data.external_debt contains 'e1' %}
-                        <td>{{ data.external_debt | slice: 0, 5 | times: 10 }}</td>
-                    {% endif %}
+                    <td>{{ data.domestic_debt | divided_by: site.data.large-numbers.trillion | slice: 0, 4 }}</td>
+                    <td>{{ data.external_debt | divided_by: site.data.large-numbers.trillion | slice: 0, 4 }}</td>
                 </tr>
             {% endfor %}
         </tbody>

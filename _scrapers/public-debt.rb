@@ -26,10 +26,10 @@ rows.each do |row|
     end
 
     year = row_data[0]
-    # below values are divided by 1e6 to change the values from a base of millions to trillions
-    domestic_debt = BigDecimal.new(row_data[2].gsub(",", ""))/1e6
-    external_debt = BigDecimal.new(row_data[3].gsub(",", ""))/1e6
-    total_debt = BigDecimal.new(row_data[4].gsub(",", ""))/1e6
+    # below values are multiplied by 1e6 because the values are based on millions
+    domestic_debt = (BigDecimal.new(row_data[2].gsub(",", ""))*1e6).to_i
+    external_debt = (BigDecimal.new(row_data[3].gsub(",", ""))*1e6).to_i
+    total_debt = (BigDecimal.new(row_data[4].gsub(",", ""))*1e6).to_i
 
     data[:debt_data][count] = { 
         year: year, 
@@ -41,5 +41,5 @@ rows.each do |row|
     count += 1
 end
 
-File.write('../json/public-debt.json', data.to_json)
-File.write('../_data/public-debt.json', data.to_json)
+# File.write('../json/public-debt.json', data.to_json)
+# File.write('../_data/public-debt.json', data.to_json)

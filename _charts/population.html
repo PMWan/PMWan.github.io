@@ -8,15 +8,16 @@ description: Kenya's population estimates and projections over a 10-year period.
 title: Population
 excerpt_separator: <!--more-->
 ---
-<div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
 
-{% include chart-description.html %}
+<div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/kenya-population.json','population_data','year',false,'population',1e6,15,25,'populationchart','populationlink');
+        jsonToLineChart('/json/kenya-population.json','population_data','year',false,'population',1e6,15,25,'populationchart');
     });
 </script>
+
+{% include chart-description.html %}
 
 {% assign source = site.data.kenya-population.source %}
 {% assign source_url = site.data.kenya-population.source_url %}
@@ -37,7 +38,7 @@ excerpt_separator: <!--more-->
             {% for i in (15..25) %}
                 <tr>
                     <td>{{ population_data[i].year }} </td>
-                    <td>{{ population_data[i].population | divided_by: 1000000.0 | slice: 0, 5 }}</td>
+                    <td>{{ population_data[i].population | divided_by: site.data.large-numbers.million | slice: 0, 5 }}</td>
                 </tr>
             {% endfor %}
         </tbody>
@@ -47,6 +48,6 @@ excerpt_separator: <!--more-->
 <h6>Notes:</h6>
 <ul>
     <li>
-        The data above was sourced from the 2017 revision of the UN World Population Prospects (UN WPP). It is the twenty-fifth round of official United Nations population <strong>estimates</strong> and <strong>projections</strong> that have been prepared by the Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat.
+        The data above was sourced from the 2017 revision of the UN World Population Prospects (UN WPP). It is the twenty-fifth round of official United Nations population estimates and projections that have been prepared by the Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat.
     </li>
 </ul>

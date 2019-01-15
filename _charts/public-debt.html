@@ -10,13 +10,13 @@ excerpt_separator: <!--more-->
 ---
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
 
-{% include chart-description.html %}
-
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/public-debt.json','debt_data','year',true,'total_debt',null,10,0,'publicdebtchart','publicdebtlink');
+        jsonToLineChart('/json/public-debt.json','debt_data','year',true,'total_debt',1e12,10,0,'publicdebtchart');
     });
 </script>
+
+{% include chart-description.html %}
 
 {% assign source = site.data.public-debt.source %}
 {% assign source_url = site.data.public-debt.source_url %}
@@ -39,11 +39,7 @@ excerpt_separator: <!--more-->
                 <tr>
                     <td>{{ data.year }}</td>
                     <td>{{ data.month | slice: 0, 3 }}</td>
-                    {% if data.total_debt contains 'e0' %}
-                        <td>{{ data.total_debt | slice: 0, 4 }}</td>
-                    {% elsif data.total_debt contains 'e1' %}
-                        <td>{{ data.total_debt | slice: 0, 5 | times: 10 }}</td>
-                    {% endif %}
+                    <td>{{ data.total_debt | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
                 </tr>
             {% endfor %}
         </tbody>
