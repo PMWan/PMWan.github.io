@@ -1,4 +1,4 @@
-function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startStep,endStep,chartDivId,chartLinkId) {
+function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startStep,endStep,chartDivId) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -55,16 +55,10 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startSte
         // that is resolving to our chart container element. The Second parameter
         // is the actual data object.
         new Chartist.Line("#" + chartDivId, data, options);
-
-        var source = jsonObj['source'];
-        var sourceUrl = jsonObj['source_url'];
-        var a = document.getElementById(chartLinkId)
-        a.innerText = source;
-        a.href = sourceUrl;
     }
 }
 
-function jsonToComparisonLineChart(requestURL,dataKey,xKey,yKey1,yKey2,chartDivId,chartLinkId) {
+function jsonToComparisonLineChart(requestURL,dataKey,xKey,yKey1,yKey2,chartDivId) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -107,11 +101,5 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,yKey1,yKey2,chartDivI
         // that is resolving to our chart container element. The Second parameter
         // is the actual data object.
         new Chartist.Line("#" + chartDivId, data, options);
-
-        var source = jsonObj['source'];
-        var sourceUrl = jsonObj['source_url'];
-        var a = document.getElementById(chartLinkId)
-        a.innerText = source;
-        a.href = sourceUrl;
     }
 }
