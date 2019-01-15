@@ -4,18 +4,22 @@ author: Paul
 unit: (KSh, trillion)
 topic: gdp
 categories: [economy]
-description: Kenya's nominal GDP from 2008 to 2017.
-title: Nominal GDP
+description: Kenya's nominal versus real GDP from 2009 to 2017.
+title: GDP - Nominal vs Real
 excerpt_separator: <!--more-->
+series-a: Nominal
+series-b: Real
 ---
 
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToBarChart('/json/gdp.json','gdp_data','year',false,'nominal_gdp',1e12,7,16,'gdpchart');
+        jsonToComparisonBarChart('/json/gdp.json','gdp_data','year',false,'nominal_gdp','real_gdp',1e12,8,16,'gdpchart');
     });
 </script>
+
+{% include key.html %}
 
 {% include chart-description.html %}
 
@@ -32,15 +36,24 @@ excerpt_separator: <!--more-->
             <tr>
                 <th scope="col">Year</th>
                 <th scope="col">Nominal GDP {{ page.unit }}</th>
+                <th scope="col">Real GDP {{ page.unit }}</th>
             </tr>
         </thead>
         <tbody>
-            {% for i in (7..16) %}
+            {% for i in (8..16) %}
                 <tr>
                     <td>{{ gdp_data[i].year }} </td>
                     <td>{{ gdp_data[i].nominal_gdp | divided_by: site.data.large-numbers.trillion | slice: 0, 5 }}</td>
+                    <td>{{ gdp_data[i].real_gdp | divided_by: site.data.large-numbers.trillion | slice: 0, 5 }}</td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
+
+<h6>Notes:</h6>
+<ul>
+    <li>
+        Real GDP figures for years 2009 to current are based on 2009 prices (i.e. 2009=100)
+    </li>
+</ul>

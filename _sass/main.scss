@@ -69,6 +69,10 @@ nav {
   stroke: #25292D;
 }
 
+.ct-series-b .ct-bar {
+  stroke: #25292D;
+}
+
 .series-a-key {
     background-color: #e90000;
     height: 1em;
@@ -108,7 +112,7 @@ nav {
 
 @media (min-width: 992px) {
     .card-columns {
-        column-count: 2;
+        column-count: 3;
     }
 }
 
