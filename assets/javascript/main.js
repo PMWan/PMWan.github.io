@@ -42,7 +42,6 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startSte
         };
         var options = {
             showPoint: false,
-            lineSmooth: false,
             axisY: {
                 offset: 30,
             },
@@ -95,7 +94,6 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,yKey1,yKey2,chartDivI
         };
         var options = {
             showPoint: false,
-            lineSmooth: false,
             axisY: {
                 offset: 30,
             },
