@@ -4,11 +4,13 @@ author: Paul
 unit: (People, million)
 topic: population
 categories: [demographics]
-description: A chart showing the trend of Kenya's population estimates and projections over a 10-year period.
+description: Kenya's population estimates and projections over a 10-year period.
 title: Population
 excerpt_separator: <!--more-->
 ---
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
+
+{% include chart-description.html %}
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
