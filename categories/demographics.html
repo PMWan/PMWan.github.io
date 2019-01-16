@@ -6,7 +6,7 @@ permalink: /demographics
 description: A collection of charts relating to Kenya's demographics.
 ---
 
-<div class="card-columns chartlist">
+<div class="row chartlist">
     {% assign charts = site.charts | where: "categories", page.category %}
     {% for chart in charts %}
         {% include chart.html %}
