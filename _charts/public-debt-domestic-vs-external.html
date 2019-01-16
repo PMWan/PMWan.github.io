@@ -9,6 +9,7 @@ title: Public Debt - Domestic vs External
 excerpt_separator: <!--more-->
 series-a: Domestic
 series-b: External
+data-file: public-debt
 ---
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
 
@@ -22,11 +23,12 @@ series-b: External
 
 {% include chart-description.html %}
 
-{% assign source = site.data.public-debt.source %}
-{% assign source_url = site.data.public-debt.source_url %}
-{% include source.html %}
-
 <!--more-->
+
+{% assign data-file = page.data-file %}
+{% assign source = site.data[data-file]['source'] %}
+{% assign source_url = site.data[data-file]['source_url'] %}
+{% include source.html %}
 
 <div class="data-table table-responsive">
     {% assign debt_data = site.data.public-debt.debt_data %}

@@ -223,8 +223,8 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,y
         };
 
         var responsiveOptions = [
-            ['screen and (min-width: 641px) and (max-width: 1024px)', {
-              seriesBarDistance: 10
+            ['screen and (min-width: 641px) and (max-width: 1200px)', {
+              seriesBarDistance: 8
             }],
             ['screen and (max-width: 640px)', {
               seriesBarDistance: 5

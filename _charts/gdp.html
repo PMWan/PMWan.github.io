@@ -4,11 +4,12 @@ author: Paul
 unit: (KSh, trillion)
 topic: gdp
 categories: [economy]
-description: "Kenya's GDP (nominal and real) from 2009 to 2017. The real GDP numbers are based on 2009 prices."
+description: "Kenya's GDP (nominal and real) from 2009 to 2017. The real GDP figures are based on 2009 prices."
 title: GDP
 excerpt_separator: <!--more-->
 series-a: Nominal
 series-b: Real
+data-file: gdp 
 ---
 
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
@@ -23,11 +24,12 @@ series-b: Real
 
 {% include chart-description.html %}
 
-{% assign source = site.data.gdp.source %}
-{% assign source_url = site.data.gdp.source_url %}
-{% include source.html %}
-
 <!--more-->
+
+{% assign data-file = page.data-file %}
+{% assign source = site.data[data-file]['source'] %}
+{% assign source_url = site.data[data-file]['source_url'] %}
+{% include source.html %}
 
 <div class="data-table table-responsive">
     {% assign gdp_data = site.data.gdp.gdp_data %}
