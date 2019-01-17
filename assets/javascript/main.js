@@ -1,4 +1,4 @@
-function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startStep,endStep,chartDivId) {
+function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startStep,endStep,chartDivId,smoothed) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -40,12 +40,17 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startSte
         // Our series array that contains series objects or in this case series data arrays
         series: [values]
         };
+
         var options = {
             showPoint: false,
             axisY: {
                 offset: 30,
             }
         };
+
+        if (smoothed == false) {
+            options['lineSmooth'] = false            
+        }
         // Create a new line chart object where as first parameter we pass in a selector
         // that is resolving to our chart container element. The Second parameter
         // is the actual data object.
@@ -53,7 +58,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startSte
     }
 }
 
-function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,yDivisor,startStep,endStep,chartDivId) {
+function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,yDivisor,startStep,endStep,chartDivId,smoothed) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -101,12 +106,17 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,
         // Our series array that contains series objects or in this case series data arrays
         series: [values1, values2]
         };
+
         var options = {
             showPoint: false,
             axisY: {
                 offset: 30,
             }
         };
+
+        if (smoothed == false) {
+            options['lineSmooth'] = false            
+        }
         // Create a new line chart object where as first parameter we pass in a selector
         // that is resolving to our chart container element. The Second parameter
         // is the actual data object.

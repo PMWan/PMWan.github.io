@@ -1,19 +1,20 @@
 ---
 layout: chart
 author: Paul
-unit: (KSh, trillion)
-topic: publicdebt
+unit: (%)
+topic: gdp-growth-rate-
 categories: [economy]
-description: Kenya's total public debt from 2008 to 2018.
-title: Public Debt
+description: "Kenya's annual GDP growth rate from 2009 to 2017."
+title: GDP Growth Rate
 excerpt_separator: <!--more-->
-data-file: public-debt
+data-file: gdp
 ---
+
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/public-debt.json','debt_data','year',false,'total_debt',1e12,0,10,'publicdebtchart',true);
+        jsonToLineChart('/json/gdp.json','gdp_data','year',false,'gdp_growth',null,8,16,'gdp-growth-rate-chart',false);
     });
 </script>
 
@@ -27,21 +28,19 @@ data-file: public-debt
 {% include source.html %}
 
 <div class="data-table table-responsive">
-    {% assign debt_data = site.data.public-debt.debt_data %}
+    {% assign gdp_data = site.data.gdp.gdp_data %}
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">Year</th>
-                <th scope="col">Month</th>
-                <th scope="col">Public Debt {{ page.unit }}</th>
+                <th scope="col">GDP Growth Rate {{ page.unit }}</th>
             </tr>
         </thead>
         <tbody>
-            {% for data in debt_data %}
+            {% for i in (8..16) %}
                 <tr>
-                    <td>{{ data.year }}</td>
-                    <td>{{ data.month | slice: 0, 3 }}</td>
-                    <td>{{ data.total_debt | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ gdp_data[i].year }} </td>
+                    <td>{{ gdp_data[i].gdp_growth }}</td>
                 </tr>
             {% endfor %}
         </tbody>
