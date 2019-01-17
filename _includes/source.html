@@ -1,1 +1,6 @@
-<div>Source: <a href="{{ source_url }}" target="_blank">{{ source }}</a></div>
+<div>
+    <span>Source:</span>
+    {% for source in sources %}
+        <a href="{{ source.source_url }}" target="_blank">{{ source.source }}</a>      
+    {% endfor %}
+</div>

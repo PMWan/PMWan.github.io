@@ -6,8 +6,7 @@
         </div>
         <div class="card-footer">
             {% assign data-file = chart.data-file %}
-            {% assign source = site.data[data-file]['source'] %}
-            {% assign source_url = site.data[data-file]['source_url'] %}
+            {% assign sources = site.data[data-file]['sources'] %}
             {% include source.html %}
         </div>
     </div>

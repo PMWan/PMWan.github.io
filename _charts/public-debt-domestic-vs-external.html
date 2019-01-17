@@ -26,8 +26,7 @@ data-file: public-debt
 <!--more-->
 
 {% assign data-file = page.data-file %}
-{% assign source = site.data[data-file]['source'] %}
-{% assign source_url = site.data[data-file]['source_url'] %}
+{% assign sources = site.data[data-file]['sources'] %}
 {% include source.html %}
 
 <div class="data-table table-responsive">

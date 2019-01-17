@@ -1,20 +1,20 @@
 ---
 layout: chart
 author: Paul
-unit: (%)
-topic: gdp-growth-rate-
+unit: ""
+topic: cpi
 categories: [economy]
-description: "Kenya's annual GDP growth rate from 2009 to 2017."
-title: GDP Growth Rate
+description: "Kenya's annual average CPI from 2008 to 2018. NB: The base period is February 2009."
+title: CPI
 excerpt_separator: <!--more-->
-data-file: gdp
+data-file: cpi
 ---
 
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/gdp.json','gdp_data','year',false,'gdp_growth',null,8,16,'gdp-growth-rate-chart',false);
+        jsonToLineChart('/json/cpi.json','cpi_data','year',false,'average_cpi',null,0,10,'cpichart',false);
     });
 </script>
 
@@ -27,19 +27,19 @@ data-file: gdp
 {% include source.html %}
 
 <div class="data-table table-responsive">
-    {% assign gdp_data = site.data.gdp.gdp_data %}
+    {% assign cpi_data = site.data.cpi.cpi_data %}
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">Year</th>
-                <th scope="col">GDP Growth Rate {{ page.unit }}</th>
+                <th scope="col">CPI</th>
             </tr>
         </thead>
         <tbody>
-            {% for i in (8..16) %}
+            {% for i in (0..10) %}
                 <tr>
-                    <td>{{ gdp_data[i].year }} </td>
-                    <td>{{ gdp_data[i].gdp_growth }}</td>
+                    <td>{{ cpi_data[i].year }} </td>
+                    <td>{{ cpi_data[i].average_cpi }}</td>
                 </tr>
             {% endfor %}
         </tbody>

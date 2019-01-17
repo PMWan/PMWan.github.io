@@ -1,6 +1,10 @@
 {
-  "source": "CBK",
-  "source_url": "https://www.centralbank.go.ke/public-debt/",
+  "sources": [
+    {
+      "source": "CBK",
+      "source_url": "https://www.centralbank.go.ke/public-debt/"
+    }
+  ],
   "debt_data": [
     {
       "year": "2008",

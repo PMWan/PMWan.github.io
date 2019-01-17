@@ -1,6 +1,10 @@
 {
-  "source": "CBK",
-  "source_url": "https://www.centralbank.go.ke/annual-gdp/",
+  "sources": [
+    {
+      "source": "CBK",
+      "source_url": "https://www.centralbank.go.ke/annual-gdp/"
+    }
+  ],
   "gdp_data": [
     {
       "year": "2001",

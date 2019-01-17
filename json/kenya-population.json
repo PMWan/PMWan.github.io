@@ -1,6 +1,10 @@
 {
-  "source": "UN WPP",
-  "source_url": "https://population.un.org/wpp/",
+  "sources": [
+    {
+      "source": "UN WPP",
+      "source_url": "https://population.un.org/wpp/"
+    }
+  ],
   "population_data": [
     {
       "year": "1999",

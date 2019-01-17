@@ -16,7 +16,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startSte
         var values = [];
         if (xReverse == true) {
             for (var step = startStep; step >= endStep; step--) {
-                years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
+                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 if (yDivisor) {
                     values.push((jsonObj[dataKey][step][yKey])/yDivisor);
                 } else {
@@ -25,7 +25,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startSte
             }
         } else {
             for (var step = startStep; step <= endStep; step++) {
-                years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
+                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 if (yDivisor) {
                     values.push((jsonObj[dataKey][step][yKey])/yDivisor);
                 } else {
