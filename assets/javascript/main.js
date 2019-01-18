@@ -8,7 +8,6 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startSte
 
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
-    // request.responseType = 'json';
     request.send();
     request.onload = function() {
         var jsonObj = JSON.parse(request.response);
@@ -16,7 +15,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startSte
         var values = [];
         if (xReverse == true) {
             for (var step = startStep; step >= endStep; step--) {
-                years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
+                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 if (yDivisor) {
                     values.push((jsonObj[dataKey][step][yKey])/yDivisor);
                 } else {
@@ -25,7 +24,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startSte
             }
         } else {
             for (var step = startStep; step <= endStep; step++) {
-                years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
+                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 if (yDivisor) {
                     values.push((jsonObj[dataKey][step][yKey])/yDivisor);
                 } else {
@@ -68,7 +67,6 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,
 
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
-    // request.responseType = 'json';
     request.send();
     request.onload = function() {
         var jsonObj = JSON.parse(request.response);
@@ -78,7 +76,7 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,
 
         if (xReverse == true) {
             for (var step = startStep; step >= endStep; step--) {
-                years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
+                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 if (yDivisor) {
                     values1.push((jsonObj[dataKey][step][yKey1])/yDivisor);
                     values2.push((jsonObj[dataKey][step][yKey2])/yDivisor);
@@ -89,7 +87,7 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,
             }
         } else {
             for (var step = startStep; step <= endStep; step++) {
-                years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
+                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 if (yDivisor) {
                     values1.push((jsonObj[dataKey][step][yKey1])/yDivisor);
                     values2.push((jsonObj[dataKey][step][yKey2])/yDivisor);
@@ -134,16 +132,14 @@ function jsonToBarChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startStep
 
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
-    // request.responseType = 'json';
     request.send();
     request.onload = function() {
-        // var jsonObj = request.response;
         var jsonObj = JSON.parse(request.response);
         var years = [];
         var values = [];
         if (xReverse == true) {
             for (var step = startStep; step >= endStep; step--) {
-                years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
+                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 if (yDivisor) {
                     values.push((jsonObj[dataKey][step][yKey])/yDivisor);
                 } else {
@@ -152,7 +148,7 @@ function jsonToBarChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startStep
             }
         } else {
             for (var step = startStep; step <= endStep; step++) {
-                years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
+                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 if (yDivisor) {
                     values.push((jsonObj[dataKey][step][yKey])/yDivisor);
                 } else {
@@ -189,10 +185,8 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,y
 
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
-    // request.responseType = 'json';
     request.send();
     request.onload = function() {
-        // var jsonObj = request.response;
         var jsonObj = JSON.parse(request.response);
         var years = [];
         var values1 = [];
@@ -200,7 +194,7 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,y
 
         if (xReverse == true) {
             for (var step = startStep; step >= endStep; step--) {
-                years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
+                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 if (yDivisor) {
                     values1.push((jsonObj[dataKey][step][yKey1])/yDivisor);
                     values2.push((jsonObj[dataKey][step][yKey2])/yDivisor);
@@ -211,7 +205,7 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,y
             }
         } else {
             for (var step = startStep; step <= endStep; step++) {
-                years.push((jsonObj[dataKey][step][xKey]).slice(2,4));
+                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 if (yDivisor) {
                     values1.push((jsonObj[dataKey][step][yKey1])/yDivisor);
                     values2.push((jsonObj[dataKey][step][yKey2])/yDivisor);
