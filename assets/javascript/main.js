@@ -1,4 +1,4 @@
-function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startStep,endStep,chartDivId,smoothed) {
+function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -43,7 +43,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startSte
         var options = {
             showPoint: false,
             axisY: {
-                offset: 35,
+                offset: yOffset
             }
         };
 
@@ -57,7 +57,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startSte
     }
 }
 
-function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,yDivisor,startStep,endStep,chartDivId,smoothed) {
+function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -108,7 +108,7 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,
         var options = {
             showPoint: false,
             axisY: {
-                offset: 35,
+                offset: yOffset
             }
         };
 
@@ -122,7 +122,7 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,
     }
 }
 
-function jsonToBarChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startStep,endStep,chartDivId) {
+function jsonToBarChart(requestURL,dataKey,xKey,xReverse,yKey,yOffset,yDivisor,startStep,endStep,chartDivId) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -165,7 +165,7 @@ function jsonToBarChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startStep
         };
         var options = {
             axisY: {
-                offset: 35,
+                offset: yOffset
             }
         };
         // Create a new line chart object where as first parameter we pass in a selector
@@ -175,7 +175,7 @@ function jsonToBarChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startStep
     }
 }
 
-function jsonToComparisonBarChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,yDivisor,startStep,endStep,chartDivId) {
+function jsonToComparisonBarChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -224,7 +224,7 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,y
         };
         var options = {
             axisY: {
-                offset: 35,
+                offset: yOffset
             }
         };
 
