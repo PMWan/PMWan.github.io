@@ -1,10 +1,14 @@
-function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed) {
+function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
         chartDiv.classList.remove('ct-minor-sixth');
         chartDiv.classList.add('ct-double-octave');
     }
+
+    // if (!document.querySelector('.chartlist') && (xKeyPrefix)) {
+    //     xKeyPrefix = null;
+    // }
 
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
@@ -15,21 +19,43 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yOffset,yDivisor,
         var values = [];
         if (xReverse == true) {
             for (var step = startStep; step >= endStep; step--) {
-                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+
+                if (xKeyPrefix) {
+                    years.push(
+                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
+                        " " + "'" +
+                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        );
+                } else {
+                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                }
+
                 if (yDivisor) {
                     values.push((jsonObj[dataKey][step][yKey])/yDivisor);
                 } else {
                     values.push(jsonObj[dataKey][step][yKey]);
                 }
+
             }
         } else {
             for (var step = startStep; step <= endStep; step++) {
-                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+
+                if (xKeyPrefix) {
+                    years.push(
+                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
+                        " " + "'" +
+                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        );
+                } else {
+                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                }
+
                 if (yDivisor) {
                     values.push((jsonObj[dataKey][step][yKey])/yDivisor);
                 } else {
                     values.push(jsonObj[dataKey][step][yKey]);
                 }
+
             }
         }
         
@@ -50,6 +76,22 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yOffset,yDivisor,
         if (smoothed == false) {
             options['lineSmooth'] = false            
         }
+
+        if (xKeyPrefix) {
+            if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
+                options['axisX'] = { 
+                    offset: 35
+                }
+            } else {
+                options['axisX'] = { 
+                    offset: 35,
+                    labelInterpolationFnc: function(value, index) {
+                        return index % 2 === 0 ? value : null;
+                    }
+                }
+            }
+        }
+
         // Create a new line chart object where as first parameter we pass in a selector
         // that is resolving to our chart container element. The Second parameter
         // is the actual data object.
@@ -57,7 +99,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yOffset,yDivisor,
     }
 }
 
-function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed) {
+function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -122,7 +164,7 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,
     }
 }
 
-function jsonToBarChart(requestURL,dataKey,xKey,xReverse,yKey,yOffset,yDivisor,startStep,endStep,chartDivId) {
+function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset,yDivisor,startStep,endStep,chartDivId) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -175,7 +217,7 @@ function jsonToBarChart(requestURL,dataKey,xKey,xReverse,yKey,yOffset,yDivisor,s
     }
 }
 
-function jsonToComparisonBarChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId) {
+function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);

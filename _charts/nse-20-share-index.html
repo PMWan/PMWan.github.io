@@ -1,19 +1,21 @@
 ---
 layout: chart
 author: Paul
-unit: (KSh, trillion)
-topic: publicdebt
+unit: ""
+topic: nse-20-share-index-
 categories: [economy]
-description: Kenya's total public debt from Sep 2008 to Sep 2018.
-title: Public Debt
+description: "Kenya's NSE-20 Share Index monthly average from Oct 2017 to Oct 2018."
+title: NSE-20 Share Index - Monthly Average
 excerpt_separator: <!--more-->
-data-file: public-debt
+data-file: nse
+data-key: nse_data
 ---
+
 <div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/public-debt.json','debt_data','year','month',false,'total_debt',30,1e12,0,10,'publicdebtchart',true);
+        jsonToLineChart('/json/nse.json','nse_data','year','month',false,'nse_20_share_index',40,null,9,21,'nse-20-share-index-chart',false);
     });
 </script>
 
@@ -26,21 +28,22 @@ data-file: public-debt
 {% include source.html %}
 
 <div class="data-table table-responsive">
-    {% assign debt_data = site.data.public-debt.debt_data %}
+    {% assign data-key = page.data-key %}
+    {% assign nse_data = site.data[data-file][data-key] %}
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">Year</th>
                 <th scope="col">Month</th>
-                <th scope="col">Public Debt {{ page.unit }}</th>
+                <th scope="col">{{ page.title }}</th>
             </tr>
         </thead>
         <tbody>
-            {% for data in debt_data %}
+            {% for i in (9..21) %}
                 <tr>
-                    <td>{{ data.year }}</td>
-                    <td>{{ data.month | slice: 0, 3 }}</td>
-                    <td>{{ data.total_debt | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ nse_data[i].year }}</td>
+                    <td>{{ nse_data[i].month | slice: 0, 3 }} </td>
+                    <td>{{ nse_data[i].nse_20_share_index }}</td>
                 </tr>
             {% endfor %}
         </tbody>

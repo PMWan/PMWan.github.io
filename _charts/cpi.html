@@ -4,8 +4,8 @@ author: Paul
 unit: ""
 topic: cpi
 categories: [economy]
-description: "Kenya's annual average Consumer Price Index (CPI) from 2008 to 2018. NB: The base period is February 2009."
-title: CPI
+description: "Kenya's Consumer Price Index (CPI) annual average from 2008 to 2018. NB: The base period is February 2009."
+title: CPI - Annual Average
 excerpt_separator: <!--more-->
 data-file: cpi
 ---
@@ -14,7 +14,7 @@ data-file: cpi
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/cpi.json','cpi_data','year',false,'average_cpi',35,null,0,10,'cpichart',false);
+        jsonToLineChart('/json/cpi.json','cpi_data','year',null,false,'average_cpi',35,null,0,10,'cpichart',false);
     });
 </script>
 
