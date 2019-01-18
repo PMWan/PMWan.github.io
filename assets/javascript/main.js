@@ -43,7 +43,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startSte
         var options = {
             showPoint: false,
             axisY: {
-                offset: 30,
+                offset: 35,
             }
         };
 
@@ -108,7 +108,7 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,
         var options = {
             showPoint: false,
             axisY: {
-                offset: 30,
+                offset: 35,
             }
         };
 
@@ -165,7 +165,7 @@ function jsonToBarChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startStep
         };
         var options = {
             axisY: {
-                offset: 30,
+                offset: 35,
             }
         };
         // Create a new line chart object where as first parameter we pass in a selector
@@ -224,7 +224,7 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,y
         };
         var options = {
             axisY: {
-                offset: 30,
+                offset: 35,
             }
         };
 
