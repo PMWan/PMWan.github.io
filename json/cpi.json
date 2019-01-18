@@ -12,47 +12,47 @@
     ],
   "cpi_data":[
     {
-      "year": 2008,
+      "year": "2008",
       "average_cpi": 92.36
     },
     {
-      "year": 2009,
+      "year": "2009",
       "average_cpi": 102.1
     },
     {
-      "year": 2010,
+      "year": "2010",
       "average_cpi": 106.26
     },
     {
-      "year": 2011,
+      "year": "2011",
       "average_cpi": 121.17
     },
     {
-      "year": 2012,
+      "year": "2012",
       "average_cpi": 132.53
     },
     {
-      "year": 2013,
+      "year": "2013",
       "average_cpi": 140.11
     },
     {
-      "year": 2014,
+      "year": "2014",
       "average_cpi": 149.74
     },
     {
-      "year": 2015,
+      "year": "2015",
       "average_cpi": 159.6
     },
     {
-      "year": 2016,
+      "year": "2016",
       "average_cpi": 169.68
     },
     {
-      "year": 2017,
+      "year": "2017",
       "average_cpi": 183.23
     },
     {
-      "year": 2018,
+      "year": "2018",
       "average_cpi": 191.82
     }
   ]
