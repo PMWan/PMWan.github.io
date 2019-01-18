@@ -8,10 +8,10 @@ function jsonToLineChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startSte
 
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
-    request.responseType = 'json';
+    // request.responseType = 'json';
     request.send();
     request.onload = function() {
-        var jsonObj = request.response;
+        var jsonObj = JSON.parse(request.response);
         var years = [];
         var values = [];
         if (xReverse == true) {
@@ -68,10 +68,10 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,
 
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
-    request.responseType = 'json';
+    // request.responseType = 'json';
     request.send();
     request.onload = function() {
-        var jsonObj = request.response;
+        var jsonObj = JSON.parse(request.response);
         var years = [];
         var values1 = [];
         var values2 = [];
@@ -134,10 +134,11 @@ function jsonToBarChart(requestURL,dataKey,xKey,xReverse,yKey,yDivisor,startStep
 
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
-    request.responseType = 'json';
+    // request.responseType = 'json';
     request.send();
     request.onload = function() {
-        var jsonObj = request.response;
+        // var jsonObj = request.response;
+        var jsonObj = JSON.parse(request.response);
         var years = [];
         var values = [];
         if (xReverse == true) {
@@ -188,10 +189,11 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xReverse,yKey1,yKey2,y
 
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
-    request.responseType = 'json';
+    // request.responseType = 'json';
     request.send();
     request.onload = function() {
-        var jsonObj = request.response;
+        // var jsonObj = request.response;
+        var jsonObj = JSON.parse(request.response);
         var years = [];
         var values1 = [];
         var values2 = [];
