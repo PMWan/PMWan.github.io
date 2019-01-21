@@ -1,11 +1,11 @@
 ---
 layout: chart
 author: Paul
-unit: ""
-topic: nse-20-share-index-
+unit: (Shares, million)
+topic: nse-monthly-share-volume-
 categories: [economy]
-description: "Kenya's NSE-20 Share Index monthly average from Oct 2017 to Oct 2018."
-title: NSE-20 Share Index - Monthly Average
+description: "Nairobi Stock Exchange's monthly share volume from Oct 2017 to Oct 2018."
+title: NSE - Monthly Share Volume
 excerpt_separator: <!--more-->
 data-file: nse
 data-key: nse_data
@@ -15,7 +15,7 @@ data-key: nse_data
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/nse.json','nse_data','year','month',false,'nse_20_share_index',40,null,9,21,'nse-20-share-index-chart',false);
+        jsonToLineChart('/json/nse.json','nse_data','year','month',false,'no_of_shares',40,1e6,9,21,'nse-monthly-share-volume-chart',false);
     });
 </script>
 
@@ -35,7 +35,7 @@ data-key: nse_data
             <tr>
                 <th scope="col">Year</th>
                 <th scope="col">Month</th>
-                <th scope="col">{{ page.title }}</th>
+                <th scope="col">{{ page.title }} {{ page.unit }}</th>
             </tr>
         </thead>
         <tbody>
@@ -43,7 +43,7 @@ data-key: nse_data
                 <tr>
                     <td>{{ nse_data[i].year }}</td>
                     <td>{{ nse_data[i].month | slice: 0, 3 }} </td>
-                    <td>{{ nse_data[i].nse_20_share_index }}</td>
+                    <td>{{ nse_data[i].no_of_shares | divided_by: site.data.large-numbers.million }}</td>
                 </tr>
             {% endfor %}
         </tbody>
