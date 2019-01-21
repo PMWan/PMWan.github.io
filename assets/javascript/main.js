@@ -1,4 +1,4 @@
-function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed) {
+function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed,showArea) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -77,6 +77,10 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffse
             options['lineSmooth'] = false            
         }
 
+        if (showArea == true) {
+            options['showArea'] = true
+        }
+
         if (xKeyPrefix) {
             if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
                 options['axisX'] = { 
@@ -99,7 +103,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffse
     }
 }
 
-function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed) {
+function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed,showArea) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -156,6 +160,21 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
 
         if (smoothed == false) {
             options['lineSmooth'] = false            
+        }
+
+        if (xKeyPrefix) {
+            if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
+                options['axisX'] = { 
+                    offset: 35
+                }
+            } else {
+                options['axisX'] = { 
+                    offset: 35,
+                    labelInterpolationFnc: function(value, index) {
+                        return index % 2 === 0 ? value : null;
+                    }
+                }
+            }
         }
         // Create a new line chart object where as first parameter we pass in a selector
         // that is resolving to our chart container element. The Second parameter
