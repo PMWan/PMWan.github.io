@@ -283,16 +283,18 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
         // Our series array that contains series objects or in this case series data arrays
         series: [values1, values2]
         };
+
         var options = {
             axisY: {
                 offset: yOffset
-            }
+            },
         };
 
+        if (document.querySelector('.chartlist')) {
+            options['seriesBarDistance'] = 8
+        }
+
         var responsiveOptions = [
-            ['screen and (min-width: 641px) and (max-width: 1200px)', {
-              seriesBarDistance: 8
-            }],
             ['screen and (max-width: 640px)', {
               seriesBarDistance: 5
             }]
