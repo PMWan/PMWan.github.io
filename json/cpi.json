@@ -10,50 +10,66 @@
         "source_url": "https://www.knbs.or.ke/download/cpi-and-rates-of-inflation-for-december-2018/"
       }
     ],
-  "cpi_data":[
+  "cpi_data": [
+    {
+      "year": 2007,
+      "average_cpi": 80.24,
+      "average_inflation_rate": ""
+    },
     {
       "year": 2008,
-      "average_cpi": 92.36
+      "average_cpi": 92.36,
+      "average_inflation_rate": 15.11
     },
     {
       "year": 2009,
-      "average_cpi": 102.1
+      "average_cpi": 102.1,
+      "average_inflation_rate": 10.54
     },
     {
       "year": 2010,
-      "average_cpi": 106.26
+      "average_cpi": 106.26,
+      "average_inflation_rate": 4.08
     },
     {
       "year": 2011,
-      "average_cpi": 121.17
+      "average_cpi": 121.17,
+      "average_inflation_rate": 14.02
     },
     {
       "year": 2012,
-      "average_cpi": 132.53
+      "average_cpi": 132.53,
+      "average_inflation_rate": 9.38
     },
     {
       "year": 2013,
-      "average_cpi": 140.11
+      "average_cpi": 140.11,
+      "average_inflation_rate": 5.72
     },
     {
       "year": 2014,
-      "average_cpi": 149.74
+      "average_cpi": 149.74,
+      "average_inflation_rate": 6.88
     },
     {
       "year": 2015,
-      "average_cpi": 159.6
+      "average_cpi": 159.6,
+      "average_inflation_rate": 6.58
     },
     {
       "year": 2016,
-      "average_cpi": 169.68
+      "average_cpi": 169.68,
+      "average_inflation_rate": 6.32
     },
     {
       "year": 2017,
-      "average_cpi": 183.23
+      "average_cpi": 183.23,
+      "average_inflation_rate": 7.99
     },
     {
       "year": 2018,
-      "average_cpi": 191.82
+      "average_cpi": 191.82,
+      "average_inflation_rate": 4.69
     }
   ]
 }

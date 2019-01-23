@@ -1,11 +1,11 @@
 ---
 layout: chart
 author: Paul
-unit: ""
-topic: cpi
+unit: "(%)"
+topic: inflation
 categories: [economy]
-description: "Kenya's Consumer Price Index (CPI) annual average from 2008 to 2018. NB: The base period is February 2009."
-title: CPI - Annual Average
+description: "Kenya's annual average inflation rate from 2008 to 2018."
+title: Inflation Rate - Annual Average
 excerpt_separator: <!--more-->
 data-file: cpi
 ---
@@ -14,7 +14,7 @@ data-file: cpi
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/cpi.json','cpi_data','year',null,false,'average_cpi',35,null,1,11,'cpichart',false,false);
+        jsonToLineChart('/json/cpi.json','cpi_data','year',null,false,'average_inflation_rate',35,null,1,11,'inflationchart',false,false);
     });
 </script>
 
@@ -32,14 +32,14 @@ data-file: cpi
         <thead>
             <tr>
                 <th scope="col">Year</th>
-                <th scope="col">CPI</th>
+                <th scope="col">Inflation Rate {{ page.unit }}</th>
             </tr>
         </thead>
         <tbody>
             {% for i in (1..11) %}
                 <tr>
                     <td>{{ cpi_data[i].year }} </td>
-                    <td>{{ cpi_data[i].average_cpi }}</td>
+                    <td>{{ cpi_data[i].average_inflation_rate }}</td>
                 </tr>
             {% endfor %}
         </tbody>
