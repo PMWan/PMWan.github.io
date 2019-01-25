@@ -1,49 +1,57 @@
 ---
 layout: chart
 author: Paul
-unit: ""
-topic: nse-20-share-index-
+unit: null
 categories: [economy]
 description: "Nairobi Stock Exchange's NSE-20 Share Index monthly average from Oct 2017 to Oct 2018."
 title: NSE-20 Share Index - Monthly Average
 excerpt_separator: <!--more-->
-data-file: nse
-data-key: nse_data
+chart_function: jsonToLineChart
+data_file: nse
+data_key: nse_data
+x_key: year
+x_prefix: month
+x_reverse: false
+y_key: nse_20_share_index
+y_offset: 40
+y_divisor: null
+start_step: 9
+end_step: 21
+chart_id: nse-20-share-index-chart
+smoothed: false
+show_area: false
+table_col_1: Year
+table_col_2: Month
+table_col_3: NSE-20 Share Index - Monthly Average
 ---
 
-<div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
+<div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/nse.json','nse_data','year','month',false,'nse_20_share_index',40,null,9,21,'nse-20-share-index-chart',false,false);
-    });
-</script>
+{% include {{ page.chart_function }}.html %}
 
 {% include chart-description.html %}
 
 <!--more-->
 
-{% assign data-file = page.data-file %}
-{% assign sources = site.data[data-file]['sources'] %}
+{% assign sources = site.data[page.data_file]['sources'] %}
 {% include source.html %}
 
 <div class="data-table table-responsive">
-    {% assign data-key = page.data-key %}
-    {% assign nse_data = site.data[data-file][data-key] %}
+    {% assign data = site.data[page.data_file][page.data_key] %}
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Year</th>
-                <th scope="col">Month</th>
-                <th scope="col">{{ page.title }}</th>
+                <th scope="col">{{ page.table_col_1 }}</th>
+                <th scope="col">{{ page.table_col_2 }}</th>
+                <th scope="col">{{ page.table_col_3 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
             </tr>
         </thead>
         <tbody>
-            {% for i in (9..21) %}
+            {% for i in (page.start_step..page.end_step) %}
                 <tr>
-                    <td>{{ nse_data[i].year }}</td>
-                    <td>{{ nse_data[i].month | slice: 0, 3 }} </td>
-                    <td>{{ nse_data[i].nse_20_share_index }}</td>
+                    <td>{{ data[i][page.x_key] }} </td>
+                    <td>{{ data[i][page.x_prefix] | slice: 0, 3 }} </td>
+                    <td>{{ data[i][page.y_key] }}</td>
                 </tr>
             {% endfor %}
         </tbody>

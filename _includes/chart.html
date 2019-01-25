@@ -5,8 +5,7 @@
             <div>{{ chart.excerpt }}</div>
         </div>
         <div class="card-footer">
-            {% assign data-file = chart.data-file %}
-            {% assign sources = site.data[data-file]['sources'] %}
+            {% assign sources = site.data[chart.data_file]['sources'] %}
             {% include source.html %}
         </div>
     </div>

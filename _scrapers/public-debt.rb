@@ -15,7 +15,7 @@ parsed_content = Nokogiri::HTML(content)
 
 rows = [0,12,24,36,48,60,72,84,96,108,120].reverse
 
-data = { source: 'CBK', source_url: url, debt_data: [] }
+data = { sources: [{ source: 'CBK' , source_url: url }], debt_data: [] }
 
 count = 0
 
@@ -41,5 +41,5 @@ rows.each do |row|
     count += 1
 end
 
-File.write('../json/public-debt.json', JSON.pretty_generate(data))
-File.write('../_data/public-debt.json', JSON.pretty_generate(data))
+File.write('../json/debt.json', JSON.pretty_generate(data))
+File.write('../_data/debt.json', JSON.pretty_generate(data))

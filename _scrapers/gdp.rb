@@ -15,7 +15,7 @@ parsed_content = Nokogiri::HTML(content)
 
 rows = parsed_content.css('tbody').css('tr').size
 
-data = { source: 'CBK', source_url: url, gdp_data: [] }
+data = { sources: [{ source: 'CBK' , source_url: url }], gdp_data: [] }
 
 count = 0
 

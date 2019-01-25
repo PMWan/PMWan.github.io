@@ -2,45 +2,56 @@
 layout: chart
 author: Paul
 unit: (KSh, trillion)
-topic: publicdebt
 categories: [economy]
-description: Kenya's total public debt from Sep 2008 to Sep 2018.
+description: "Kenya's total public debt from Sep 2008 to Sep 2018."
 title: Public Debt
 excerpt_separator: <!--more-->
-data-file: public-debt
+chart_function: jsonToLineChart
+data_file: debt
+data_key: debt_data
+x_key: year
+x_prefix: month
+x_reverse: false
+y_key: total_debt
+y_offset: 30
+y_divisor: 1e12
+start_step: 0
+end_step: 10
+chart_id: public-debt-chart
+smoothed: true
+show_area: true
+table_col_1: Year
+table_col_2: Month
+table_col_3: Public Debt
 ---
-<div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/public-debt.json','debt_data','year','month',false,'total_debt',30,1e12,0,10,'publicdebtchart',true,true);
-    });
-</script>
+<div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
+
+{% include {{ page.chart_function }}.html %}
 
 {% include chart-description.html %}
 
 <!--more-->
 
-{% assign data-file = page.data-file %}
-{% assign sources = site.data[data-file]['sources'] %}
+{% assign sources = site.data[page.data_file]['sources'] %}
 {% include source.html %}
 
 <div class="data-table table-responsive">
-    {% assign debt_data = site.data.public-debt.debt_data %}
+    {% assign data = site.data[page.data_file][page.data_key] %}
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Year</th>
-                <th scope="col">Month</th>
-                <th scope="col">Public Debt {{ page.unit }}</th>
+                <th scope="col">{{ page.table_col_1 }}</th>
+                <th scope="col">{{ page.table_col_2 }}</th>
+                <th scope="col">{{ page.table_col_3 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
             </tr>
         </thead>
         <tbody>
-            {% for data in debt_data %}
+            {% for i in (page.start_step..page.end_step) %}
                 <tr>
-                    <td>{{ data.year }}</td>
-                    <td>{{ data.month | slice: 0, 3 }}</td>
-                    <td>{{ data.total_debt | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ data[i][page.x_key] }} </td>
+                    <td>{{ data[i][page.x_prefix] | slice: 0, 3 }} </td>
+                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
                 </tr>
             {% endfor %}
         </tbody>

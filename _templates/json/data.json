@@ -1,0 +1,9 @@
+{
+  "sources": [
+    {
+      "source": "<enter source name>",
+      "source_url": "<enter source url>"
+    }
+  ],
+  "<enter topic here>_data": "<paste data here>"
+}

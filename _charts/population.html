@@ -2,44 +2,53 @@
 layout: chart
 author: Paul
 unit: (People, million)
-topic: population
 categories: [demographics]
 description: Kenya's population estimates and projections from 2014 to 2024.
 title: Population
 excerpt_separator: <!--more-->
-data-file: kenya-population
+chart_function: jsonToLineChart
+data_file: population
+data_key: population_data
+x_key: year
+x_prefix: null
+x_reverse: false
+y_key: population
+y_offset: 30
+y_divisor: 1e6
+start_step: 15
+end_step: 25
+chart_id: population-chart
+smoothed: true
+show_area: true
+table_col_1: Year
+table_col_2: Population
 ---
 
-<div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
+<div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToLineChart('/json/kenya-population.json','population_data','year',null,false,'population',30,1e6,15,25,'populationchart',true,true);
-    });
-</script>
+{% include {{ page.chart_function }}.html %}
 
 {% include chart-description.html %}
 
 <!--more-->
 
-{% assign data-file = page.data-file %}
-{% assign sources = site.data[data-file]['sources'] %}
+{% assign sources = site.data[page.data_file]['sources'] %}
 {% include source.html %}
 
 <div class="data-table table-responsive">
-    {% assign population_data = site.data.kenya-population.population_data %}
+    {% assign data = site.data[page.data_file][page.data_key] %}
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Year</th>
-                <th scope="col">Population {{ page.unit }}</th>
+                <th scope="col">{{ page.table_col_1 }}</th>
+                <th scope="col">{{ page.table_col_2 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
             </tr>
         </thead>
         <tbody>
-            {% for i in (15..25) %}
+            {% for i in (page.start_step..page.end_step) %}
                 <tr>
-                    <td>{{ population_data[i].year }} </td>
-                    <td>{{ population_data[i].population | divided_by: site.data.large-numbers.million | slice: 0, 5 }}</td>
+                    <td>{{ data[i][page.x_key] }} </td>
+                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.million | slice: 0, 5 }}</td>
                 </tr>
             {% endfor %}
         </tbody>

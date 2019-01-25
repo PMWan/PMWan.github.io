@@ -1,0 +1,19 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        jsonToComparisonLineChart(
+            '/json/{{ page.data_file }}.json',
+            '{{ page.data_key }}',
+            '{{ page.x_key }}',
+            {% if page.x_prefix == null %}null{% else %}'{{ page.x_prefix }}'{% endif %},
+            {{ page.x_reverse }},
+            '{{ page.y_key_1 }}',
+            '{{ page.y_key_2 }}',
+            {{ page.y_offset }},
+            {% if page.y_divisor == null %}null{% else %}{{ page.y_divisor }}{% endif %},
+            {{ page.start_step }},
+            {{ page.end_step }},
+            '{{ page.chart_id }}',
+            {{ page.smoothed }},
+            {{ page.show_area }});
+    });
+</script>

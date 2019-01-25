@@ -122,7 +122,17 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
 
         if (xReverse == true) {
             for (var step = startStep; step >= endStep; step--) {
-                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+
+                if (xKeyPrefix) {
+                    years.push(
+                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
+                        " " + "'" +
+                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        );
+                } else {
+                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                }
+
                 if (yDivisor) {
                     values1.push((jsonObj[dataKey][step][yKey1])/yDivisor);
                     values2.push((jsonObj[dataKey][step][yKey2])/yDivisor);
@@ -130,10 +140,21 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
                     values1.push(jsonObj[dataKey][step][yKey1]);
                     values2.push(jsonObj[dataKey][step][yKey2]);
                 }
+
             }
         } else {
             for (var step = startStep; step <= endStep; step++) {
-                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+
+                if (xKeyPrefix) {
+                    years.push(
+                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
+                        " " + "'" +
+                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        );
+                } else {
+                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                }
+
                 if (yDivisor) {
                     values1.push((jsonObj[dataKey][step][yKey1])/yDivisor);
                     values2.push((jsonObj[dataKey][step][yKey2])/yDivisor);
@@ -141,6 +162,7 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
                     values1.push(jsonObj[dataKey][step][yKey1]);
                     values2.push(jsonObj[dataKey][step][yKey2]);
                 }
+
             }
         }
 
@@ -160,6 +182,10 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
 
         if (smoothed == false) {
             options['lineSmooth'] = false            
+        }
+
+        if (showArea == true) {
+            options['showArea'] = true
         }
 
         if (xKeyPrefix) {
@@ -200,21 +226,43 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset
         var values = [];
         if (xReverse == true) {
             for (var step = startStep; step >= endStep; step--) {
-                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+
+                if (xKeyPrefix) {
+                    years.push(
+                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
+                        " " + "'" +
+                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        );
+                } else {
+                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                }
+
                 if (yDivisor) {
                     values.push((jsonObj[dataKey][step][yKey])/yDivisor);
                 } else {
                     values.push(jsonObj[dataKey][step][yKey]);
                 }
+
             }
         } else {
             for (var step = startStep; step <= endStep; step++) {
-                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+
+                if (xKeyPrefix) {
+                    years.push(
+                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
+                        " " + "'" +
+                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        );
+                } else {
+                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                }
+
                 if (yDivisor) {
                     values.push((jsonObj[dataKey][step][yKey])/yDivisor);
                 } else {
                     values.push(jsonObj[dataKey][step][yKey]);
                 }
+
             }
         }
         
@@ -224,11 +272,27 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset
         // Our series array that contains series objects or in this case series data arrays
         series: [values]
         };
+        
         var options = {
             axisY: {
                 offset: yOffset
             }
         };
+
+        if (xKeyPrefix) {
+            if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
+                options['axisX'] = { 
+                    offset: 35
+                }
+            } else {
+                options['axisX'] = { 
+                    offset: 35,
+                    labelInterpolationFnc: function(value, index) {
+                        return index % 2 === 0 ? value : null;
+                    }
+                }
+            }
+        }
         // Create a new line chart object where as first parameter we pass in a selector
         // that is resolving to our chart container element. The Second parameter
         // is the actual data object.
@@ -255,7 +319,17 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
 
         if (xReverse == true) {
             for (var step = startStep; step >= endStep; step--) {
-                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                
+                if (xKeyPrefix) {
+                    years.push(
+                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
+                        " " + "'" +
+                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        );
+                } else {
+                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                }
+
                 if (yDivisor) {
                     values1.push((jsonObj[dataKey][step][yKey1])/yDivisor);
                     values2.push((jsonObj[dataKey][step][yKey2])/yDivisor);
@@ -263,10 +337,21 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
                     values1.push(jsonObj[dataKey][step][yKey1]);
                     values2.push(jsonObj[dataKey][step][yKey2]);
                 }
+
             }
         } else {
             for (var step = startStep; step <= endStep; step++) {
-                years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                
+                if (xKeyPrefix) {
+                    years.push(
+                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
+                        " " + "'" +
+                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        );
+                } else {
+                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                }
+
                 if (yDivisor) {
                     values1.push((jsonObj[dataKey][step][yKey1])/yDivisor);
                     values2.push((jsonObj[dataKey][step][yKey2])/yDivisor);
@@ -274,6 +359,7 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
                     values1.push(jsonObj[dataKey][step][yKey1]);
                     values2.push(jsonObj[dataKey][step][yKey2]);
                 }
+
             }
         }
 
@@ -289,6 +375,21 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
                 offset: yOffset
             },
         };
+
+        if (xKeyPrefix) {
+            if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
+                options['axisX'] = { 
+                    offset: 35
+                }
+            } else {
+                options['axisX'] = { 
+                    offset: 35,
+                    labelInterpolationFnc: function(value, index) {
+                        return index % 2 === 0 ? value : null;
+                    }
+                }
+            }
+        }
 
         if (document.querySelector('.chartlist')) {
             options['seriesBarDistance'] = 8

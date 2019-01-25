@@ -2,22 +2,36 @@
 layout: chart
 author: Paul
 unit: (KSh, trillion)
-topic: domesticvsexternaldebt
 categories: [economy]
-description: Kenya's domestic and external public debt from Sep 2008 to Sep 2018.
+description: "Kenya's domestic and external public debt from Sep 2008 to Sep 2018."
 title: Public Debt - Domestic and External
 excerpt_separator: <!--more-->
 series-a: Domestic
 series-b: External
-data-file: public-debt
+chart_function: jsonToComparisonLineChart
+data_file: debt
+data_key: debt_data
+x_key: year
+x_prefix: month
+x_reverse: false
+y_key_1: domestic_debt
+y_key_2: external_debt
+y_offset: 30
+y_divisor: 1e12
+start_step: 0
+end_step: 10
+chart_id: domestic-external-debt-chart
+smoothed: true
+show_area: true
+table_col_1: Year
+table_col_2: Month
+table_col_3: Public Debt - Domestic
+table_col_4: Public Debt - External
 ---
-<div class="ct-chart ct-minor-sixth" id="{{ page.topic }}chart"></div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-        jsonToComparisonLineChart('/json/public-debt.json','debt_data','year','month',false,'domestic_debt','external_debt',30,1e12,0,10,'domesticvsexternaldebtchart',true);
-    });
-</script>
+<div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
+
+{% include {{ page.chart_function }}.html %}
 
 {% include key.html %}
 
@@ -25,28 +39,27 @@ data-file: public-debt
 
 <!--more-->
 
-{% assign data-file = page.data-file %}
-{% assign sources = site.data[data-file]['sources'] %}
+{% assign sources = site.data[page.data_file]['sources'] %}
 {% include source.html %}
 
 <div class="data-table table-responsive">
-    {% assign debt_data = site.data.public-debt.debt_data %}
+    {% assign data = site.data[page.data_file][page.data_key] %}
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Year</th>
-                <th scope="col">Month</th>
-                <th scope="col">Public Debt - Domestic {{ page.unit }}</th>
-                <th scope="col">Public Debt - External {{ page.unit }}</th>
+                <th scope="col">{{ page.table_col_1 }}</th>
+                <th scope="col">{{ page.table_col_2 }}</th>
+                <th scope="col">{{ page.table_col_3 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
+                <th scope="col">{{ page.table_col_4 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
             </tr>
         </thead>
         <tbody>
-            {% for data in debt_data %}
+            {% for i in (page.start_step..page.end_step) %}
                 <tr>
-                    <td>{{ data.year }}</td>
-                    <td>{{ data.month | slice: 0, 3 }}</td>
-                    <td>{{ data.domestic_debt | divided_by: site.data.large-numbers.trillion | slice: 0, 4 }}</td>
-                    <td>{{ data.external_debt | divided_by: site.data.large-numbers.trillion | slice: 0, 4 }}</td>
+                    <td>{{ data[i][page.x_key] }} </td>
+                    <td>{{ data[i][page.x_prefix] | slice: 0, 3 }} </td>
+                    <td>{{ data[i][page.y_key_1] | divided_by: site.data.large-numbers.trillion | slice: 0, 4 }}</td>
+                    <td>{{ data[i][page.y_key_2] | divided_by: site.data.large-numbers.trillion | slice: 0, 4 }}</td>
                 </tr>
             {% endfor %}
         </tbody>
