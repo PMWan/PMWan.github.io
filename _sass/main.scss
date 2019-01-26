@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: #000000;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -21,15 +21,20 @@ body {
 nav {
     padding-top: 1em;
     padding-bottom: 1em;
-    background-color: #f8f8f8;
+    background-color: #f6f6f6;
 }
 
 .filter-link {
     background-color: #ffffff;
+    color: black;
+    &:hover {
+        color: black;
+    }
 }
 
 #filter-category-name {
     margin-left: 0.5em;
+    color: #000000;
 }
 
 #link-to-home {
