@@ -19,18 +19,13 @@ body {
 }
 
 nav {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    background-color: #F7F7F7;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #F8F8F8;
 }
 
-// .filter-dropdown {
-//     margin-bottom: 0.5em;
-// }
-
 .filter-link {
-    margin: 0;
-    padding: 0;
+    background-color: #FFFFFF;
 }
 
 #filter-category-name {
@@ -44,7 +39,13 @@ nav {
 .content-wrapper {
     padding-top: 1em;
     padding-bottom: 1em;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
+}
+
+.chartlist-content-wrapper {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #F2F1F2;
 }
 
 .footer {
@@ -60,7 +61,7 @@ nav {
 }
 
 .data-table {
-    padding-top: 1em;
+    padding-top: 2em;
     text-align: center;
 }
 
@@ -119,9 +120,15 @@ nav {
 }
 
 .card {
-    border-radius: 0;
+    // border-radius: 0;
+    // background-color: #F7F7F7;
+    border: 0px;
 }
 
 .chartlist .card-body {
     padding-bottom: 0;
+}
+
+.chartlist .card-footer {
+    background-color: #FFFFFF;
 }
