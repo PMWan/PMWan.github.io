@@ -1,7 +1,7 @@
 <div class="dropright filter-dropdown">
-        <a class="btn btn-outline-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Category
-        </a>
+    <a class="btn btn-outline-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Category
+    </a>
 
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
         {% for category in site.data.categories %}
@@ -14,4 +14,8 @@
             <span id="filter-category-name">{{ category.name }}</span>
         {% endif %}
     {% endfor%}
+
+    {% if page.url != "/" %}  
+        <a href="/" aria-label="Clear category selection">[ &times; ]</a>
+    {% endif %}
 </div>

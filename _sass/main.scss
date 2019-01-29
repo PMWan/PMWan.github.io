@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: #0A0B0C;
+    background-color: #000;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -27,11 +27,21 @@ h5 {
     display: inline-block;
 }
 
-nav {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+.nav-wrapper {
     background-color: #ffffff;
     border-bottom: 1px solid #d8d8d8;
+}
+
+.navbar {
+    padding: 0.5em 0em 0.5em 0em;
+}
+
+.navbar-toggler {
+    border-radius: 0;
+}
+
+.form-control {
+    border-radius: 0;
 }
 
 #filter-category-name {
@@ -45,7 +55,7 @@ nav {
 .content-wrapper {
     padding-top: 1em;
     padding-bottom: 1em;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
 .chartlist-content-wrapper {
@@ -134,7 +144,7 @@ nav {
 }
 
 .chartlist .card-footer {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
 .btn {
