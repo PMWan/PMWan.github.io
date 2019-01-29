@@ -7,8 +7,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Roboto Slab', serif;
+}
+
+h5 {
+    font-weight: 400;
+}
+
 #logo {
-    font-weight: 900;
+    font-weight: 700;
     margin-bottom: 0;
     a {
         color: #0A0B0C;
@@ -16,18 +24,18 @@ body {
             text-decoration: none;
         }
     }
+    display: inline-block;
 }
 
 nav {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     background-color: #ffffff;
     border-bottom: 1px solid #d8d8d8;
 }
 
 #filter-category-name {
     margin-left: 0.5em;
-    color: #000000;
 }
 
 #link-to-home {
