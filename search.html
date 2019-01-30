@@ -1,0 +1,22 @@
+---
+layout: default-page
+---
+{% include linktohome.html %}
+
+<h5 id="search-page-header"></h5>
+
+<ul id="search-results"></ul>
+
+<script>
+  window.store = {
+    {% for chart in site.charts %}
+      "{{ chart.url | slugify }}": {
+        "title": "{{ chart.title | xml_escape }}",
+        "category": "{{ chart.category | xml_escape }}",
+        "description": {{ chart.description | strip_html | strip_newlines | jsonify }},
+        "url": "{{ chart.url | xml_escape }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+</script>
