@@ -24,7 +24,6 @@ h5 {
             text-decoration: none;
         }
     }
-    display: inline-block;
 }
 
 .nav-wrapper {
@@ -38,6 +37,10 @@ h5 {
 
 .navbar-toggler {
     border-radius: 0;
+}
+
+#tag-line {
+    font-size: .4em;
 }
 
 .form-control {
