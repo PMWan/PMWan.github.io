@@ -6,10 +6,6 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffse
         chartDiv.classList.add('ct-double-octave');
     }
 
-    // if (!document.querySelector('.chartlist') && (xKeyPrefix)) {
-    //     xKeyPrefix = null;
-    // }
-
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.send();
@@ -17,6 +13,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffse
         var jsonObj = JSON.parse(request.response);
         var years = [];
         var values = [];
+        var count = 0;
         if (xReverse == true) {
             for (var step = startStep; step >= endStep; step--) {
 
@@ -27,14 +24,22 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffse
                         (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
                         );
                 } else {
-                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 }
 
                 if (yDivisor) {
-                    values.push((jsonObj[dataKey][step][yKey])/yDivisor);
+                    values[count] = { 
+                        meta: years[count],
+                        value: (jsonObj[dataKey][step][yKey])/yDivisor 
+                    };
                 } else {
-                    values.push(jsonObj[dataKey][step][yKey]);
+                    values[count] = {
+                        meta: years[count],
+                        value: jsonObj[dataKey][step][yKey] 
+                    };
                 }
+
+                count = count + 1;
 
             }
         } else {
@@ -47,14 +52,22 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffse
                         (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
                         );
                 } else {
-                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 }
 
                 if (yDivisor) {
-                    values.push((jsonObj[dataKey][step][yKey])/yDivisor);
+                    values[count] = { 
+                        meta: years[count],
+                        value: (jsonObj[dataKey][step][yKey])/yDivisor 
+                    };
                 } else {
-                    values.push(jsonObj[dataKey][step][yKey]);
+                    values[count] = {
+                        meta: years[count],
+                        value: jsonObj[dataKey][step][yKey] 
+                    };
                 }
+
+                count = count + 1;
 
             }
         }
@@ -67,10 +80,13 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffse
         };
 
         var options = {
-            showPoint: false,
+            showPoint: true,
             axisY: {
                 offset: yOffset
-            }
+            },
+            plugins: [
+                Chartist.plugins.tooltip()
+            ]
         };
 
         if (smoothed == false) {
@@ -119,7 +135,7 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
         var years = [];
         var values1 = [];
         var values2 = [];
-
+        var count = 0;
         if (xReverse == true) {
             for (var step = startStep; step >= endStep; step--) {
 
@@ -130,16 +146,30 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
                         (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
                         );
                 } else {
-                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 }
 
                 if (yDivisor) {
-                    values1.push((jsonObj[dataKey][step][yKey1])/yDivisor);
-                    values2.push((jsonObj[dataKey][step][yKey2])/yDivisor);
+                    values1[count] = { 
+                        meta: years[count],
+                        value: (jsonObj[dataKey][step][yKey1])/yDivisor 
+                    };
+                    values2[count] = { 
+                        meta: years[count],
+                        value: (jsonObj[dataKey][step][yKey2])/yDivisor 
+                    };
                 } else {
-                    values1.push(jsonObj[dataKey][step][yKey1]);
-                    values2.push(jsonObj[dataKey][step][yKey2]);
+                    values1[count] = { 
+                        meta: years[count],
+                        value: jsonObj[dataKey][step][yKey1]
+                    };
+                    values2[count] = { 
+                        meta: years[count],
+                        value: jsonObj[dataKey][step][yKey2] 
+                    };
                 }
+
+                count = count + 1;
 
             }
         } else {
@@ -152,16 +182,30 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
                         (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
                         );
                 } else {
-                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 }
 
                 if (yDivisor) {
-                    values1.push((jsonObj[dataKey][step][yKey1])/yDivisor);
-                    values2.push((jsonObj[dataKey][step][yKey2])/yDivisor);
+                    values1[count] = { 
+                        meta: years[count],
+                        value: (jsonObj[dataKey][step][yKey1])/yDivisor 
+                    };
+                    values2[count] = { 
+                        meta: years[count],
+                        value: (jsonObj[dataKey][step][yKey2])/yDivisor 
+                    };
                 } else {
-                    values1.push(jsonObj[dataKey][step][yKey1]);
-                    values2.push(jsonObj[dataKey][step][yKey2]);
+                    values1[count] = { 
+                        meta: years[count],
+                        value: jsonObj[dataKey][step][yKey1]
+                    };
+                    values2[count] = { 
+                        meta: years[count],
+                        value: jsonObj[dataKey][step][yKey2] 
+                    };
                 }
+
+                count = count + 1;
 
             }
         }
@@ -174,10 +218,13 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
         };
 
         var options = {
-            showPoint: false,
+            showPoint: true,
             axisY: {
                 offset: yOffset
-            }
+            },
+            plugins: [
+                Chartist.plugins.tooltip()
+            ]
         };
 
         if (smoothed == false) {
@@ -224,6 +271,7 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset
         var jsonObj = JSON.parse(request.response);
         var years = [];
         var values = [];
+        var count = 0;
         if (xReverse == true) {
             for (var step = startStep; step >= endStep; step--) {
 
@@ -234,14 +282,22 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset
                         (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
                         );
                 } else {
-                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 }
 
                 if (yDivisor) {
-                    values.push((jsonObj[dataKey][step][yKey])/yDivisor);
+                    values[count] = { 
+                        meta: years[count],
+                        value: (jsonObj[dataKey][step][yKey])/yDivisor 
+                    };
                 } else {
-                    values.push(jsonObj[dataKey][step][yKey]);
+                    values[count] = {
+                        meta: years[count],
+                        value: jsonObj[dataKey][step][yKey] 
+                    };
                 }
+
+                count = count + 1;
 
             }
         } else {
@@ -254,14 +310,22 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset
                         (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
                         );
                 } else {
-                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 }
 
                 if (yDivisor) {
-                    values.push((jsonObj[dataKey][step][yKey])/yDivisor);
+                    values[count] = { 
+                        meta: years[count],
+                        value: (jsonObj[dataKey][step][yKey])/yDivisor 
+                    };
                 } else {
-                    values.push(jsonObj[dataKey][step][yKey]);
+                    values[count] = {
+                        meta: years[count],
+                        value: jsonObj[dataKey][step][yKey] 
+                    };
                 }
+
+                count = count + 1;
 
             }
         }
@@ -276,7 +340,10 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset
         var options = {
             axisY: {
                 offset: yOffset
-            }
+            },
+            plugins: [
+                Chartist.plugins.tooltip()
+            ]
         };
 
         if (xKeyPrefix) {
@@ -316,7 +383,7 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
         var years = [];
         var values1 = [];
         var values2 = [];
-
+        var count = 0;
         if (xReverse == true) {
             for (var step = startStep; step >= endStep; step--) {
                 
@@ -327,16 +394,30 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
                         (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
                         );
                 } else {
-                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 }
 
                 if (yDivisor) {
-                    values1.push((jsonObj[dataKey][step][yKey1])/yDivisor);
-                    values2.push((jsonObj[dataKey][step][yKey2])/yDivisor);
+                    values1[count] = { 
+                        meta: years[count],
+                        value: (jsonObj[dataKey][step][yKey1])/yDivisor 
+                    };
+                    values2[count] = { 
+                        meta: years[count],
+                        value: (jsonObj[dataKey][step][yKey2])/yDivisor 
+                    };
                 } else {
-                    values1.push(jsonObj[dataKey][step][yKey1]);
-                    values2.push(jsonObj[dataKey][step][yKey2]);
+                    values1[count] = { 
+                        meta: years[count],
+                        value: jsonObj[dataKey][step][yKey1]
+                    };
+                    values2[count] = { 
+                        meta: years[count],
+                        value: jsonObj[dataKey][step][yKey2] 
+                    };
                 }
+
+                count = count + 1;
 
             }
         } else {
@@ -349,16 +430,30 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
                         (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
                         );
                 } else {
-                    years.push((jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
                 }
 
                 if (yDivisor) {
-                    values1.push((jsonObj[dataKey][step][yKey1])/yDivisor);
-                    values2.push((jsonObj[dataKey][step][yKey2])/yDivisor);
+                    values1[count] = { 
+                        meta: years[count],
+                        value: (jsonObj[dataKey][step][yKey1])/yDivisor 
+                    };
+                    values2[count] = { 
+                        meta: years[count],
+                        value: (jsonObj[dataKey][step][yKey2])/yDivisor 
+                    };
                 } else {
-                    values1.push(jsonObj[dataKey][step][yKey1]);
-                    values2.push(jsonObj[dataKey][step][yKey2]);
+                    values1[count] = { 
+                        meta: years[count],
+                        value: jsonObj[dataKey][step][yKey1]
+                    };
+                    values2[count] = { 
+                        meta: years[count],
+                        value: jsonObj[dataKey][step][yKey2] 
+                    };
                 }
+
+                count = count + 1;
 
             }
         }
@@ -374,6 +469,9 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
             axisY: {
                 offset: yOffset
             },
+            plugins: [
+                Chartist.plugins.tooltip()
+            ]
         };
 
         if (xKeyPrefix) {
