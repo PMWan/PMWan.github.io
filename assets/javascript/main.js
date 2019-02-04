@@ -495,7 +495,7 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
 
         var responsiveOptions = [
             ['screen and (max-width: 640px)', {
-              seriesBarDistance: 5
+              seriesBarDistance: 6
             }]
         ];
         // Create a new line chart object where as first parameter we pass in a selector
