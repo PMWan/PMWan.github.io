@@ -1,27 +1,25 @@
 ---
 layout: chart
 author: Paul
-unit: (%)
-categories: [economy]
-description: "Kenya's Gross Domestic Product (GDP) growth rate from 2009 to 2017."
-title: GDP Growth Rate
+unit: (KSh, trillion)
+categories: [economy, ICT]
+description: "Kenya's mobile money transaction values from 2008 to 2018."
+title: Mobile Money Transaction Values
 excerpt_separator: <!--more-->
-chart_function: jsonToLineChart
-data_file: gdp
-data_key: gdp_data
+chart_function: jsonToBarChart
+data_file: mobile-money
+data_key: mobile_money_value_data
 x_key: year
 x_prefix: null
 x_reverse: false
-y_key: gdp_growth
-y_offset: 30
-y_divisor: null
-start_step: 8
-end_step: 16
-chart_id: gdp-growth-rate-chart
-smoothed: false
-show_area: false
+y_key: value
+y_offset: 35
+y_divisor: 1e12
+start_step: 0
+end_step: 10
+chart_id: mobile-money-transaction-values-chart
 table_col_1: Year
-table_col_2: GDP Growth Rate
+table_col_2: Mobile Money Transaction Values
 ---
 
 <div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
@@ -48,7 +46,7 @@ table_col_2: GDP Growth Rate
             {% for i in (page.start_step..page.end_step) %}
                 <tr>
                     <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.y_key] }}</td>
+                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
                 </tr>
             {% endfor %}
         </tbody>
