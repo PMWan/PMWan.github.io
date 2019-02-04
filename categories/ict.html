@@ -1,0 +1,14 @@
+---
+layout: category
+category: ict
+title: ICT
+permalink: /ict
+description: A collection of charts relating to the state of Kenya's ICT.
+---
+
+<div class="row chartlist">
+    {% assign charts = site.charts | where: "categories", page.category %}
+    {% for chart in charts %}
+        {% include chart.html %}
+    {% endfor %}
+</div>
