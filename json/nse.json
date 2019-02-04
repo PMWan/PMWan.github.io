@@ -2,7 +2,7 @@
   "sources": [
       {
         "source": "KNBS",
-        "source_url": "http://www.knbs.or.ke/download/leading-economic-indicator-october-2018/"
+        "source_url": "http://www.knbs.or.ke/download/leading-economic-indicator-november-2018/"
       }
     ],
   "nse_data": [
@@ -225,6 +225,16 @@
       "value_of_shares_million_ksh": 16890,
       "value_of_shares": 16890000000,
       "nse_20_share_index": 2820
+    },
+    {
+      "year": 2018,
+      "month": "November",
+      "no_of_transactions": 22252,
+      "no_of_shares_million": 407,
+      "no_of_shares": 407000000,
+      "value_of_shares_million_ksh": 10713,
+      "value_of_shares": 10713000000,
+      "nse_20_share_index": 2797
     }
   ]
 }
