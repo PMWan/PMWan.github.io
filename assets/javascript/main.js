@@ -256,7 +256,7 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
     }
 }
 
-function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset,yDivisor,startStep,endStep,chartDivId) {
+function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop,yKey,yOffset,yDivisor,startStep,endStep,chartDivId) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -341,6 +341,7 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset
             axisY: {
                 offset: yOffset
             },
+            axisX: {},
             plugins: [
                 Chartist.plugins.tooltip()
             ]
@@ -360,6 +361,11 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset
                 }
             }
         }
+
+        if (xPositionTop == true) {
+            options['axisX']['position'] = 'start';
+        }
+        
         // Create a new line chart object where as first parameter we pass in a selector
         // that is resolving to our chart container element. The Second parameter
         // is the actual data object.

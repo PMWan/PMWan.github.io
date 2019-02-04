@@ -2,25 +2,25 @@
 layout: chart
 author: Paul
 unit: (KSh, trillion)
-categories: [economy,ict]
-description: "Kenya's mobile money transaction values from 2008 to 2018."
-title: Mobile Money Transaction Values
+categories: [economy]
+description: "Kenya's trade deficit from 2007 to 2017."
+title: "Trade Deficit"
 excerpt_separator: <!--more-->
 chart_function: jsonToBarChart
-data_file: mobile-money
-data_key: mobile_money_value_data
+data_file: foreign-trade
+data_key: foreign_trade_data
 x_key: year
 x_prefix: null
 x_reverse: false
-x_position_top: false
-y_key: value
+x_position_top: true
+y_key: total_deficit
 y_offset: 35
 y_divisor: 1e12
 start_step: 0
 end_step: 10
-chart_id: mobile-money-transaction-values-chart
+chart_id: trade-deficit-chart
 table_col_1: Year
-table_col_2: Mobile Money Transaction Values
+table_col_2: Trade Deficit
 ---
 
 <div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
@@ -47,7 +47,7 @@ table_col_2: Mobile Money Transaction Values
             {% for i in (page.start_step..page.end_step) %}
                 <tr>
                     <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.trillion | slice: 0,5 }}</td>
                 </tr>
             {% endfor %}
         </tbody>
