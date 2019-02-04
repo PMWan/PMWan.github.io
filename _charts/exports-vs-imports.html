@@ -1,0 +1,62 @@
+---
+layout: chart
+author: Paul
+unit: (KSh, trillion)
+categories: [economy]
+description: "Kenya's total exports versus imports from 2007 to 2017."
+title: Exports vs. Imports
+excerpt_separator: <!--more-->
+series-a: Exports
+series-b: Imports
+chart_function: jsonToComparisonBarChart
+data_file: foreign-trade
+data_key: foreign_trade_data
+x_key: year
+x_prefix: null
+x_reverse: false
+y_key_1: total_exports
+y_key_2: total_imports
+y_offset: 35
+y_divisor: 1e12
+start_step: 0
+end_step: 10
+chart_id: exports-vs-imports-chart
+table_col_1: Year
+table_col_2: Exports
+table_col_3: Imports
+---
+
+<div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
+
+{% include {{ page.chart_function }}.html %}
+
+{% include key.html %}
+
+{% include chart-description.html %}
+
+<!--more-->
+
+{% assign sources = site.data[page.data_file]['sources'] %}
+{% include source.html %}
+
+<div class="data-table table-responsive">
+    {% assign data = site.data[page.data_file][page.data_key] %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">{{ page.table_col_1 }}</th>
+                <th scope="col">{{ page.table_col_2 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
+                <th scope="col">{{ page.table_col_3 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in (page.start_step..page.end_step) %}
+                <tr>
+                    <td>{{ data[i][page.x_key] }} </td>
+                    <td>{{ data[i][page.y_key_1] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ data[i][page.y_key_2] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
