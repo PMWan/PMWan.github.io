@@ -6,7 +6,12 @@ title: Kenya's dashboard
 {% include filter.html %}
 
 <div class="row chartlist">
-    {% for chart in site.charts %}
+    {% assign sorted_charts = site.charts | sort: 'last_modified_at' | reverse %}
+    {% for chart in sorted_charts %}
       {% include chart.html %}
     {% endfor %}
 </div>
+
+<!-- <div class="btn-load-more-wrapper">
+  <button class="btn btn-dark">Load more charts</button>
+</div> -->
