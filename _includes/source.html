@@ -1,6 +1,15 @@
 <div class="source-wrapper">
     <span>Source:</span>
     {% for source in sources %}
-        <a href="{{ source.source_url }}" target="_blank">{{ source.source }}</a>      
+        <a href="{{ source.source_url }}" target="_blank">{{ source.source }}</a>
+        {% unless forloop.last %},{% endunless %}
     {% endfor %}
+
+    <p class="last-updated text-muted">
+        {% if page.date %}
+            Last updated on {{ page.date | date_to_string }}
+        {% elsif chart.date %}
+            Last updated on {{ chart.date | date_to_string }}
+        {% endif %}
+    </p>
 </div>

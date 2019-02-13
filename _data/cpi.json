@@ -2,11 +2,11 @@
   "sources": 
     [
       {
-        "source": "KNBS(1)",
+        "source": "KNBS[1]",
         "source_url": "http://www.knbs.or.ke/download/inflation-trends-1961-present/"
       },
       {
-        "source": "KNBS(2)",
+        "source": "KNBS[2]",
         "source_url": "https://www.knbs.or.ke/download/cpi-and-rates-of-inflation-for-december-2018/"
       }
     ],
