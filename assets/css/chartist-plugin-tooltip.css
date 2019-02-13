@@ -4,7 +4,7 @@
   opacity: 0;
   min-width: 5em;
   padding: .5em;
-  background: #e9e9e9;
+  background: yellow;
   color: #453D3F;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -24,7 +24,7 @@
     height: 0;
     margin-left: -15px;
     border: 15px solid transparent;
-    border-top-color: #e9e9e9; }
+    border-top-color: yellow; }
   .chartist-tooltip.tooltip-show {
     opacity: 1; }
 
