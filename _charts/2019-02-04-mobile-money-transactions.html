@@ -1,29 +1,26 @@
 ---
 layout: chart
 author: Paul
-unit: null
-categories: [economy]
-description: "Nairobi Stock Exchange's NSE-20 Share Index monthly average from Nov 2017 to Nov 2018."
-title: NSE-20 Share Index - Monthly Average
+unit: (KSh, trillion)
+categories: [economy,ict]
+description: "Value of mobile money transactions in Kenya from 2008 to 2018."
+title: Mobile Money Transactions
 excerpt_separator: <!--more-->
-chart_function: jsonToLineChart
-data_file: nse
-data_key: nse_data
+chart_function: jsonToBarChart
+data_file: mobile-money
+data_key: mobile_money_value_data
 x_key: year
-x_prefix: month
+x_prefix: null
 x_reverse: false
-y_key: nse_20_share_index
-y_offset: 40
-y_divisor: null
-start_step: 10
-end_step: 22
-chart_id: nse-20-share-index-chart
-smoothed: false
-show_area: false
+x_position_top: false
+y_key: value
+y_offset: 35
+y_divisor: 1e12
+start_step: 0
+end_step: 10
+chart_id: mobile-money-transaction-chart
 table_col_1: Year
-table_col_2: Month
-table_col_3: NSE-20 Share Index - Monthly Average
-last_modified_at: 2019-01-01T00:00:00+03:00
+table_col_2: Mobile Money Transactions
 ---
 
 <div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
@@ -43,16 +40,14 @@ last_modified_at: 2019-01-01T00:00:00+03:00
         <thead>
             <tr>
                 <th scope="col">{{ page.table_col_1 }}</th>
-                <th scope="col">{{ page.table_col_2 }}</th>
-                <th scope="col">{{ page.table_col_3 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
+                <th scope="col">{{ page.table_col_2 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
             </tr>
         </thead>
         <tbody>
             {% for i in (page.start_step..page.end_step) %}
                 <tr>
                     <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.x_prefix] | slice: 0, 3 }} </td>
-                    <td>{{ data[i][page.y_key] }}</td>
+                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
                 </tr>
             {% endfor %}
         </tbody>

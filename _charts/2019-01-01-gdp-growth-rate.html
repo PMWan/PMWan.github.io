@@ -3,26 +3,25 @@ layout: chart
 author: Paul
 unit: (%)
 categories: [economy]
-description: "Kenya's annual average inflation rate from 2008 to 2018."
-title: Inflation Rate - Annual Average
+description: "Kenya's Gross Domestic Product (GDP) growth rate from 2009 to 2017."
+title: GDP Growth Rate
 excerpt_separator: <!--more-->
 chart_function: jsonToLineChart
-data_file: cpi
-data_key: cpi_data
+data_file: gdp
+data_key: gdp_data
 x_key: year
 x_prefix: null
 x_reverse: false
-y_key: average_inflation_rate
-y_offset: 35
+y_key: gdp_growth
+y_offset: 30
 y_divisor: null
-start_step: 1
-end_step: 11
-chart_id: inflation-chart
+start_step: 8
+end_step: 16
+chart_id: gdp-growth-rate-chart
 smoothed: false
 show_area: false
 table_col_1: Year
-table_col_2: Inflation Rate
-last_modified_at: 2019-01-01T00:00:00+03:00
+table_col_2: GDP Growth Rate
 ---
 
 <div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>

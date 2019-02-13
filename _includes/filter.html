@@ -1,7 +1,9 @@
 <div class="dropdown filter-dropdown">
     <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {% for category in site.data.categories %}
-            {% if page.url == category.link %}
+            {% assign page_category = page.category_name | downcase %}
+            {% assign category_name = category.name | downcase %}
+            {% if page_category == category_name %}
                 {{ category.name }}
             {% endif %}
         {% endfor%}

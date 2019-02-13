@@ -3,31 +3,27 @@ layout: chart
 author: Paul
 unit: (KSh, trillion)
 categories: [economy]
-description: "Kenya's domestic versus external public debt from Sep 2008 to Sep 2018."
-title: Public Debt - Domestic vs. External
+description: "Kenya's nominal and real Gross Domestic Product (GDP) from 2009 to 2017. NB: The real GDP figures are based on 2009 prices."
+title: GDP - Nominal and Real
 excerpt_separator: <!--more-->
-series-a: Domestic
-series-b: External
-chart_function: jsonToComparisonLineChart
-data_file: debt
-data_key: debt_data
+series-a: Nominal
+series-b: Real
+chart_function: jsonToComparisonBarChart
+data_file: gdp
+data_key: gdp_data
 x_key: year
-x_prefix: month
+x_prefix: null
 x_reverse: false
-y_key_1: domestic_debt
-y_key_2: external_debt
+y_key_1: nominal_gdp
+y_key_2: real_gdp
 y_offset: 30
 y_divisor: 1e12
-start_step: 0
-end_step: 10
-chart_id: domestic-external-debt-chart
-smoothed: true
-show_area: true
+start_step: 8
+end_step: 16
+chart_id: gdp-chart
 table_col_1: Year
-table_col_2: Month
-table_col_3: Public Debt - Domestic
-table_col_4: Public Debt - External
-last_modified_at: 2019-01-01T00:00:00+03:00
+table_col_2: Nominal GDP
+table_col_3: Real GDP
 ---
 
 <div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
@@ -49,18 +45,16 @@ last_modified_at: 2019-01-01T00:00:00+03:00
         <thead>
             <tr>
                 <th scope="col">{{ page.table_col_1 }}</th>
-                <th scope="col">{{ page.table_col_2 }}</th>
+                <th scope="col">{{ page.table_col_2 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
                 <th scope="col">{{ page.table_col_3 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
-                <th scope="col">{{ page.table_col_4 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
             </tr>
         </thead>
         <tbody>
             {% for i in (page.start_step..page.end_step) %}
                 <tr>
                     <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.x_prefix] | slice: 0, 3 }} </td>
-                    <td>{{ data[i][page.y_key_1] | divided_by: site.data.large-numbers.trillion | slice: 0, 4 }}</td>
-                    <td>{{ data[i][page.y_key_2] | divided_by: site.data.large-numbers.trillion | slice: 0, 4 }}</td>
+                    <td>{{ data[i][page.y_key_1] | divided_by: site.data.large-numbers.trillion | slice: 0, 5 }}</td>
+                    <td>{{ data[i][page.y_key_2] | divided_by: site.data.large-numbers.trillion | slice: 0, 5 }}</td>
                 </tr>
             {% endfor %}
         </tbody>

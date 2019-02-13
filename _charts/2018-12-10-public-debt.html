@@ -1,28 +1,28 @@
 ---
 layout: chart
 author: Paul
-unit: (%)
+unit: (KSh, trillion)
 categories: [economy]
-description: "Kenya's Gross Domestic Product (GDP) growth rate from 2009 to 2017."
-title: GDP Growth Rate
+description: "Kenya's total public debt from Sep 2008 to Sep 2018."
+title: Public Debt
 excerpt_separator: <!--more-->
 chart_function: jsonToLineChart
-data_file: gdp
-data_key: gdp_data
+data_file: debt
+data_key: debt_data
 x_key: year
-x_prefix: null
+x_prefix: month
 x_reverse: false
-y_key: gdp_growth
+y_key: total_debt
 y_offset: 30
-y_divisor: null
-start_step: 8
-end_step: 16
-chart_id: gdp-growth-rate-chart
-smoothed: false
-show_area: false
+y_divisor: 1e12
+start_step: 0
+end_step: 10
+chart_id: public-debt-chart
+smoothed: true
+show_area: true
 table_col_1: Year
-table_col_2: GDP Growth Rate
-last_modified_at: 2019-01-01T00:00:00+03:00
+table_col_2: Month
+table_col_3: Public Debt
 ---
 
 <div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
@@ -42,14 +42,16 @@ last_modified_at: 2019-01-01T00:00:00+03:00
         <thead>
             <tr>
                 <th scope="col">{{ page.table_col_1 }}</th>
-                <th scope="col">{{ page.table_col_2 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
+                <th scope="col">{{ page.table_col_2 }}</th>
+                <th scope="col">{{ page.table_col_3 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
             </tr>
         </thead>
         <tbody>
             {% for i in (page.start_step..page.end_step) %}
                 <tr>
                     <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.y_key] }}</td>
+                    <td>{{ data[i][page.x_prefix] | slice: 0, 3 }} </td>
+                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
                 </tr>
             {% endfor %}
         </tbody>

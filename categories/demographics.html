@@ -1,14 +1,10 @@
 ---
 layout: category
-category: demographics
+category_name: demographics
 title: Demographics
-permalink: /demographics
+permalink: /demographics/
 description: A collection of charts relating to the state of Kenya's demographics.
+pagination: 
+  enabled: true
+  category: demographics
 ---
-
-<div class="row chartlist">
-    {% assign charts = site.charts | where: "categories", page.category %}
-    {% for chart in charts %}
-        {% include chart.html %}
-    {% endfor %}
-</div>

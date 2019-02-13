@@ -1,28 +1,27 @@
 ---
 layout: chart
 author: Paul
-unit: (People, million)
-categories: [demographics]
-description: Kenya's population estimates and projections from 2014 to 2024.
-title: Population
+unit: null
+categories: [economy]
+description: "Kenya's Consumer Price Index (CPI) annual average from 2008 to 2018. NB: The base period is February 2009."
+title: Consumer Price Index - Annual Average
 excerpt_separator: <!--more-->
 chart_function: jsonToLineChart
-data_file: population
-data_key: population_data
+data_file: cpi
+data_key: cpi_data
 x_key: year
 x_prefix: null
 x_reverse: false
-y_key: population
-y_offset: 30
-y_divisor: 1e6
-start_step: 15
-end_step: 25
-chart_id: population-chart
-smoothed: true
-show_area: true
+y_key: average_cpi
+y_offset: 35
+y_divisor: null
+start_step: 1
+end_step: 11
+chart_id: cpi-chart
+smoothed: false
+show_area: false
 table_col_1: Year
-table_col_2: Population
-last_modified_at: 2019-01-01T00:00:00+03:00
+table_col_2: CPI - Annual Average
 ---
 
 <div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
@@ -49,16 +48,9 @@ last_modified_at: 2019-01-01T00:00:00+03:00
             {% for i in (page.start_step..page.end_step) %}
                 <tr>
                     <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.million | slice: 0, 5 }}</td>
+                    <td>{{ data[i][page.y_key] }}</td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
-
-<h6>Notes:</h6>
-<ul>
-    <li>
-        The data above was sourced from the 2017 revision of the UN World Population Prospects (UN WPP). It is the twenty-fifth round of official United Nations population estimates and projections that have been prepared by the Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat.
-    </li>
-</ul>

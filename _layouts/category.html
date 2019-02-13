@@ -4,4 +4,10 @@ layout: chartlist-page
 
 {% include filter.html %}
 
-{{ content }}
+<div class="row chartlist">
+    {% for chart in paginator.posts %}
+        {% include chart.html %}
+    {% endfor %}
+</div>
+
+{% include pagination-links.html %}

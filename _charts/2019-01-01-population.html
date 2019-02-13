@@ -1,37 +1,32 @@
 ---
 layout: chart
 author: Paul
-unit: (KSh, trillion)
-categories: [economy]
-description: "Kenya's annual exports versus imports from 2007 to 2017."
-title: Exports vs. Imports
+unit: (People, million)
+categories: [demographics]
+description: Kenya's population estimates and projections from 2014 to 2024.
+title: Population
 excerpt_separator: <!--more-->
-series-a: Exports
-series-b: Imports
-chart_function: jsonToComparisonBarChart
-data_file: foreign-trade
-data_key: foreign_trade_data
+chart_function: jsonToLineChart
+data_file: population
+data_key: population_data
 x_key: year
 x_prefix: null
 x_reverse: false
-y_key_1: total_exports
-y_key_2: total_imports
-y_offset: 35
-y_divisor: 1e12
-start_step: 0
-end_step: 10
-chart_id: exports-vs-imports-chart
+y_key: population
+y_offset: 30
+y_divisor: 1e6
+start_step: 15
+end_step: 25
+chart_id: population-chart
+smoothed: true
+show_area: true
 table_col_1: Year
-table_col_2: Exports
-table_col_3: Imports
-last_modified_at: 2019-02-04T00:00:00+03:00
+table_col_2: Population
 ---
 
 <div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
 
 {% include {{ page.chart_function }}.html %}
-
-{% include key.html %}
 
 {% include chart-description.html %}
 
@@ -47,17 +42,22 @@ last_modified_at: 2019-02-04T00:00:00+03:00
             <tr>
                 <th scope="col">{{ page.table_col_1 }}</th>
                 <th scope="col">{{ page.table_col_2 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
-                <th scope="col">{{ page.table_col_3 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
             </tr>
         </thead>
         <tbody>
             {% for i in (page.start_step..page.end_step) %}
                 <tr>
                     <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.y_key_1] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
-                    <td>{{ data[i][page.y_key_2] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.million | slice: 0, 5 }}</td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
+
+<h6>Notes:</h6>
+<ul>
+    <li>
+        The data above was sourced from the 2017 revision of the UN World Population Prospects (UN WPP). It is the twenty-fifth round of official United Nations population estimates and projections that have been prepared by the Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat.
+    </li>
+</ul>

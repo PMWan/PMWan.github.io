@@ -1,13 +1,17 @@
 ---
 layout: chartlist-page
 title: Kenya's dashboard
+category_name: all
+pagination: 
+  enabled: true
 ---
 
 {% include filter.html %}
 
 <div class="row chartlist">
-    {% assign sorted_charts = site.charts | sort: 'last_modified_at' | reverse %}
-    {% for chart in sorted_charts %}
+    {% for chart in paginator.posts %}
       {% include chart.html %}
     {% endfor %}
 </div>
+
+{% include pagination-links.html %}

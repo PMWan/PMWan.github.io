@@ -1,14 +1,10 @@
 ---
 layout: category
-category: economy
 title: Economy
-permalink: /economy
+category_name: economy
+permalink: /economy/
 description: A collection of charts relating to the state of Kenya's economy.
+pagination: 
+  enabled: true
+  category: economy
 ---
-
-<div class="row chartlist">
-    {% assign charts = site.charts | where: "categories", page.category %}
-    {% for chart in charts %}
-        {% include chart.html %}
-    {% endfor %}
-</div>

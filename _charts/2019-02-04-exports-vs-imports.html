@@ -1,33 +1,36 @@
 ---
 layout: chart
 author: Paul
-unit: null
+unit: (KSh, trillion)
 categories: [economy]
-description: "Kenya's Consumer Price Index (CPI) annual average from 2008 to 2018. NB: The base period is February 2009."
-title: Consumer Price Index - Annual Average
+description: "Kenya's annual exports versus imports from 2007 to 2017."
+title: Exports vs. Imports
 excerpt_separator: <!--more-->
-chart_function: jsonToLineChart
-data_file: cpi
-data_key: cpi_data
+series-a: Exports
+series-b: Imports
+chart_function: jsonToComparisonBarChart
+data_file: foreign-trade
+data_key: foreign_trade_data
 x_key: year
 x_prefix: null
 x_reverse: false
-y_key: average_cpi
+y_key_1: total_exports
+y_key_2: total_imports
 y_offset: 35
-y_divisor: null
-start_step: 1
-end_step: 11
-chart_id: cpi-chart
-smoothed: false
-show_area: false
+y_divisor: 1e12
+start_step: 0
+end_step: 10
+chart_id: exports-vs-imports-chart
 table_col_1: Year
-table_col_2: CPI - Annual Average
-last_modified_at: 2019-01-01T00:00:00+03:00
+table_col_2: Exports
+table_col_3: Imports
 ---
 
 <div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
 
 {% include {{ page.chart_function }}.html %}
+
+{% include key.html %}
 
 {% include chart-description.html %}
 
@@ -43,13 +46,15 @@ last_modified_at: 2019-01-01T00:00:00+03:00
             <tr>
                 <th scope="col">{{ page.table_col_1 }}</th>
                 <th scope="col">{{ page.table_col_2 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
+                <th scope="col">{{ page.table_col_3 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
             </tr>
         </thead>
         <tbody>
             {% for i in (page.start_step..page.end_step) %}
                 <tr>
                     <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.y_key] }}</td>
+                    <td>{{ data[i][page.y_key_1] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ data[i][page.y_key_2] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
                 </tr>
             {% endfor %}
         </tbody>
