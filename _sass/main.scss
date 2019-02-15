@@ -192,6 +192,8 @@ h5 {
     }
 }
 
-thead {
-    background-color: #ffffff;
+table.floatThead-table {
+    border-top: none;
+    border-bottom: none;
+    background-color: #FFF;
 }
