@@ -47,11 +47,6 @@ h5 {
     margin-left: 0.5em;
 }
 
-#link-to-home {
-    margin-bottom: 1em;
-    // text-decoration: underline;
-}
-
 .content-wrapper {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -182,5 +177,17 @@ h5 {
     .next, .previous {
         margin: 0em 0.5em;
         min-width: 90px;
+    }
+}
+
+.hidden-element {
+    display: none;
+}
+
+#go-home-or-go-back-links-wrapper {
+    padding-bottom: 1em;
+    a{
+        text-decoration: underline;
+        margin-right: 1em;
     }
 }

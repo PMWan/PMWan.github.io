@@ -510,3 +510,24 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
         new Chartist.Bar("#" + chartDivId, data, options, responsiveOptions);
     }
 }
+
+function goBack() {
+    window.history.back();
+}
+
+(function () {
+    if (document.getElementById('go-home-or-go-back-links-wrapper')) {
+        var ref = document.referrer;
+        if (ref.match(/^https?:\/\/([^\/]+\.)?localhost:4000(\/|$)/i) || ref.match(/^https?:\/\/([^\/]+\.)?dashibodi\.com(\/|$)/i)) {
+            if (window.history.length > 1) {
+                document.getElementById('link-to-go-back').classList.remove('hidden-element');
+                document.getElementById('link-to-home').classList.remove('hidden-element');
+            } else {
+                // runs in case of 'open in new tab' from within dashibodi
+                document.getElementById('link-to-home').classList.remove('hidden-element');
+            }
+        } else {
+            document.getElementById('link-to-home').classList.remove('hidden-element');
+        }
+    }
+})();
