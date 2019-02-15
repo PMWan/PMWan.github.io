@@ -516,6 +516,7 @@ function goBack() {
 }
 
 (function () {
+    // inserts 'home' and/or 'go back' links if user browsed to chart or contact page from within site
     if (document.getElementById('go-home-or-go-back-links-wrapper')) {
         var ref = document.referrer;
         if (ref.match(/^https?:\/\/([^\/]+\.)?localhost:4000(\/|$)/i) || ref.match(/^https?:\/\/([^\/]+\.)?dashibodi\.com(\/|$)/i)) {
