@@ -256,7 +256,7 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
     }
 }
 
-function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop,yKey,yOffset,yDivisor,startStep,endStep,chartDivId) {
+function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop,xSlanted,yKey,yOffset,yDivisor,startStep,endStep,chartDivId) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -282,7 +282,11 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
                         (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
                         );
                 } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    if (xSlanted) {
+                        years.push(jsonObj[dataKey][step][xKey]);
+                    } else {
+                        years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    }
                 }
 
                 if (yDivisor) {
@@ -310,7 +314,11 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
                         (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
                         );
                 } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    if (xSlanted) {
+                        years.push(jsonObj[dataKey][step][xKey]);
+                    } else {
+                        years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    }
                 }
 
                 if (yDivisor) {

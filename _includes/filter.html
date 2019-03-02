@@ -1,5 +1,5 @@
 <div class="dropdown filter-dropdown">
-    <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {% for category in site.data.categories %}
             {% assign page_category = page.category_name | downcase %}
             {% assign category_name = category.name | downcase %}
@@ -10,7 +10,8 @@
     </a>
 
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        {% for category in site.data.categories %}
+        {% assign chart_categories = site.data.categories | sort: 'name' %}
+        {% for category in chart_categories %}
             <a class="dropdown-item" href="{{ category.link }}">{{ category.name }}</a>
         {% endfor %}
     </div>

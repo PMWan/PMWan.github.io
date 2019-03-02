@@ -131,7 +131,7 @@ h5 {
 }
 
 .chart-description-extra-top-padding {
-    padding-top: 1em;
+    padding-top: 1.5em;
 }
 
 .chart-wrapper {
@@ -195,4 +195,19 @@ table.floatThead-table {
     border-top: none;
     border-bottom: none;
     background-color: #FFF;
+}
+
+.slanted-labels-barchart {
+    .ct-label.ct-label.ct-horizontal.ct-end {
+        position: relative;
+        justify-content: flex-end;
+        text-align: right;
+        transform-origin: 100% 0%;
+        transform: translate(-50%) rotate(-45deg);
+        white-space:nowrap;
+    }
+
+    svg.ct-chart-bar, svg.ct-chart-line {
+        overflow: visible;
+    }
 }

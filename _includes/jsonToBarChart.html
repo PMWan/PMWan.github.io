@@ -1,4 +1,4 @@
-{% if page.x_position_top == true %}
+{% if page.x_position_top == true or page.x_slanted == true %}
     <div class="chart-description-extra-top-padding"></div>
 {% endif %}
 
@@ -11,6 +11,7 @@
             {% if page.x_prefix == null %}null{% else %}'{{ page.x_prefix }}'{% endif %},
             {{ page.x_reverse }},
             {{ page.x_position_top }},
+            {{ page.x_slanted }},
             '{{ page.y_key }}',
             {{ page.y_offset }},
             {% if page.y_divisor == null %}null{% else %}{{ page.y_divisor }}{% endif %},

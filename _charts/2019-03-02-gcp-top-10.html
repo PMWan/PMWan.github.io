@@ -2,29 +2,29 @@
 layout: chart
 author: Paul
 unit: (KSh, trillion)
-categories: [economy,ict]
-description: "Value of mobile money transactions in Kenya from 2008 to 2018."
-title: Mobile Money Transactions
+categories: [economy, counties]
+description: "Kenya's top 10 counties by Gross County Product (GCP) in 2017."
+title: Gross County Product - Top 10 Counties
 excerpt_separator: <!--more-->
 chart_function: jsonToBarChart
-data_file: mobile-money
-data_key: mobile_money_value_data
-x_key: year
+data_file: gcp
+data_key: gcp_data
+x_key: county
 x_prefix: null
 x_reverse: false
 x_position_top: false
-x_slanted: false
-y_key: value
-y_offset: 35
+x_slanted: true
+y_key: gcp_2017
+y_offset: 30
 y_divisor: 1e12
 start_step: 0
-end_step: 10
-chart_id: mobile-money-transaction-chart
-table_col_1: Year
-table_col_2: Mobile Money Transactions
+end_step: 9
+chart_id: gcp-shares-chart
+table_col_1: County
+table_col_2: Gross County Product
 ---
 
-<div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
+<div class="ct-chart ct-minor-sixth slanted-labels-barchart" id="{{ page.chart_id }}"></div>
 
 {% include {{ page.chart_function }}.html %}
 
@@ -48,9 +48,16 @@ table_col_2: Mobile Money Transactions
             {% for i in (page.start_step..page.end_step) %}
                 <tr>
                     <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.trillion | slice: 0, 5 }}</td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
+
+<h6>Notes:</h6>
+<ul>
+    <li>
+        Gross County Product (GCP) is a geographic breakdown of Kenya’s Gross Domestic Product (GDP) that gives an estimate of the size and structure of county economies. It also provides a benchmark for evaluating the growth of county economies over time.
+    </li>
+</ul>
