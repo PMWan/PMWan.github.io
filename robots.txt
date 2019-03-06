@@ -1,0 +1,10 @@
+---
+---
+
+User-agent: *
+Disallow: /search
+Disallow: /page/
+Disallow: /*/page/
+Disallow: /*?
+
+Sitemap: {{ "sitemap.xml" | absolute_url }}
