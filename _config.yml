@@ -31,6 +31,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate-v2
 
+sass:
+  style: compressed
+
 collections:
   charts:
     output: true
