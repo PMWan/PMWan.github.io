@@ -256,7 +256,7 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
     }
 }
 
-function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop,xSlanted,yKey,yOffset,yDivisor,startStep,endStep,chartDivId) {
+function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop,horizontalBars,yKey,yOffset,yDivisor,startStep,endStep,chartDivId) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -282,7 +282,7 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
                         (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
                         );
                 } else {
-                    if (xSlanted) {
+                    if (horizontalBars) {
                         years.push(jsonObj[dataKey][step][xKey]);
                     } else {
                         years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
@@ -314,7 +314,7 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
                         (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
                         );
                 } else {
-                    if (xSlanted) {
+                    if (horizontalBars) {
                         years.push(jsonObj[dataKey][step][xKey]);
                     } else {
                         years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
@@ -372,6 +372,11 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
 
         if (xPositionTop == true) {
             options['axisX']['position'] = 'start';
+        }
+
+        if (horizontalBars == true) {
+            options['reverseData'] = true;
+            options['horizontalBars'] = true;
         }
         
         // Create a new line chart object where as first parameter we pass in a selector
