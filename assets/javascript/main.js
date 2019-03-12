@@ -261,6 +261,7 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
         chartDiv.classList.remove('ct-minor-sixth');
+        chartDiv.classList.remove('ct-major-third');
         chartDiv.classList.add('ct-double-octave');
     }
 
@@ -375,7 +376,6 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
         }
 
         if (horizontalBars == true) {
-            options['reverseData'] = true;
             options['horizontalBars'] = true;
         }
         
