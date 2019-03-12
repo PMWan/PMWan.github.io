@@ -6,5 +6,6 @@ Disallow: /search
 Disallow: /page/
 Disallow: /*/page/
 Disallow: /*?
+Disallow: /swdchallenge_mar_2019/
 
 Sitemap: {{ "sitemap.xml" | absolute_url }}
