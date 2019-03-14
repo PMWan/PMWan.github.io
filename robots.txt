@@ -3,8 +3,6 @@
 
 User-agent: *
 Disallow: /search
-Disallow: /page/
-Disallow: /*/page/
 Disallow: /*?
 Disallow: /swdchallenge_mar_2019/
 
