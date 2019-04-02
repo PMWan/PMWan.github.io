@@ -4,6 +4,5 @@
 User-agent: *
 Disallow: /search
 Disallow: /*?
-Disallow: /swdchallenge_mar_2019/
 
 Sitemap: {{ "sitemap.xml" | absolute_url }}
