@@ -4,27 +4,27 @@ author: Paul
 unit: (KSh, trillion)
 categories: [economy, counties]
 description: "Kenya's top 10 counties by Gross County Product (GCP) in 2017."
-title: Gross County Product - Top 10 Counties
+title: GCP - Top 10 Counties
 excerpt_separator: <!--more-->
 chart_function: jsonToBarChart
 data_file: gcp
 data_key: gcp_data
 x_key: county
 x_prefix: null
-x_reverse: false
+x_reverse: true
 x_position_top: false
 horizontal_bars: true
 y_key: gcp_2017
 y_offset: 70
 y_divisor: 1e12
-start_step: 0
-end_step: 9
+start_step: 9
+end_step: 0
 chart_id: gcp-shares-chart
 table_col_1: County
-table_col_2: Gross County Product
+table_col_2: GCP
 ---
 
-<div class="ct-chart ct-major-third" id="{{ page.chart_id }}"></div>
+<div class="ct-chart ct-square" id="{{ page.chart_id }}"></div>
 
 {% include {{ page.chart_function }}.html %}
 
@@ -40,13 +40,15 @@ table_col_2: Gross County Product
     <table class="table">
         <thead>
             <tr>
+                <th scope="col">Rank</th>
                 <th scope="col">{{ page.table_col_1 }}</th>
                 <th scope="col">{{ page.table_col_2 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
             </tr>
         </thead>
         <tbody>
-            {% for i in (page.start_step..page.end_step) %}
+            {% for i in (page.end_step..46) %}
                 <tr>
+                    <td>{{ i | plus: 1 }}</td>
                     <td>{{ data[i][page.x_key] }} </td>
                     <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.trillion | slice: 0, 5 }}</td>
                 </tr>

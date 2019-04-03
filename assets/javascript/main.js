@@ -260,9 +260,14 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
-        chartDiv.classList.remove('ct-minor-sixth');
-        chartDiv.classList.remove('ct-major-third');
-        chartDiv.classList.add('ct-double-octave');
+        if (chartDiv.classList.contains('ct-minor-sixth')) {
+            chartDiv.classList.remove('ct-minor-sixth');
+            chartDiv.classList.add('ct-double-octave');
+        }
+        if (chartDiv.classList.contains('ct-square')) {
+            chartDiv.classList.remove('ct-square');
+            chartDiv.classList.add('ct-major-twelfth');
+        }
     }
 
     var request = new XMLHttpRequest();

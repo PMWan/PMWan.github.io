@@ -1,30 +1,30 @@
 ---
 layout: chart
 author: Paul
-unit:
-categories: []
-description:
-title:
+unit: (%)
+categories: [counties, economy]
+description: "Kenya's top 10 counties by average Gross County Product (GCP) growth rate between 2014 and 2017."
+title: "GCP Growth Rate - Top 10 Counties"
 excerpt_separator: <!--more-->
 chart_function: jsonToBarChart
-data_file:
-data_key:
-x_key:
-x_prefix:
-x_reverse:
-x_position_top:
-horizontal_bars:
-y_key:
-y_offset:
-y_divisor:
-start_step:
-end_step:
-chart_id:
-table_col_1:
-table_col_2:
+data_file: gcp-growth
+data_key: gcp_growth_data
+x_key: county
+x_prefix: null
+x_reverse: true
+x_position_top: false
+horizontal_bars: true
+y_key: avg_growth_rate_14_17
+y_offset: 70
+y_divisor: null
+start_step: 9
+end_step: 0
+chart_id: gcp-growth-chart
+table_col_1: County
+table_col_2: Average GCP Growth Rate between 2014 and 2017
 ---
 
-<div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
+<div class="ct-chart ct-square" id="{{ page.chart_id }}"></div>
 
 {% include {{ page.chart_function }}.html %}
 
@@ -40,13 +40,15 @@ table_col_2:
     <table class="table">
         <thead>
             <tr>
+                <th scope="col">Rank</th>
                 <th scope="col">{{ page.table_col_1 }}</th>
                 <th scope="col">{{ page.table_col_2 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
             </tr>
         </thead>
         <tbody>
-            {% for i in (page.start_step..page.end_step) %}
+            {% for i in (page.end_step..46) %}
                 <tr>
+                    <td>{{ i | plus: 1 }}</td>
                     <td>{{ data[i][page.x_key] }} </td>
                     <td>{{ data[i][page.y_key] }}</td>
                 </tr>
@@ -54,3 +56,6 @@ table_col_2:
         </tbody>
     </table>
 </div>
+
+###### Notes:
+* The average Gross County Product (GCP) growth rate across all 47 counties between 2014 and 2017 was **5.6%**.
