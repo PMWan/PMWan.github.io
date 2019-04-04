@@ -1,29 +1,29 @@
 ---
 layout: chart
 author: Paul
-unit: (Shares, million)
+unit: null
 categories: [economy]
-description: "Nairobi Stock Exchange's monthly share volume from Nov 2017 to Nov 2018."
-title: NSE Share Volume
+description: "Nairobi Stock Exchange's NSE-20 Share Index monthly average from Dec 2017 to Dec 2018."
+title: NSE-20 Share Index
 excerpt_separator: <!--more-->
-chart_function: jsonToBarChart
+chart_function: jsonToLineChart
 data_file: nse
 data_key: nse_data
 x_key: year
 x_prefix: month
 x_reverse: false
-x_position_top: false
-horizontal_bars: false
-y_key: no_of_shares
+y_key: nse_20_share_index
 y_offset: 40
-y_divisor: 1e6
-start_step: 10
-end_step: 22
-chart_id: nse-monthly-share-volume-chart
+y_divisor: null
+start_step: 11
+end_step: 23
+chart_id: nse-20-share-index-chart
+smoothed: false
+show_area: false
 table_col_1: Year
 table_col_2: Month
-table_col_3: NSE Share Volume - Monthly
-image: /assets/images/nse-share-volume.png
+table_col_3: NSE-20 Share Index - Monthly Average
+image: /assets/images/nse-20-share-index.png
 ---
 
 <div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
@@ -52,7 +52,7 @@ image: /assets/images/nse-share-volume.png
                 <tr>
                     <td>{{ data[i][page.x_key] }} </td>
                     <td>{{ data[i][page.x_prefix] | slice: 0, 3 }} </td>
-                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.million }}</td>
+                    <td>{{ data[i][page.y_key] }}</td>
                 </tr>
             {% endfor %}
         </tbody>
