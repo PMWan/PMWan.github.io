@@ -50,7 +50,7 @@ image: /assets/images/public-debt.png
             </tr>
         </thead>
         <tbody>
-            {% for i in (page.start_step..page.end_step) %}
+            {% for i in (page.start_step..page.end_step) reversed %}
                 <tr>
                     <td>{{ data[i][page.x_key] }} </td>
                     <td>{{ data[i][page.x_prefix] | slice: 0, 3 }} </td>

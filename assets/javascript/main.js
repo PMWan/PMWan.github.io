@@ -21,10 +21,10 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yK
                     years.push(
                         (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
                         " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
                         );
                 } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
                 }
 
                 if (yDivisor) {
@@ -49,10 +49,10 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yK
                     years.push(
                         (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
                         " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
                         );
                 } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
                 }
 
                 if (yDivisor) {
@@ -155,10 +155,10 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
                     years.push(
                         (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
                         " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
                         );
                 } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
                 }
 
                 if (yDivisor) {
@@ -191,10 +191,10 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
                     years.push(
                         (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
                         " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
                         );
                 } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
                 }
 
                 if (yDivisor) {
@@ -297,13 +297,13 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
                     years.push(
                         (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
                         " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
                         );
                 } else {
                     if (horizontalBars) {
                         years.push(jsonObj[dataKey][step][xKey]);
                     } else {
-                        years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                        years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
                     }
                 }
 
@@ -329,13 +329,13 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
                     years.push(
                         (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
                         " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
                         );
                 } else {
                     if (horizontalBars) {
                         years.push(jsonObj[dataKey][step][xKey]);
                     } else {
-                        years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                        years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
                     }
                 }
 
@@ -427,10 +427,10 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
                     years.push(
                         (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
                         " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
                         );
                 } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
                 }
 
                 if (yDivisor) {
@@ -463,10 +463,10 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
                     years.push(
                         (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
                         " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(2,4)
+                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
                         );
                 } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(2,4));
+                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
                 }
 
                 if (yDivisor) {

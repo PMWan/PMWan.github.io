@@ -51,7 +51,7 @@ image: /assets/images/gdp.png
             </tr>
         </thead>
         <tbody>
-            {% for i in (page.start_step..page.end_step) %}
+            {% for i in (page.start_step..page.end_step) reversed %}
                 <tr>
                     <td>{{ data[i][page.x_key] }} </td>
                     <td>{{ data[i][page.y_key_1] | divided_by: site.data.large-numbers.trillion | slice: 0, 5 }}</td>
