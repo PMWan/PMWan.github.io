@@ -6,6 +6,7 @@
             '{{ page.x_key }}',
             {% if page.x_prefix == null %}null{% else %}'{{ page.x_prefix }}'{% endif %},
             {{ page.x_reverse }},
+            {% if page.x_spacing == null %}null{% else %}'{{ page.x_spacing }}'{% endif %},
             '{{ page.y_key }}',
             {{ page.y_offset }},
             {% if page.y_divisor == null %}null{% else %}{{ page.y_divisor }}{% endif %},
@@ -13,6 +14,8 @@
             {{ page.end_step }},
             '{{ page.chart_id }}',
             {{ page.smoothed }},
-            {{ page.show_area }});
+            {{ page.show_area }},
+            {{ page.show_point }}
+        );
     });
 </script>

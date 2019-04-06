@@ -1,4 +1,4 @@
-function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed,showArea) {
+function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yKey,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed,showArea,showPoint) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -97,6 +97,10 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffse
             options['showArea'] = true
         }
 
+        if (showPoint == false) {
+            options['showPoint'] = false
+        }
+
         if (xKeyPrefix) {
             if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
                 options['axisX'] = { 
@@ -108,6 +112,14 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey,yOffse
                     labelInterpolationFnc: function(value, index) {
                         return index % 2 === 0 ? value : null;
                     }
+                }
+            }
+        }
+
+        if (xSpacing) {
+            options['axisX'] = { 
+                labelInterpolationFnc: function(value, index) {
+                    return index % xSpacing === 0 ? value : null;
                 }
             }
         }
