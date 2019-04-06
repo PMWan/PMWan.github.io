@@ -11,6 +11,7 @@
             {% if page.x_prefix == null %}null{% else %}'{{ page.x_prefix }}'{% endif %},
             {{ page.x_reverse }},
             {{ page.x_position_top }},
+            {% if page.x_spacing == null %}null{% else %}'{{ page.x_spacing }}'{% endif %},
             {{ page.horizontal_bars }},
             '{{ page.y_key }}',
             {{ page.y_offset }},

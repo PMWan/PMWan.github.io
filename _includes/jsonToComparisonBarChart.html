@@ -6,6 +6,7 @@
             '{{ page.x_key }}',
             {% if page.x_prefix == null %}null{% else %}'{{ page.x_prefix }}'{% endif %},
             {{ page.x_reverse }},
+            {% if page.x_spacing == null %}null{% else %}'{{ page.x_spacing }}'{% endif %},
             '{{ page.y_key_1 }}',
             '{{ page.y_key_2 }}',
             {{ page.y_offset }},

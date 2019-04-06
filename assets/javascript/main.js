@@ -102,24 +102,23 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yK
         }
 
         if (xKeyPrefix) {
-            if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
-                options['axisX'] = { 
-                    offset: 35
-                }
-            } else {
-                options['axisX'] = { 
-                    offset: 35,
-                    labelInterpolationFnc: function(value, index) {
-                        return index % 2 === 0 ? value : null;
-                    }
-                }
+            options['axisX'] = {
+                offset: 35
             }
         }
 
         if (xSpacing) {
-            options['axisX'] = { 
-                labelInterpolationFnc: function(value, index) {
-                    return index % xSpacing === 0 ? value : null;
+            if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
+                options['axisX'] = { 
+                    labelInterpolationFnc: function(value, index) {
+                        return index % (xSpacing/2) === 0 ? value : null;
+                    }
+                }
+            } else {
+                options['axisX'] = {
+                    labelInterpolationFnc: function(value, index) {
+                        return index % xSpacing === 0 ? value : null;
+                    }
                 }
             }
         }
@@ -131,7 +130,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yK
     }
 }
 
-function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed,showArea) {
+function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed,showArea) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -248,19 +247,27 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
         }
 
         if (xKeyPrefix) {
+            options['axisX'] = {
+                offset: 35
+            }
+        }
+
+        if (xSpacing) {
             if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
                 options['axisX'] = { 
-                    offset: 35
+                    labelInterpolationFnc: function(value, index) {
+                        return index % (xSpacing/2) === 0 ? value : null;
+                    }
                 }
             } else {
-                options['axisX'] = { 
-                    offset: 35,
+                options['axisX'] = {
                     labelInterpolationFnc: function(value, index) {
-                        return index % 2 === 0 ? value : null;
+                        return index % xSpacing === 0 ? value : null;
                     }
                 }
             }
         }
+
         // Create a new line chart object where as first parameter we pass in a selector
         // that is resolving to our chart container element. The Second parameter
         // is the actual data object.
@@ -268,7 +275,7 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,y
     }
 }
 
-function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop,horizontalBars,yKey,yOffset,yDivisor,startStep,endStep,chartDivId) {
+function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop,xSpacing,horizontalBars,yKey,yOffset,yDivisor,startStep,endStep,chartDivId) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -374,15 +381,22 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
         };
 
         if (xKeyPrefix) {
+            options['axisX'] = {
+                offset: 35
+            }
+        }
+
+        if (xSpacing) {
             if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
                 options['axisX'] = { 
-                    offset: 35
+                    labelInterpolationFnc: function(value, index) {
+                        return index % (xSpacing/2) === 0 ? value : null;
+                    }
                 }
             } else {
-                options['axisX'] = { 
-                    offset: 35,
+                options['axisX'] = {
                     labelInterpolationFnc: function(value, index) {
-                        return index % 2 === 0 ? value : null;
+                        return index % xSpacing === 0 ? value : null;
                     }
                 }
             }
@@ -403,7 +417,7 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
     }
 }
 
-function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId) {
+function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId) {
 
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
@@ -511,15 +525,22 @@ function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,yK
         };
 
         if (xKeyPrefix) {
+            options['axisX'] = {
+                offset: 35
+            }
+        }
+
+        if (xSpacing) {
             if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
                 options['axisX'] = { 
-                    offset: 35
+                    labelInterpolationFnc: function(value, index) {
+                        return index % (xSpacing/2) === 0 ? value : null;
+                    }
                 }
             } else {
-                options['axisX'] = { 
-                    offset: 35,
+                options['axisX'] = {
                     labelInterpolationFnc: function(value, index) {
-                        return index % 2 === 0 ? value : null;
+                        return index % xSpacing === 0 ? value : null;
                     }
                 }
             }
