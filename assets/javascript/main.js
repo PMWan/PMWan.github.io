@@ -1,10 +1,20 @@
-function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yKey,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed,showArea,showPoint) {
-
+function setChartSize(chartDivId) {
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
-        chartDiv.classList.remove('ct-minor-sixth');
-        chartDiv.classList.add('ct-double-octave');
+        if (chartDiv.classList.contains('ct-minor-sixth')) {
+            chartDiv.classList.remove('ct-minor-sixth');
+            chartDiv.classList.add('ct-double-octave');
+        }
+        if (chartDiv.classList.contains('ct-square')) {
+            chartDiv.classList.remove('ct-square');
+            chartDiv.classList.add('ct-major-twelfth');
+        }
     }
+}
+
+function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yKey,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed,showArea,showPoint) {
+
+    setChartSize(chartDivId);
 
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
@@ -80,7 +90,6 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yK
         };
 
         var options = {
-            showPoint: true,
             axisY: {
                 offset: yOffset
             },
@@ -88,6 +97,8 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yK
                 Chartist.plugins.tooltip()
             ]
         };
+
+        options['showPoint'] = true;
 
         if (smoothed == false) {
             options['lineSmooth'] = false            
@@ -132,11 +143,7 @@ function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yK
 
 function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed,showArea) {
 
-    if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
-        var chartDiv = document.getElementById(chartDivId);
-        chartDiv.classList.remove('ct-minor-sixth');
-        chartDiv.classList.add('ct-double-octave');
-    }
+    setChartSize(chartDivId);
 
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
@@ -277,18 +284,8 @@ function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,x
 
 function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop,xSpacing,horizontalBars,yKey,yOffset,yDivisor,startStep,endStep,chartDivId) {
 
-    if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
-        var chartDiv = document.getElementById(chartDivId);
-        if (chartDiv.classList.contains('ct-minor-sixth')) {
-            chartDiv.classList.remove('ct-minor-sixth');
-            chartDiv.classList.add('ct-double-octave');
-        }
-        if (chartDiv.classList.contains('ct-square')) {
-            chartDiv.classList.remove('ct-square');
-            chartDiv.classList.add('ct-major-twelfth');
-        }
-    }
-
+    setChartSize(chartDivId);
+    
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.send();
@@ -419,11 +416,7 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
 
 function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId) {
 
-    if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
-        var chartDiv = document.getElementById(chartDivId);
-        chartDiv.classList.remove('ct-minor-sixth');
-        chartDiv.classList.add('ct-double-octave');
-    }
+    setChartSize(chartDivId);
 
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
