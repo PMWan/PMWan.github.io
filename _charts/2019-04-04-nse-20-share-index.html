@@ -6,20 +6,21 @@ categories: [economy]
 description: "Nairobi Stock Exchange's NSE-20 Share Index monthly average from December 2017 to December 2018."
 title: NSE-20 Share Index
 excerpt_separator: <!--more-->
-chart_function: jsonToLineChart
+chart_function: jsonToChart
+chart_type: line
 data_file: nse
 data_key: nse_data
-x_key: year
-x_prefix: month
-x_reverse: false
-x_spacing: 2
-y_key: nse_20_share_index
-y_offset: 40
-y_divisor: null
+label_key: year
+label_values_prefix: month
+label_values_reversed: false
+x_axis_label_spacing: 2
+series_key: nse_20_share_index
+y_axis_offset: 40
+series_divisor: null
 start_step: 11
 end_step: 23
 chart_id: nse-20-share-index-chart
-smoothed: false
+smooth_line: false
 show_area: false
 show_point: true
 table_col_1: Year
@@ -52,9 +53,9 @@ image: /assets/images/nse-20-share-index.png
         <tbody>
             {% for i in (page.start_step..page.end_step) reversed %}
                 <tr>
-                    <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.x_prefix] | slice: 0, 3 }} </td>
-                    <td>{{ data[i][page.y_key] }}</td>
+                    <td>{{ data[i][page.label_key] }} </td>
+                    <td>{{ data[i][page.label_values_prefix] | slice: 0, 3 }} </td>
+                    <td>{{ data[i][page.series_key] }}</td>
                 </tr>
             {% endfor %}
         </tbody>

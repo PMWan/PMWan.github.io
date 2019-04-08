@@ -6,20 +6,21 @@ categories: [demographics]
 description: Kenya's population estimates and projections from 2014 to 2024.
 title: Population
 excerpt_separator: <!--more-->
-chart_function: jsonToLineChart
+chart_function: jsonToChart
+chart_type: line
 data_file: population
 data_key: population_data
-x_key: year
-x_prefix: null
-x_reverse: false
-x_spacing: null
-y_key: population
-y_offset: 30
-y_divisor: 1e6
+label_key: year
+label_values_prefix: null
+label_values_reversed: false
+x_axis_label_spacing: null
+series_key: population
+y_axis_offset: 30
+series_divisor: 1e6
 start_step: 15
 end_step: 25
 chart_id: population-chart
-smoothed: true
+smooth_line: true
 show_area: true
 show_point: true
 table_col_1: Year
@@ -50,8 +51,8 @@ image: /assets/images/population.png
         <tbody>
             {% for i in (page.start_step..page.end_step) %}
                 <tr>
-                    <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.million | slice: 0, 5 }}</td>
+                    <td>{{ data[i][page.label_key] }} </td>
+                    <td>{{ data[i][page.series_key] | divided_by: site.data.large-numbers.million | slice: 0, 5 }}</td>
                 </tr>
             {% endfor %}
         </tbody>

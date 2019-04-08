@@ -6,17 +6,18 @@ categories: [economy,ict]
 description: "Total annual value of mobile money transactions in Kenya from 2008 to 2018."
 title: Mobile Money Transactions
 excerpt_separator: <!--more-->
-chart_function: jsonToBarChart
+chart_function: jsonToChart
+chart_type: bar
 data_file: mobile-money
 data_key: mobile_money_value_data
-x_key: year
-x_prefix: null
-x_reverse: false
+label_key: year
+label_values_prefix: null
+label_values_reversed: false
 x_position_top: false
 horizontal_bars: false
-y_key: value
-y_offset: 35
-y_divisor: 1e12
+series_key: value
+y_axis_offset: 35
+series_divisor: 1e12
 start_step: 0
 end_step: 10
 chart_id: mobile-money-transaction-chart
@@ -48,8 +49,8 @@ image: /assets/images/mobile-money-transactions.png
         <tbody>
             {% for i in (page.start_step..page.end_step) reversed %}
                 <tr>
-                    <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ data[i][page.label_key] }} </td>
+                    <td>{{ data[i][page.series_key] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
                 </tr>
             {% endfor %}
         </tbody>

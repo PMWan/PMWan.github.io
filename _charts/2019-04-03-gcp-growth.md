@@ -6,17 +6,18 @@ categories: [counties,economy]
 description: "Kenya's top 10 counties based on average Gross County Product (GCP) growth rates between 2014 and 2017."
 title: "GCP Growth - Top 10 Counties"
 excerpt_separator: <!--more-->
-chart_function: jsonToBarChart
+chart_function: jsonToChart
+chart_type: bar
 data_file: gcp-growth
 data_key: gcp_growth_data
-x_key: county
-x_prefix: null
-x_reverse: true
+label_key: county
+label_values_prefix: null
+label_values_reversed: true
 x_position_top: false
 horizontal_bars: true
-y_key: avg_growth_rate_14_17
-y_offset: 70
-y_divisor: null
+series_key: avg_growth_rate_14_17
+y_axis_offset: 70
+series_divisor: null
 start_step: 9
 end_step: 0
 chart_id: gcp-growth-chart
@@ -50,8 +51,8 @@ image: /assets/images/gcp-growth.png
             {% for i in (page.end_step..46) %}
                 <tr>
                     <td>{{ i | plus: 1 }}</td>
-                    <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.y_key] }}</td>
+                    <td>{{ data[i][page.label_key] }} </td>
+                    <td>{{ data[i][page.series_key] }}</td>
                 </tr>
             {% endfor %}
         </tbody>

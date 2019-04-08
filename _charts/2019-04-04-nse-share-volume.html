@@ -6,18 +6,19 @@ categories: [economy]
 description: "Nairobi Stock Exchange's monthly share volume from December 2017 to December 2018."
 title: NSE Share Volume
 excerpt_separator: <!--more-->
-chart_function: jsonToBarChart
+chart_function: jsonToChart
+chart_type: bar
 data_file: nse
 data_key: nse_data
-x_key: year
-x_prefix: month
-x_reverse: false
+label_key: year
+label_values_prefix: month
+label_values_reversed: false
 x_position_top: false
-x_spacing: 2
+x_axis_label_spacing: 2
 horizontal_bars: false
-y_key: no_of_shares
-y_offset: 40
-y_divisor: 1e6
+series_key: no_of_shares
+y_axis_offset: 40
+series_divisor: 1e6
 start_step: 11
 end_step: 23
 chart_id: nse-monthly-share-volume-chart
@@ -51,9 +52,9 @@ image: /assets/images/nse-share-volume.png
         <tbody>
             {% for i in (page.start_step..page.end_step) reversed %}
                 <tr>
-                    <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.x_prefix] | slice: 0, 3 }} </td>
-                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.million }}</td>
+                    <td>{{ data[i][page.label_key] }} </td>
+                    <td>{{ data[i][page.label_values_prefix] | slice: 0, 3 }} </td>
+                    <td>{{ data[i][page.series_key] | divided_by: site.data.large-numbers.million }}</td>
                 </tr>
             {% endfor %}
         </tbody>

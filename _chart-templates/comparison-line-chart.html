@@ -11,13 +11,13 @@ series-b:
 chart_function: jsonToComparisonLineChart
 data_file:
 data_key:
-x_key:
-x_prefix:
-x_reverse:
-y_key_1:
-y_key_2:
-y_offset:
-y_divisor:
+label_key:
+label_values_prefix:
+label_values_reversed:
+series_key:
+series_key_2:
+y_axis_offset:
+series_divisor:
 start_step:
 end_step:
 chart_id:
@@ -52,9 +52,9 @@ table_col_3:
         <tbody>
             {% for i in (page.start_step..page.end_step) reversed %}
                 <tr>
-                    <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.y_key_1] }}</td>
-                    <td>{{ data[i][page.y_key_2] }}</td>
+                    <td>{{ data[i][page.label_key] }} </td>
+                    <td>{{ data[i][page.series_key] }}</td>
+                    <td>{{ data[i][page.series_key_2] }}</td>
                 </tr>
             {% endfor %}
         </tbody>

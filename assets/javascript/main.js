@@ -1,4 +1,6 @@
-function setChartSize(chartDivId) {
+function jsonToChart(requestURL,dataKey,labelKey,labelValuesPrefix,labelValuesReversed,xAxisLabelSpacing,xPositionTop,seriesKey,seriesKey2,yOffset,seriesDivisor,seriesBarDistance,startStep,endStep,chartDivId,chartType,smoothLine,showArea,showPoint,horizontalBars) {
+    
+    // set chart's aspect ratio
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
         if (chartDiv.classList.contains('ct-minor-sixth')) {
@@ -10,363 +12,77 @@ function setChartSize(chartDivId) {
             chartDiv.classList.add('ct-major-twelfth');
         }
     }
-}
 
-function jsonToLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yKey,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed,showArea,showPoint) {
-
-    setChartSize(chartDivId);
-
+    // request chart data from corresponding json data file
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.send();
+    // once the response is fully loaded, generate the chart
     request.onload = function() {
         var jsonObj = JSON.parse(request.response);
-        var years = [];
-        var values = [];
+        var labelValues = [];
+        var seriesValues1 = [];
+        var seriesValues2 = [];
         var count = 0;
-        if (xReverse == true) {
-            for (var step = startStep; step >= endStep; step--) {
 
-                if (xKeyPrefix) {
-                    years.push(
-                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
+        function pushDataIntoArrays(step) {
+            // push data into an array representing x-axis values
+            if (horizontalBars) {
+                labelValues.push(jsonObj[dataKey][step][labelKey]);
+            }else{
+                if (labelValuesPrefix) {
+                    labelValues.push(
+                        (jsonObj[dataKey][step][labelValuesPrefix]).toString().slice(0,3) +
                         " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
+                        (jsonObj[dataKey][step][labelKey]).toString().slice(-2)
                         );
                 } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
+                    labelValues.push("'" + (jsonObj[dataKey][step][labelKey]).toString().slice(-2));
                 }
-
-                if (yDivisor) {
-                    values[count] = { 
-                        meta: years[count],
-                        value: (jsonObj[dataKey][step][yKey])/yDivisor 
-                    };
-                } else {
-                    values[count] = {
-                        meta: years[count],
-                        value: jsonObj[dataKey][step][yKey] 
-                    };
-                }
-
-                count = count + 1;
-
             }
-        } else {
-            for (var step = startStep; step <= endStep; step++) {
 
-                if (xKeyPrefix) {
-                    years.push(
-                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
-                        " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
-                        );
-                } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
-                }
-
-                if (yDivisor) {
-                    values[count] = { 
-                        meta: years[count],
-                        value: (jsonObj[dataKey][step][yKey])/yDivisor 
-                    };
-                } else {
-                    values[count] = {
-                        meta: years[count],
-                        value: jsonObj[dataKey][step][yKey] 
-                    };
-                }
-
-                count = count + 1;
-
-            }
-        }
-        
-        var data = {
-        // A labels array that can contain any sort of values
-        labels: years,
-        // Our series array that contains series objects or in this case series data arrays
-        series: [values]
-        };
-
-        var options = {
-            axisY: {
-                offset: yOffset
-            },
-            plugins: [
-                Chartist.plugins.tooltip()
-            ]
-        };
-
-        options['showPoint'] = true;
-
-        if (smoothed == false) {
-            options['lineSmooth'] = false            
-        }
-
-        if (showArea == true) {
-            options['showArea'] = true
-        }
-
-        if (showPoint == false) {
-            options['showPoint'] = false
-        }
-
-        if (xKeyPrefix) {
-            options['axisX'] = {
-                offset: 35
-            }
-        }
-
-        if (xSpacing) {
-            if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
-                options['axisX'] = { 
-                    labelInterpolationFnc: function(value, index) {
-                        return index % (xSpacing/2) === 0 ? value : null;
-                    }
-                }
+            // push data into arrays representing y-axis values
+            if (seriesDivisor) {
+                seriesValues1[count] = { 
+                    meta: labelValues[count],
+                    value: (jsonObj[dataKey][step][seriesKey])/seriesDivisor 
+                };
+                seriesValues2[count] = { 
+                    meta: labelValues[count],
+                    value: (jsonObj[dataKey][step][seriesKey2])/seriesDivisor 
+                };
             } else {
-                options['axisX'] = {
-                    labelInterpolationFnc: function(value, index) {
-                        return index % xSpacing === 0 ? value : null;
-                    }
-                }
+                seriesValues1[count] = { 
+                    meta: labelValues[count],
+                    value: jsonObj[dataKey][step][seriesKey]
+                };
+                seriesValues2[count] = { 
+                    meta: labelValues[count],
+                    value: jsonObj[dataKey][step][seriesKey2]
+                };
             }
+
+            count = count + 1;
         }
 
-        // Create a new line chart object where as first parameter we pass in a selector
-        // that is resolving to our chart container element. The Second parameter
-        // is the actual data object.
-        new Chartist.Line("#" + chartDivId, data, options);
-    }
-}
-
-function jsonToComparisonLineChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId,smoothed,showArea) {
-
-    setChartSize(chartDivId);
-
-    var request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.send();
-    request.onload = function() {
-        var jsonObj = JSON.parse(request.response);
-        var years = [];
-        var values1 = [];
-        var values2 = [];
-        var count = 0;
-        if (xReverse == true) {
+        // execute based on whether or not values are to be charted in reverse of their order in the data file
+        if (labelValuesReversed == true) {
             for (var step = startStep; step >= endStep; step--) {
-
-                if (xKeyPrefix) {
-                    years.push(
-                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
-                        " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
-                        );
-                } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
-                }
-
-                if (yDivisor) {
-                    values1[count] = { 
-                        meta: years[count],
-                        value: (jsonObj[dataKey][step][yKey1])/yDivisor 
-                    };
-                    values2[count] = { 
-                        meta: years[count],
-                        value: (jsonObj[dataKey][step][yKey2])/yDivisor 
-                    };
-                } else {
-                    values1[count] = { 
-                        meta: years[count],
-                        value: jsonObj[dataKey][step][yKey1]
-                    };
-                    values2[count] = { 
-                        meta: years[count],
-                        value: jsonObj[dataKey][step][yKey2] 
-                    };
-                }
-
-                count = count + 1;
-
+                pushDataIntoArrays(step);
             }
         } else {
             for (var step = startStep; step <= endStep; step++) {
-
-                if (xKeyPrefix) {
-                    years.push(
-                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
-                        " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
-                        );
-                } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
-                }
-
-                if (yDivisor) {
-                    values1[count] = { 
-                        meta: years[count],
-                        value: (jsonObj[dataKey][step][yKey1])/yDivisor 
-                    };
-                    values2[count] = { 
-                        meta: years[count],
-                        value: (jsonObj[dataKey][step][yKey2])/yDivisor 
-                    };
-                } else {
-                    values1[count] = { 
-                        meta: years[count],
-                        value: jsonObj[dataKey][step][yKey1]
-                    };
-                    values2[count] = { 
-                        meta: years[count],
-                        value: jsonObj[dataKey][step][yKey2] 
-                    };
-                }
-
-                count = count + 1;
-
+                pushDataIntoArrays(step);
             }
         }
 
         var data = {
-        // A labels array that can contain any sort of values
-        labels: years,
-        // Our series array that contains series objects or in this case series data arrays
-        series: [values1, values2]
+            // A labels array that can contain any sort of values
+            labels: labelValues,
+            // Our series array that contains series objects or in this case series data arrays
+            series: [seriesValues1, seriesValues2]
         };
 
-        var options = {
-            showPoint: true,
-            axisY: {
-                offset: yOffset
-            },
-            plugins: [
-                Chartist.plugins.tooltip()
-            ]
-        };
-
-        if (smoothed == false) {
-            options['lineSmooth'] = false            
-        }
-
-        if (showArea == true) {
-            options['showArea'] = true
-        }
-
-        if (xKeyPrefix) {
-            options['axisX'] = {
-                offset: 35
-            }
-        }
-
-        if (xSpacing) {
-            if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
-                options['axisX'] = { 
-                    labelInterpolationFnc: function(value, index) {
-                        return index % (xSpacing/2) === 0 ? value : null;
-                    }
-                }
-            } else {
-                options['axisX'] = {
-                    labelInterpolationFnc: function(value, index) {
-                        return index % xSpacing === 0 ? value : null;
-                    }
-                }
-            }
-        }
-
-        // Create a new line chart object where as first parameter we pass in a selector
-        // that is resolving to our chart container element. The Second parameter
-        // is the actual data object.
-        new Chartist.Line("#" + chartDivId, data, options);
-    }
-}
-
-function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop,xSpacing,horizontalBars,yKey,yOffset,yDivisor,startStep,endStep,chartDivId) {
-
-    setChartSize(chartDivId);
-    
-    var request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.send();
-    request.onload = function() {
-        var jsonObj = JSON.parse(request.response);
-        var years = [];
-        var values = [];
-        var count = 0;
-        if (xReverse == true) {
-            for (var step = startStep; step >= endStep; step--) {
-
-                if (xKeyPrefix) {
-                    years.push(
-                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
-                        " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
-                        );
-                } else {
-                    if (horizontalBars) {
-                        years.push(jsonObj[dataKey][step][xKey]);
-                    } else {
-                        years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
-                    }
-                }
-
-                if (yDivisor) {
-                    values[count] = { 
-                        meta: years[count],
-                        value: (jsonObj[dataKey][step][yKey])/yDivisor 
-                    };
-                } else {
-                    values[count] = {
-                        meta: years[count],
-                        value: jsonObj[dataKey][step][yKey] 
-                    };
-                }
-
-                count = count + 1;
-
-            }
-        } else {
-            for (var step = startStep; step <= endStep; step++) {
-
-                if (xKeyPrefix) {
-                    years.push(
-                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
-                        " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
-                        );
-                } else {
-                    if (horizontalBars) {
-                        years.push(jsonObj[dataKey][step][xKey]);
-                    } else {
-                        years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
-                    }
-                }
-
-                if (yDivisor) {
-                    values[count] = { 
-                        meta: years[count],
-                        value: (jsonObj[dataKey][step][yKey])/yDivisor 
-                    };
-                } else {
-                    values[count] = {
-                        meta: years[count],
-                        value: jsonObj[dataKey][step][yKey] 
-                    };
-                }
-
-                count = count + 1;
-
-            }
-        }
-        
-        var data = {
-        // A labels array that can contain any sort of values
-        labels: years,
-        // Our series array that contains series objects or in this case series data arrays
-        series: [values]
-        };
-        
         var options = {
             axisY: {
                 offset: yOffset
@@ -377,23 +93,23 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
             ]
         };
 
-        if (xKeyPrefix) {
+        if (labelValuesPrefix) {
             options['axisX'] = {
                 offset: 35
             }
         }
 
-        if (xSpacing) {
+        if (xAxisLabelSpacing) {
             if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
                 options['axisX'] = { 
                     labelInterpolationFnc: function(value, index) {
-                        return index % (xSpacing/2) === 0 ? value : null;
+                        return index % (xAxisLabelSpacing/2) === 0 ? value : null;
                     }
                 }
             } else {
                 options['axisX'] = {
                     labelInterpolationFnc: function(value, index) {
-                        return index % xSpacing === 0 ? value : null;
+                        return index % xAxisLabelSpacing === 0 ? value : null;
                     }
                 }
             }
@@ -403,155 +119,39 @@ function jsonToBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xPositionTop
             options['axisX']['position'] = 'start';
         }
 
-        if (horizontalBars == true) {
-            options['horizontalBars'] = true;
-        }
-        
-        // Create a new line chart object where as first parameter we pass in a selector
-        // that is resolving to our chart container element. The Second parameter
-        // is the actual data object.
-        new Chartist.Bar("#" + chartDivId, data, options);
-    }
-}
+        if (chartType == 'line') {
+            
+            options['showPoint'] = showPoint;
+            options['lineSmooth'] = smoothLine;         
+            options['showArea'] = showArea;
 
-function jsonToComparisonBarChart(requestURL,dataKey,xKey,xKeyPrefix,xReverse,xSpacing,yKey1,yKey2,yOffset,yDivisor,startStep,endStep,chartDivId) {
+            // Create a new line chart object where as first parameter we pass in a selector
+            // that is resolving to our chart container element. The Second parameter
+            // is the actual data object.
+            new Chartist.Line("#" + chartDivId, data, options);
 
-    setChartSize(chartDivId);
-
-    var request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.send();
-    request.onload = function() {
-        var jsonObj = JSON.parse(request.response);
-        var years = [];
-        var values1 = [];
-        var values2 = [];
-        var count = 0;
-        if (xReverse == true) {
-            for (var step = startStep; step >= endStep; step--) {
-                
-                if (xKeyPrefix) {
-                    years.push(
-                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
-                        " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
-                        );
-                } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
-                }
-
-                if (yDivisor) {
-                    values1[count] = { 
-                        meta: years[count],
-                        value: (jsonObj[dataKey][step][yKey1])/yDivisor 
-                    };
-                    values2[count] = { 
-                        meta: years[count],
-                        value: (jsonObj[dataKey][step][yKey2])/yDivisor 
-                    };
-                } else {
-                    values1[count] = { 
-                        meta: years[count],
-                        value: jsonObj[dataKey][step][yKey1]
-                    };
-                    values2[count] = { 
-                        meta: years[count],
-                        value: jsonObj[dataKey][step][yKey2] 
-                    };
-                }
-
-                count = count + 1;
-
-            }
-        } else {
-            for (var step = startStep; step <= endStep; step++) {
-                
-                if (xKeyPrefix) {
-                    years.push(
-                        (jsonObj[dataKey][step][xKeyPrefix]).toString().slice(0,3) +
-                        " " + "'" +
-                        (jsonObj[dataKey][step][xKey]).toString().slice(-2)
-                        );
-                } else {
-                    years.push("'" + (jsonObj[dataKey][step][xKey]).toString().slice(-2));
-                }
-
-                if (yDivisor) {
-                    values1[count] = { 
-                        meta: years[count],
-                        value: (jsonObj[dataKey][step][yKey1])/yDivisor 
-                    };
-                    values2[count] = { 
-                        meta: years[count],
-                        value: (jsonObj[dataKey][step][yKey2])/yDivisor 
-                    };
-                } else {
-                    values1[count] = { 
-                        meta: years[count],
-                        value: jsonObj[dataKey][step][yKey1]
-                    };
-                    values2[count] = { 
-                        meta: years[count],
-                        value: jsonObj[dataKey][step][yKey2] 
-                    };
-                }
-
-                count = count + 1;
-
-            }
         }
 
-        var data = {
-        // A labels array that can contain any sort of values
-        labels: years,
-        // Our series array that contains series objects or in this case series data arrays
-        series: [values1, values2]
-        };
+        if (chartType == 'bar') {
 
-        var options = {
-            axisY: {
-                offset: yOffset
-            },
-            plugins: [
-                Chartist.plugins.tooltip()
-            ]
-        };
+            options['horizontalBars'] = horizontalBars;
 
-        if (xKeyPrefix) {
-            options['axisX'] = {
-                offset: 35
-            }
+            if (document.querySelector('.chartlist')) {
+                options['seriesBarDistance'] = seriesBarDistance;
+            }    
+
+            var responsiveOptions = [
+                ['screen and (max-width: 576px)', {
+                  seriesBarDistance: seriesBarDistance
+                }]
+            ];
+
+            // Create a new line chart object where as first parameter we pass in a selector
+            // that is resolving to our chart container element. The Second parameter
+            // is the actual data object.
+            new Chartist.Bar("#" + chartDivId, data, options, responsiveOptions);
+
         }
-
-        if (xSpacing) {
-            if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
-                options['axisX'] = { 
-                    labelInterpolationFnc: function(value, index) {
-                        return index % (xSpacing/2) === 0 ? value : null;
-                    }
-                }
-            } else {
-                options['axisX'] = {
-                    labelInterpolationFnc: function(value, index) {
-                        return index % xSpacing === 0 ? value : null;
-                    }
-                }
-            }
-        }
-
-        if (document.querySelector('.chartlist')) {
-            options['seriesBarDistance'] = 8
-        }
-
-        var responsiveOptions = [
-            ['screen and (max-width: 640px)', {
-              seriesBarDistance: 6
-            }]
-        ];
-        // Create a new line chart object where as first parameter we pass in a selector
-        // that is resolving to our chart container element. The Second parameter
-        // is the actual data object.
-        new Chartist.Bar("#" + chartDivId, data, options, responsiveOptions);
     }
 }
 

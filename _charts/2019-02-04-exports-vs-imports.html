@@ -8,16 +8,18 @@ title: Exports vs. Imports
 excerpt_separator: <!--more-->
 series-a: Exports
 series-b: Imports
-chart_function: jsonToComparisonBarChart
+chart_function: jsonToChart
+chart_type: bar
 data_file: foreign-trade
 data_key: foreign_trade_data
-x_key: year
-x_prefix: null
-x_reverse: false
-y_key_1: total_exports
-y_key_2: total_imports
-y_offset: 35
-y_divisor: 1e12
+label_key: year
+label_values_prefix: null
+label_values_reversed: false
+series_key: total_exports
+series_key_2: total_imports
+y_axis_offset: 35
+series_divisor: 1e12
+series_bar_distance: 8
 start_step: 0
 end_step: 10
 chart_id: exports-vs-imports-chart
@@ -53,9 +55,9 @@ image: /assets/images/exports-vs-imports.png
         <tbody>
             {% for i in (page.start_step..page.end_step) reversed %}
                 <tr>
-                    <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.y_key_1] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
-                    <td>{{ data[i][page.y_key_2] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ data[i][page.label_key] }} </td>
+                    <td>{{ data[i][page.series_key] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ data[i][page.series_key_2] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
                 </tr>
             {% endfor %}
         </tbody>

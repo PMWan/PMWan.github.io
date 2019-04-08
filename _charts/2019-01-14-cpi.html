@@ -6,20 +6,21 @@ categories: [economy]
 description: "Kenya's Consumer Price Index (CPI) annual average from 2008 to 2018. NB: The base period is February 2009."
 title: CPI
 excerpt_separator: <!--more-->
-chart_function: jsonToLineChart
+chart_function: jsonToChart
+chart_type: line
 data_file: cpi
 data_key: cpi_data
-x_key: year
-x_prefix: null
-x_reverse: false
-x_spacing: null
-y_key: average_cpi
-y_offset: 35
-y_divisor: null
+label_key: year
+label_values_prefix: null
+label_values_reversed: false
+x_axis_label_spacing: null
+series_key: average_cpi
+y_axis_offset: 35
+series_divisor: null
 start_step: 1
 end_step: 11
 chart_id: cpi-chart
-smoothed: false
+smooth_line: false
 show_area: false
 show_point: true
 table_col_1: Year
@@ -50,8 +51,8 @@ image: /assets/images/cpi.png
         <tbody>
             {% for i in (page.start_step..page.end_step) reversed %}
                 <tr>
-                    <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.y_key] }}</td>
+                    <td>{{ data[i][page.label_key] }} </td>
+                    <td>{{ data[i][page.series_key] }}</td>
                 </tr>
             {% endfor %}
         </tbody>

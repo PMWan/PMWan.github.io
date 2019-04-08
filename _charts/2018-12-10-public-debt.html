@@ -6,20 +6,21 @@ categories: [economy]
 description: "Kenya's total public debt from September 2008 to September 2018."
 title: Public Debt
 excerpt_separator: <!--more-->
-chart_function: jsonToLineChart
+chart_function: jsonToChart
+chart_type: line
 data_file: debt
 data_key: debt_data
-x_key: year
-x_prefix: month
-x_reverse: false
-x_spacing: 2
-y_key: total_debt
-y_offset: 30
-y_divisor: 1e12
+label_key: year
+label_values_prefix: month
+label_values_reversed: false
+x_axis_label_spacing: 2
+series_key: total_debt
+y_axis_offset: 30
+series_divisor: 1e12
 start_step: 0
 end_step: 10
 chart_id: public-debt-chart
-smoothed: true
+smooth_line: true
 show_area: true
 show_point: true
 table_col_1: Year
@@ -52,9 +53,9 @@ image: /assets/images/public-debt.png
         <tbody>
             {% for i in (page.start_step..page.end_step) reversed %}
                 <tr>
-                    <td>{{ data[i][page.x_key] }} </td>
-                    <td>{{ data[i][page.x_prefix] | slice: 0, 3 }} </td>
-                    <td>{{ data[i][page.y_key] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ data[i][page.label_key] }} </td>
+                    <td>{{ data[i][page.label_values_prefix] | slice: 0, 3 }} </td>
+                    <td>{{ data[i][page.series_key] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
                 </tr>
             {% endfor %}
         </tbody>

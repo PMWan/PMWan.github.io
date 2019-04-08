@@ -1,0 +1,30 @@
+{% if page.x_position_top == true or page.x_slanted == true %}
+    <div class="chart-description-extra-top-padding"></div>
+{% endif %}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        jsonToChart(
+            '/data/{{ page.data_file }}.json',
+            '{{ page.data_key }}',
+            '{{ page.label_key }}',
+            {% if page.label_values_prefix == null %}null{% else %}'{{ page.label_values_prefix }}'{% endif %},
+            {% if page.label_values_reversed == true %}true{% else %}false{% endif %},
+            {% if page.x_axis_label_spacing == null %}null{% else %}'{{ page.x_axis_label_spacing }}'{% endif %},
+            {% if page.x_position_top == true %}true{% else %}false{% endif %},
+            '{{ page.series_key }}',
+            {% if page.series_key_2 %}'{{ page.series_key_2 }}'{% else %}null{% endif %},
+            {{ page.y_axis_offset }},
+            {% if page.series_divisor == null %}null{% else %}{{ page.series_divisor }}{% endif %},
+            {% if page.series_bar_distance == null %}null{% else %}{{ page.series_bar_distance }}{% endif %},
+            {{ page.start_step }},
+            {{ page.end_step }},
+            '{{ page.chart_id }}',
+            '{{ page.chart_type }}',
+            {% if page.smooth_line == true %}true{% else %}false{% endif %},
+            {% if page.show_area == true %}true{% else %}false{% endif %},
+            {% if page.show_point == true %}true{% else %}false{% endif %},
+            {% if page.horizontal_bars == true %}true{% else %}false{% endif %}
+        );
+    });
+</script>
