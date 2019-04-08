@@ -39,5 +39,4 @@ rows.times do |row|
     }
 end
 
-File.write('../json/gdp.json', JSON.pretty_generate(data))
-File.write('../_data/gdp.json', JSON.pretty_generate(data))
+File.write('../data/gdp.json', JSON.pretty_generate(data))

@@ -41,5 +41,4 @@ rows.each do |row|
     count += 1
 end
 
-File.write('../json/debt.json', JSON.pretty_generate(data))
-File.write('../_data/debt.json', JSON.pretty_generate(data))
+File.write('../data/debt.json', JSON.pretty_generate(data))

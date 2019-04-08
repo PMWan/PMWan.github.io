@@ -47,6 +47,10 @@ pagination:
   title: ":title"
   permalink: '/page/:num/'
 
+# Changed _data to data so that it's included in _site when site generation occurs.
+# Did this so that chartist.js library can have access to data when generating charts
+data_dir: 'data'
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
