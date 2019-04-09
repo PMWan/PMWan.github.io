@@ -32,6 +32,7 @@ table_col_2: Month
 table_col_3: Lending Rate
 table_col_4: Deposit Rate
 table_col_5: Savings Rate
+image: /assets/images/bank-rates.png
 ---
 
 {% include key.html %}

@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 series-a:
 series-b:
 chart_function: jsonToChart
-chart_type: bar
+chart_type: line
 data_file:
 data_key:
 label_key:
@@ -25,6 +25,7 @@ chart_id:
 table_col_1:
 table_col_2:
 table_col_3:
+image: /assets/images/
 ---
 {% include key.html %}
 

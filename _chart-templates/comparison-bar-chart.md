@@ -6,26 +6,28 @@ categories: []
 description:
 title:
 excerpt_separator: <!--more-->
+series-a:
+series-b:
 chart_function: jsonToChart
-chart_type: line
+chart_type: bar
 data_file:
 data_key:
 label_key:
 label_values_prefix:
 label_values_reversed:
-x_spacing:
 series_key:
+series_key_2:
 y_axis_offset:
 series_divisor:
 start_step:
 end_step:
 chart_id:
-smooth_line:
-show_area:
-show_point:
 table_col_1:
 table_col_2:
+table_col_3:
+image: /assets/images/
 ---
+{% include key.html %}
 
 <div class="ct-chart ct-perfect-fifth" id="{{ page.chart_id }}"></div>
 
@@ -45,6 +47,7 @@ table_col_2:
             <tr>
                 <th scope="col">{{ page.table_col_1 }}</th>
                 <th scope="col">{{ page.table_col_2 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
+                <th scope="col">{{ page.table_col_3 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
             </tr>
         </thead>
         <tbody>
@@ -52,6 +55,7 @@ table_col_2:
                 <tr>
                     <td>{{ data[i][page.label_key] }} </td>
                     <td>{{ data[i][page.series_key] }}</td>
+                    <td>{{ data[i][page.series_key_2] }}</td>
                 </tr>
             {% endfor %}
         </tbody>

@@ -23,6 +23,7 @@ end_step:
 chart_id:
 table_col_1:
 table_col_2:
+image: /assets/images/
 ---
 
 <div class="ct-chart ct-perfect-fifth" id="{{ page.chart_id }}"></div>
