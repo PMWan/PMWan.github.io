@@ -3,8 +3,8 @@ layout: chart
 author: Paul
 unit: (%)
 categories: [economy]
-description: "Kenya's commercial banks weighted average rates from November 2008 to November 2018."
-title: "Commercial Bank Rates"
+description: "Kenya's commercial banks' weighted average rates from November 2008 to November 2018."
+title: "Commercial Banks' Rates"
 excerpt_separator: <!--more-->
 series-a: Lending
 series-b: Deposit
