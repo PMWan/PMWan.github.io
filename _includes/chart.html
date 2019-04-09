@@ -3,6 +3,7 @@
         <div class="card-body">
             <h5><a href="{{ chart.url }}">{{ chart.title }} {{ chart.unit }}</a></h5>
             <div>{{ chart.excerpt }}</div>
+            <p class="more-link-wrapper">> <a href="{{ chart.url }}" class="more-link">More</a></p>
         </div>
         <div class="card-footer">
             {% assign sources = site.data[chart.data_file]['sources'] %}
