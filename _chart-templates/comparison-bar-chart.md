@@ -3,7 +3,7 @@ layout: chart
 author: Paul
 unit:
 categories: []
-description: "Chart: "
+description: ""
 title:
 excerpt_separator: <!--more-->
 series-a:

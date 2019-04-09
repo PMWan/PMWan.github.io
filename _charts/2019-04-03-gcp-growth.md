@@ -3,7 +3,7 @@ layout: chart
 author: Paul
 unit: (%)
 categories: [counties,economy]
-description: "Chart: Kenya's top 10 counties based on average Gross County Product (GCP) growth rates between 2014 and 2017."
+description: "Kenya's top 10 counties based on average Gross County Product (GCP) growth rates between 2014 and 2017."
 title: "GCP Growth Rate - Top 10 Counties"
 excerpt_separator: <!--more-->
 chart_function: jsonToChart
