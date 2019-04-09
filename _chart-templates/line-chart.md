@@ -3,7 +3,7 @@ layout: chart
 author: Paul
 unit:
 categories: []
-description: ""
+description: "Chart: "
 title:
 excerpt_separator: <!--more-->
 chart_function: jsonToChart
