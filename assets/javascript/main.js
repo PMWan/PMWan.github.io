@@ -1,10 +1,10 @@
-function jsonToChart(requestURL,dataKey,labelKey,labelValuesPrefix,labelValuesReversed,xAxisLabelSpacing,xPositionTop,seriesKey,seriesKey2,yOffset,seriesDivisor,seriesBarDistance,startStep,endStep,chartDivId,chartType,smoothLine,showArea,showPoint,horizontalBars) {
+function jsonToChart(requestURL,dataKey,labelKey,labelValuesPrefix,labelValuesReversed,xAxisLabelSpacing,xPositionTop,seriesKey,seriesKey2,seriesKey3,yOffset,seriesDivisor,seriesBarDistance,startStep,endStep,chartDivId,chartType,smoothLine,showArea,showPoint,horizontalBars) {
     
     // set chart's aspect ratio
     if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
         var chartDiv = document.getElementById(chartDivId);
-        if (chartDiv.classList.contains('ct-minor-sixth')) {
-            chartDiv.classList.remove('ct-minor-sixth');
+        if (chartDiv.classList.contains('ct-perfect-fifth')) {
+            chartDiv.classList.remove('ct-perfect-fifth');
             chartDiv.classList.add('ct-double-octave');
         }
         if (chartDiv.classList.contains('ct-square')) {
@@ -23,6 +23,7 @@ function jsonToChart(requestURL,dataKey,labelKey,labelValuesPrefix,labelValuesRe
         var labelValues = [];
         var seriesValues1 = [];
         var seriesValues2 = [];
+        var seriesValues3 = [];
         var count = 0;
 
         function pushDataIntoArrays(step) {
@@ -51,6 +52,10 @@ function jsonToChart(requestURL,dataKey,labelKey,labelValuesPrefix,labelValuesRe
                     meta: labelValues[count],
                     value: (jsonObj[dataKey][step][seriesKey2])/seriesDivisor 
                 };
+                seriesValues3[count] = { 
+                    meta: labelValues[count],
+                    value: (jsonObj[dataKey][step][seriesKey3])/seriesDivisor 
+                };
             } else {
                 seriesValues1[count] = { 
                     meta: labelValues[count],
@@ -59,6 +64,10 @@ function jsonToChart(requestURL,dataKey,labelKey,labelValuesPrefix,labelValuesRe
                 seriesValues2[count] = { 
                     meta: labelValues[count],
                     value: jsonObj[dataKey][step][seriesKey2]
+                };
+                seriesValues3[count] = { 
+                    meta: labelValues[count],
+                    value: jsonObj[dataKey][step][seriesKey3]
                 };
             }
 
@@ -80,24 +89,21 @@ function jsonToChart(requestURL,dataKey,labelKey,labelValuesPrefix,labelValuesRe
             // A labels array that can contain any sort of values
             labels: labelValues,
             // Our series array that contains series objects or in this case series data arrays
-            series: [seriesValues1, seriesValues2]
+            series: [seriesValues1, seriesValues2, seriesValues3]
         };
 
         var options = {
             axisY: {
                 offset: yOffset
             },
-            axisX: {},
+            axisX: {
+                offset: 15
+            },
+            chartPadding: 20,
             plugins: [
                 Chartist.plugins.tooltip()
             ]
         };
-
-        if (labelValuesPrefix) {
-            options['axisX'] = {
-                offset: 35
-            }
-        }
 
         if (xAxisLabelSpacing) {
             if (!document.querySelector('.chartlist') && window.matchMedia("(min-width: 576px)").matches) {
@@ -115,8 +121,13 @@ function jsonToChart(requestURL,dataKey,labelKey,labelValuesPrefix,labelValuesRe
             }
         }
 
+        if (labelValuesPrefix) {
+            options['axisX']['offset'] = 25;
+        }
+
         if (xPositionTop == true) {
             options['axisX']['position'] = 'start';
+            options['axisX']['offset'] = 10;
         }
 
         if (chartType == 'line') {

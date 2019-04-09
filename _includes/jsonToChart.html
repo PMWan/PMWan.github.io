@@ -1,7 +1,3 @@
-{% if page.x_position_top == true or page.x_slanted == true %}
-    <div class="chart-description-extra-top-padding"></div>
-{% endif %}
-
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         jsonToChart(
@@ -14,6 +10,7 @@
             {% if page.x_position_top == true %}true{% else %}false{% endif %},
             '{{ page.series_key }}',
             {% if page.series_key_2 %}'{{ page.series_key_2 }}'{% else %}null{% endif %},
+            {% if page.series_key_3 %}'{{ page.series_key_3 }}'{% else %}null{% endif %},
             {{ page.y_axis_offset }},
             {% if page.series_divisor == null %}null{% else %}{{ page.series_divisor }}{% endif %},
             {% if page.series_bar_distance == null %}null{% else %}{{ page.series_bar_distance }}{% endif %},

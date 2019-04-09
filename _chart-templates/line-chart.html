@@ -6,7 +6,8 @@ categories: []
 description:
 title:
 excerpt_separator: <!--more-->
-chart_function: jsonToLineChart
+chart_function: jsonToChart
+chart_type: line
 data_file:
 data_key:
 label_key:
@@ -26,7 +27,7 @@ table_col_1:
 table_col_2:
 ---
 
-<div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
+<div class="ct-chart ct-perfect-fifth" id="{{ page.chart_id }}"></div>
 
 {% include {{ page.chart_function }}.html %}
 

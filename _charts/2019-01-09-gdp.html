@@ -4,7 +4,7 @@ author: Paul
 unit: (KSh, trillion)
 categories: [economy]
 description: "Kenya's nominal and real Gross Domestic Product (GDP) from 2009 to 2017. NB: The real GDP figures are based on 2009 prices."
-title: GDP - Nominal and Real
+title: GDP
 excerpt_separator: <!--more-->
 series-a: Nominal
 series-b: Real
@@ -17,7 +17,7 @@ label_values_prefix: null
 label_values_reversed: false
 series_key: nominal_gdp
 series_key_2: real_gdp
-y_axis_offset: 30
+y_axis_offset: 5
 series_divisor: 1e12
 series_bar_distance: 8
 start_step: 8
@@ -31,7 +31,7 @@ image: /assets/images/gdp.png
 
 {% include key.html %}
 
-<div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
+<div class="ct-chart ct-perfect-fifth" id="{{ page.chart_id }}"></div>
 
 {% include {{ page.chart_function }}.html %}
 

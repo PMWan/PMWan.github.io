@@ -84,6 +84,19 @@ h5 {
     fill: black;
 }
 
+.ct-series-c .ct-line,
+.ct-series-c .ct-point {
+  stroke: limegreen;
+}
+
+.ct-series-c .ct-bar {
+  stroke: limegreen;
+}
+
+.ct-series-c .ct-area {
+    fill: limegreen;
+}
+
 .ct-series-a .ct-point {
     stroke-width: 8.5px;
 }
@@ -92,6 +105,23 @@ h5 {
     stroke-width: 8.5px;
 }
 
+.ct-series-c .ct-point {
+    stroke-width: 8.5px;
+}
+
+.dense-datapoints {
+    .ct-series-a .ct-point {
+        stroke-width: 4px;
+    }
+    
+    .ct-series-b .ct-point {
+        stroke-width: 4px;
+    }
+    
+    .ct-series-c .ct-point {
+        stroke-width: 4px;
+    }
+}
 
 .series-a-key {
     background-color: #e90000;
@@ -107,12 +137,19 @@ h5 {
     display: inline-block;
 }
 
+.series-c-key {
+    background-color: limegreen;
+    height: 1em;
+    width: 1em;
+    display:inline-block;
+}
+
 .key-wrapper {
     text-align: center;
     width: 100%;
     font-size: 0.9em;
     padding-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
     span {
         padding-right: 1em;
     }
@@ -120,14 +157,6 @@ h5 {
 
 #contact-form {
     padding-bottom: 1em;
-}
-
-.chart-description {
-    padding-top: 0.5em;
-}
-
-.chart-description-extra-top-padding {
-    padding-top: 1.5em;
 }
 
 .chart-wrapper {

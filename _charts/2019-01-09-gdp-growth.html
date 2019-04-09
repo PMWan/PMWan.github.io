@@ -4,7 +4,7 @@ author: Paul
 unit: (%)
 categories: [economy]
 description: "Kenya's Gross Domestic Product (GDP) growth rate from 2009 to 2017."
-title: GDP Growth
+title: GDP Growth Rate
 excerpt_separator: <!--more-->
 chart_function: jsonToChart
 chart_type: line
@@ -15,7 +15,7 @@ label_values_prefix: null
 label_values_reversed: false
 x_axis_label_spacing: null
 series_key: gdp_growth
-y_axis_offset: 30
+y_axis_offset: 5
 series_divisor: null
 start_step: 8
 end_step: 16
@@ -28,7 +28,7 @@ table_col_2: GDP Growth Rate
 image: /assets/images/gdp-growth.png
 ---
 
-<div class="ct-chart ct-minor-sixth" id="{{ page.chart_id }}"></div>
+<div class="ct-chart ct-perfect-fifth" id="{{ page.chart_id }}"></div>
 
 {% include {{ page.chart_function }}.html %}
 
