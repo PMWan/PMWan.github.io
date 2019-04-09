@@ -84,19 +84,6 @@ h5 {
     fill: black;
 }
 
-.ct-series-c .ct-line,
-.ct-series-c .ct-point {
-  stroke: limegreen;
-}
-
-.ct-series-c .ct-bar {
-  stroke: limegreen;
-}
-
-.ct-series-c .ct-area {
-    fill: limegreen;
-}
-
 .ct-series-a .ct-point {
     stroke-width: 8.5px;
 }
@@ -124,7 +111,7 @@ h5 {
 }
 
 .series-a-key {
-    background-color: #e90000;
+    background-color: #d70206;
     height: 1em;
     width: 1em;
     display:inline-block;
@@ -138,7 +125,7 @@ h5 {
 }
 
 .series-c-key {
-    background-color: limegreen;
+    background-color: #f4c63d;
     height: 1em;
     width: 1em;
     display:inline-block;
