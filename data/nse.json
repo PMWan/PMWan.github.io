@@ -2,7 +2,7 @@
   "sources": [
       {
         "source": "KNBS",
-        "source_url": "https://www.knbs.or.ke/download/leading-economic-indicator-december-2018/"
+        "source_url": "https://www.knbs.or.ke/download/leading-economic-indicator-january-2019/"
       }
     ],
   "nse_data": [
@@ -245,6 +245,16 @@
       "value_of_shares_million_ksh": 7830,
       "value_of_shares": 7830000000,
       "nse_20_share_index": 2801
+    },
+    {
+      "year": 2019,
+      "month": "January",
+      "no_of_transactions": 24798,
+      "no_of_shares_million": 557,
+      "no_of_shares": 557000000,
+      "value_of_shares_million_ksh": 16200,
+      "value_of_shares": 16200000000,
+      "nse_20_share_index": 2983
     }
   ]
 }
