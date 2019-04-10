@@ -1,0 +1,58 @@
+---
+layout: chart
+author: Paul
+unit: (USD, billion)
+categories: [economy]
+description: "Chart: Total amount remitted annually by Kenya's diaspora community from 2008 to 2018."
+title: "Diaspora Remittances"
+excerpt_separator: <!--more-->
+chart_function: jsonToChart
+chart_type: bar
+data_file: 2019-04-10-diaspora-remittances
+data_key: diaspora_remittances_data
+label_key: year
+label_values_prefix: null
+label_values_reversed: true
+x_position_top: false
+horizontal_bars: false
+series_key: total_remittances_usd
+y_axis_offset: 10
+series_divisor: 1e9
+start_step: 10
+end_step: 0
+chart_id: diaspora-remittances-chart
+table_col_1: Year
+table_col_2: Diaspora Remittances
+image: /assets/images/diaspora-remittances.png
+---
+
+<div class="ct-chart ct-perfect-fifth" id="{{ page.chart_id }}"></div>
+
+{% include {{ page.chart_function }}.html %}
+
+{% include chart-description.html %}
+
+<!--more-->
+
+{% assign sources = site.data[page.data_file]['sources'] %}
+{% include source.html %}
+
+<div class="data-table table-responsive">
+    {% assign data = site.data[page.data_file][page.data_key] %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">{{ page.table_col_1 }}</th>
+                <th scope="col">{{ page.table_col_2 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in (page.end_step..page.start_step) %}
+                <tr>
+                    <td>{{ data[i][page.label_key] }} </td>
+                    <td>{{ data[i][page.series_key] | divided_by: site.data.large-numbers.billion | slice: 0,5 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

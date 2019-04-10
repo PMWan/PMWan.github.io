@@ -48,27 +48,35 @@ function jsonToChart(requestURL,dataKey,labelKey,labelValuesPrefix,labelValuesRe
                     meta: labelValues[count],
                     value: (jsonObj[dataKey][step][seriesKey])/seriesDivisor 
                 };
-                seriesValues2[count] = { 
-                    meta: labelValues[count],
-                    value: (jsonObj[dataKey][step][seriesKey2])/seriesDivisor 
-                };
-                seriesValues3[count] = { 
-                    meta: labelValues[count],
-                    value: (jsonObj[dataKey][step][seriesKey3])/seriesDivisor 
-                };
+                if (seriesKey2) {
+                    seriesValues2[count] = { 
+                        meta: labelValues[count],
+                        value: (jsonObj[dataKey][step][seriesKey2])/seriesDivisor 
+                    };
+                }
+                if (seriesKey3) {
+                    seriesValues3[count] = { 
+                        meta: labelValues[count],
+                        value: (jsonObj[dataKey][step][seriesKey3])/seriesDivisor 
+                    };
+                }     
             } else {
                 seriesValues1[count] = { 
                     meta: labelValues[count],
                     value: jsonObj[dataKey][step][seriesKey]
                 };
-                seriesValues2[count] = { 
-                    meta: labelValues[count],
-                    value: jsonObj[dataKey][step][seriesKey2]
-                };
-                seriesValues3[count] = { 
-                    meta: labelValues[count],
-                    value: jsonObj[dataKey][step][seriesKey3]
-                };
+                if (seriesKey2) {
+                    seriesValues2[count] = { 
+                        meta: labelValues[count],
+                        value: jsonObj[dataKey][step][seriesKey2]
+                    };
+                }
+                if (seriesKey3) {
+                    seriesValues3[count] = { 
+                        meta: labelValues[count],
+                        value: jsonObj[dataKey][step][seriesKey3]
+                    };
+                }
             }
 
             count = count + 1;
@@ -85,11 +93,19 @@ function jsonToChart(requestURL,dataKey,labelKey,labelValuesPrefix,labelValuesRe
             }
         }
 
+        if (seriesKey && seriesKey2 && seriesKey3) {
+            var series_array = [seriesValues1, seriesValues2, seriesValues3]
+        } else if (seriesKey && seriesKey2) {
+            var series_array = [seriesValues1, seriesValues2]
+        } else if (seriesKey) {
+            var series_array = [seriesValues1]
+        }
+
         var data = {
             // A labels array that can contain any sort of values
             labels: labelValues,
             // Our series array that contains series objects or in this case series data arrays
-            series: [seriesValues1, seriesValues2, seriesValues3]
+            series: series_array
         };
 
         var options = {
