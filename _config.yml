@@ -28,8 +28,9 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jemoji
-  - jekyll-sitemap
   - jekyll-paginate-v2
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 sass:
   style: compressed
@@ -46,6 +47,13 @@ pagination:
   sort_reverse: true
   title: ":title"
   permalink: '/page/:num/'
+
+defaults:
+  -
+    scope:
+      path: "categories"
+    values:
+      sitemap: false
 
 # Changed _data to data so that it's included in _site when site generation occurs.
 # Did this so that chartist.js library can have access to data when generating charts
