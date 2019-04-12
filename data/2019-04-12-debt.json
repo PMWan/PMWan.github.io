@@ -7,6 +7,62 @@
   ],
   "debt_data": [
     {
+      "year": "2000",
+      "month": "September",
+      "domestic_debt": 195520000000,
+      "external_debt": 399798720000,
+      "total_debt": 595318720000
+    },
+    {
+      "year": "2001",
+      "month": "September",
+      "domestic_debt": 219165000000,
+      "external_debt": 392052740000,
+      "total_debt": 611217740000
+    },
+    {
+      "year": "2002",
+      "month": "September",
+      "domestic_debt": 250808600000,
+      "external_debt": 375034190000,
+      "total_debt": 625842790000
+    },
+    {
+      "year": "2003",
+      "month": "September",
+      "domestic_debt": 303252050000,
+      "external_debt": 411067000000,
+      "total_debt": 714319050000
+    },
+    {
+      "year": "2004",
+      "month": "September",
+      "domestic_debt": 299745580000,
+      "external_debt": 454438560000,
+      "total_debt": 754184140000
+    },
+    {
+      "year": "2005",
+      "month": "September",
+      "domestic_debt": 328799980000,
+      "external_debt": 418860330000,
+      "total_debt": 747660310000
+    },
+    {
+      "year": "2006",
+      "month": "September",
+      "domestic_debt": 371591470000,
+      "external_debt": 422647930000,
+      "total_debt": 794239410000
+    },
+    {
+      "year": "2007",
+      "month": "September",
+      "domestic_debt": 426821360000,
+      "external_debt": 408680790000,
+      "total_debt": 835502140000
+    },
+    {
       "year": "2008",
       "month": "September",
       "domestic_debt": 449333840000,

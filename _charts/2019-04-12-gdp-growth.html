@@ -1,32 +1,31 @@
 ---
 layout: chart
 author: Paul
-unit: (KSh, trillion)
+unit: (%)
 categories: [economy]
-description: "[CHART] Kenya's total public debt from September 2008 to September 2018."
-title: Public Debt
+description: "[CHART] Kenya's Gross Domestic Product (GDP) growth rate from 2001 to 2017."
+title: GDP Growth Rate
 excerpt_separator: <!--more-->
 chart_function: jsonToChart
 chart_type: line
-data_file: debt
-data_key: debt_data
+data_file: gdp
+data_key: gdp_data
 label_key: year
-label_values_prefix: month
+label_values_prefix: null
 label_values_reversed: false
 x_axis_label_spacing: 2
-series_key: total_debt
+series_key: gdp_growth
 y_axis_offset: 5
-series_divisor: 1e12
+series_divisor: null
 start_step: 0
-end_step: 10
-chart_id: public-debt-chart
-smooth_line: true
-show_area: true
+end_step: 16
+chart_id: gdp-growth-rate-chart
+smooth_line: false
+show_area: false
 show_point: true
 table_col_1: Year
-table_col_2: Month
-table_col_3: Public Debt
-image: /assets/images/public-debt.png
+table_col_2: GDP Growth Rate
+image: /assets/images/gdp-growth.png
 ---
 
 <div class="ct-chart ct-perfect-fifth" id="{{ page.chart_id }}"></div>
@@ -46,16 +45,14 @@ image: /assets/images/public-debt.png
         <thead>
             <tr>
                 <th scope="col">{{ page.table_col_1 }}</th>
-                <th scope="col">{{ page.table_col_2 }}</th>
-                <th scope="col">{{ page.table_col_3 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
+                <th scope="col">{{ page.table_col_2 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
             </tr>
         </thead>
         <tbody>
             {% for i in (page.start_step..page.end_step) reversed %}
                 <tr>
                     <td>{{ data[i][page.label_key] }} </td>
-                    <td>{{ data[i][page.label_values_prefix] | slice: 0, 3 }} </td>
-                    <td>{{ data[i][page.series_key] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ data[i][page.series_key] }}</td>
                 </tr>
             {% endfor %}
         </tbody>
