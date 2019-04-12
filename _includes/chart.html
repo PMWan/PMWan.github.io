@@ -3,7 +3,9 @@
         <div class="card-body">
             <h5><a href="{{ chart.url }}">{{ chart.title }}</a></h5>
             {% if chart.series-a %}{% include key.html %}{% endif %}
-            <div class="unit {% if chart.horizontal_bars %}unit-right-aligned{% endif %}">{{ chart.unit }}</div>
+            {% if chart.horizontal_bars == false or chart.horizontal_bars == null %}
+                <div class="unit">{{ chart.unit }}</div>
+            {% endif %}
             <div>{{ chart.excerpt }}</div>
             <p class="more-link-wrapper"><a href="{{ chart.url }}" class="more-link">More</a></p>
         </div>

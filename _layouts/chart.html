@@ -5,6 +5,7 @@ layout: default-page
 
 <h5>{{ page.title }}</h5>
 {% if page.series-a %}{% include key.html %}{% endif %}
-<div class="unit {% if page.horizontal_bars %}unit-right-aligned{% endif %}">{{ page.unit }}</div>
-
+{% if page.horizontal_bars == false or page.horizontal_bars == null %}
+    <div class="unit">{{ page.unit }}</div>
+{% endif %}
 {{ content }}

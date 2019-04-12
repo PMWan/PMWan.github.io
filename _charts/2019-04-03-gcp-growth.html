@@ -13,7 +13,7 @@ data_key: gcp_growth_data
 label_key: county
 label_values_prefix: null
 label_values_reversed: true
-x_position_top: true
+x_position_top: false
 horizontal_bars: true
 series_key: avg_growth_rate_14_17
 y_axis_offset: 65
@@ -29,6 +29,10 @@ image: /assets/images/gcp-growth.png
 <div class="ct-chart ct-square" id="{{ page.chart_id }}"></div>
 
 {% include {{ page.chart_function }}.html %}
+
+{% if page.horizontal_bars == true %}
+    <div class="unit unit-right-aligned">{{ page.unit }}</div>
+{% endif %}
 
 {% include chart-description.html %}
 

@@ -31,6 +31,10 @@ image: /assets/images/
 
 {% include {{ page.chart_function }}.html %}
 
+{% if page.horizontal_bars == true %}
+    <div class="unit unit-right-aligned">{{ page.unit }}</div>
+{% endif %}
+
 {% include chart-description.html %}
 
 <!--more-->
