@@ -121,7 +121,7 @@ h5 {
     text-align: center;
     width: 100%;
     font-size: 0.9em;
-    padding-top: 1em;
+    padding-top: 0.5em;
     padding-bottom: 0.5em;
     span {
         padding-right: 1em;
@@ -142,6 +142,9 @@ h5 {
 
 .more-link-wrapper {
     text-align: right;
+    a {
+        text-decoration: underline dotted darkgray;
+    }
 }
 
 .chartlist .chart-col {
@@ -212,8 +215,11 @@ table.floatThead-table {
     font-weight: 600;
 }
 
-.ct-axis-title {
+.unit {
+    color: gray;
     font-size: 0.9em;
-    fill: gray;
-    font-weight: 700;
+}
+
+.unit-right-aligned {
+    text-align: right;
 }

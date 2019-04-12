@@ -1,10 +1,25 @@
 <div class="key-wrapper">
     <div class="series-a-key"></div>
-    <span>{{ page.series-a }}</span>
+    {% if page.series-a %}
+        <span>{{ page.series-a }}</span>
+    {% endif %}
+    {% if chart.series-a %}
+        <span>{{ chart.series-a }}</span>
+    {% endif %}
     <div class="series-b-key"></div>
-    <span>{{ page.series-b }}</span>
+    {% if page.series-b %}
+        <span>{{ page.series-b }}</span>
+    {% endif %}
+    {% if chart.series-b %}
+        <span>{{ chart.series-b }}</span>
+    {% endif %}
     {% if page.series-c %}
-    <div class="series-c-key"></div>
-    <span>{{ page.series-c }}</span>
+        <div class="series-c-key"></div>
+        {% if page.series-c %}
+            <span>{{ page.series-c }}</span>
+        {% endif %}
+        {% if chart.series-c %}
+            <span>{{ chart.series-c }}</span>
+        {% endif %}
     {% endif %}
 </div>

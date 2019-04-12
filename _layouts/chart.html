@@ -3,6 +3,8 @@ layout: default-page
 ---
 {% include linktohome.html %}
 
-<h5>{{ page.title }} {{ page.unit }}</h5>
+<h5>{{ page.title }}</h5>
+{% if page.series-a %}{% include key.html %}{% endif %}
+<div class="unit {% if page.horizontal_bars %}unit-right-aligned{% endif %}">{{ page.unit }}</div>
 
 {{ content }}
