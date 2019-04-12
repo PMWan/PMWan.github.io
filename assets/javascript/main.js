@@ -34,11 +34,11 @@ function jsonToChart(requestURL,dataKey,labelKey,labelValuesPrefix,labelValuesRe
                 if (labelValuesPrefix) {
                     labelValues.push(
                         (jsonObj[dataKey][step][labelValuesPrefix]).toString().slice(0,3) +
-                        " " +
+                        " " + "'" +
                         (jsonObj[dataKey][step][labelKey]).toString().slice(-2)
                         );
                 } else {
-                    labelValues.push((jsonObj[dataKey][step][labelKey]).toString().slice(-2));
+                    labelValues.push("'" + (jsonObj[dataKey][step][labelKey]).toString().slice(-2));
                 }
             }
 
