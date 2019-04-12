@@ -115,9 +115,28 @@ function jsonToChart(requestURL,dataKey,labelKey,labelValuesPrefix,labelValuesRe
             axisX: {
                 offset: 15
             },
-            chartPadding: 20,
             plugins: [
                 Chartist.plugins.tooltip()
+                // Chartist.plugins.ctAxisTitle({
+                //     // axisX: {
+                //     //   axisTitle: "Time (mins)",
+                //     //   axisClass: "ct-axis-title",
+                //     //   offset: {
+                //     //     x: 0,
+                //     //     y: 50
+                //     //   },
+                //     //   textAnchor: "middle"
+                //     // },
+                //     axisY: {
+                //       axisTitle: "KSh, trillion",
+                //       axisClass: "ct-axis-title",
+                //       offset: {
+                //         x: 0,
+                //         y: 10
+                //       },
+                //       flipTitle: true
+                //     }
+                // })
             ]
         };
 
