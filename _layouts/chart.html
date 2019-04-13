@@ -3,7 +3,7 @@ layout: default-page
 ---
 {% include linktohome.html %}
 
-<h5>{{ page.title }}</h5>
+<h5>{{ page.title | remove: " [Chart]" }}</h5>
 {% if page.series-a %}{% include key.html %}{% endif %}
 {% if page.horizontal_bars == false or page.horizontal_bars == null %}
     <div class="unit">{{ page.unit }}</div>

@@ -1,7 +1,7 @@
 <div class="col-sm-12 col-md-6 col-lg-4 chart-col">
     <div class="chart-wrapper card">
         <div class="card-body">
-            <h5><a href="{{ chart.url }}">{{ chart.title }}</a></h5>
+            <h5><a href="{{ chart.url }}">{{ chart.title | remove: " [Chart]" }}</a></h5>
             {% if chart.series-a %}{% include key.html %}{% endif %}
             {% if chart.horizontal_bars == false or chart.horizontal_bars == null %}
                 <div class="unit">{{ chart.unit }}</div>
