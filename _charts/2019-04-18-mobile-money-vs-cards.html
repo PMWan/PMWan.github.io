@@ -1,32 +1,32 @@
 ---
 layout: chart
 author: Paul
-unit:
-categories: []
-description: "Chart: "
-title:
+unit: "(KSh, trillion)"
+categories: [economy, ict]
+description: "Total annual value of mobile money versus card transactions from 2010 and 2018."
+title: "Mobile Money vs. Card Transactions [Chart]"
 excerpt_separator: <!--more-->
-series-a:
-series-b:
+series-a: Mobile Money
+series-b: Cards
 chart_function: jsonToChart
 chart_type: bar
-data_file:
-data_key:
-label_key:
-label_values_prefix:
-label_values_reversed:
-x_axis_label_spacing:
-series_key:
-series_key_2:
-series_bar_distance:
-y_axis_offset:
-series_divisor:
-start_step:
-end_step:
-chart_id:
-table_col_1:
-table_col_2:
-table_col_3:
+data_file: 2019-04-18-mobile-money-vs-cards
+data_key: mobile_money_card_data
+label_key: year
+label_values_prefix: null
+label_values_reversed: true
+x_axis_label_spacing: null
+series_key: value_of_mobile_money_transactions
+series_key_2: value_of_card_transactions
+series_bar_distance: 8
+y_axis_offset: 25
+series_divisor: 1e12
+start_step: 8
+end_step: 0
+chart_id: mobile-money-vs-cards-chart
+table_col_1: Year
+table_col_2: Mobile Money
+table_col_3: Cards
 image: /assets/images/
 ---
 
@@ -56,11 +56,11 @@ image: /assets/images/
             </tr>
         </thead>
         <tbody>
-            {% for i in (page.start_step..page.end_step) reversed %}
+            {% for i in (page.end_step..page.start_step) %}
                 <tr>
                     <td>{{ data[i][page.label_key] }} </td>
-                    <td>{{ data[i][page.series_key] }}</td>
-                    <td>{{ data[i][page.series_key_2] }}</td>
+                    <td>{{ data[i][page.series_key] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
+                    <td>{{ data[i][page.series_key_2] | divided_by: site.data.large-numbers.trillion | slice: 0,4 }}</td>
                 </tr>
             {% endfor %}
         </tbody>
