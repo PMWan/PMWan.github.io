@@ -1,0 +1,63 @@
+---
+layout: chart
+author: Paul
+unit: "(Gbps)"
+categories: [ict]
+description: "Kenya's international internet bandwidth usage from December 2008 to December 2018."
+title: "International Internet Bandwidth Usage"
+excerpt_separator: <!--more-->
+chart_function: jsonToChart
+chart_type: line
+data_file: 2019-04-19-internet-bandwidth
+data_key: internet_bandwidth_data
+label_key: year
+label_values_prefix: month
+label_values_reversed: false
+x_axis_label_spacing: 2
+series_key: used_bandwidth_gbps
+y_axis_offset: 35
+series_divisor: null
+start_step: 1
+end_step: 11
+chart_id: internet-connectivity-bandwidth-chart
+smooth_line: true
+show_area: true
+show_point: true
+table_col_1: Year
+table_col_2: Month
+table_col_3: International Internet Bandwidth Usage
+image: /assets/images/international-internet-bandwidth-usage.png
+---
+
+<div class="ct-chart ct-perfect-fifth" id="{{ page.chart_id }}"></div>
+
+{% include {{ page.chart_function }}.html %}
+
+{% include chart-description.html %}
+
+<!--more-->
+
+{% assign sources = site.data[page.data_file]['sources'] %}
+{% include source.html %}
+
+<div class="data-table table-responsive">
+    {% assign data = site.data[page.data_file][page.data_key] %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">{{ page.table_col_1 }}</th>
+                <th scope="col">{{ page.table_col_2 }}</th>
+                <th scope="col">{{ page.table_col_3 }} {% if page.unit %}{{ page.unit }}{% endif %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in (page.start_step..page.end_step) reversed %}
+                <tr>
+                    <td>{{ data[i][page.label_key] }} </td>
+                    <td>{{ data[i][page.label_values_prefix] }} </td>
+                    <td>{{ data[i][page.series_key] | slice: 0,6 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
