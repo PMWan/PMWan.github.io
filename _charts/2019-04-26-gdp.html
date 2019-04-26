@@ -3,14 +3,14 @@ layout: chart
 author: Paul
 unit: "(KSh, trillion)"
 categories: [economy]
-description: "Kenya's nominal and real Gross Domestic Product (GDP) from 2009 to 2017. NB: The real GDP figures are based on 2009 prices."
+description: "Kenya's nominal and real Gross Domestic Product (GDP) from 2009 to 2018. NB: The real GDP figures are based on 2009 prices."
 title: "GDP [Chart]"
 excerpt_separator: <!--more-->
 series-a: Nominal
 series-b: Real
 chart_function: jsonToChart
 chart_type: bar
-data_file: 2019-04-26-gdp
+data_file: 2019-04-26-v2-gdp
 data_key: gdp_data
 label_key: year
 label_values_prefix: null
@@ -21,7 +21,7 @@ y_axis_offset: 25
 series_divisor: 1e12
 series_bar_distance: 8
 start_step: 8
-end_step: 16
+end_step: 17
 chart_id: gdp-chart
 table_col_1: Year
 table_col_2: Nominal GDP
@@ -61,3 +61,10 @@ image: /assets/images/gdp.png
         </tbody>
     </table>
 </div>
+
+<h6>Notes:</h6>
+<ul>
+    <li>
+        The GDP figures from 2009 to 2015 were sourced from <a href="https://www.centralbank.go.ke/annual-gdp/" target="_blank">CBK</a> and those from 2016 to 2018 from <a href="https://www.knbs.or.ke/download/economic-survey-2019/" target="_blank">KNBS</a>. NB: KNBS released revised GDP figures for 2016 and 2017 in the <a href="https://www.knbs.or.ke/download/economic-survey-2019/" target="_blank">Economic Survey 2019 Report</a>.
+    </li>
+</ul>

@@ -7,6 +7,10 @@
     {
       "source": "CBK[2]",
       "source_url": "https://www.centralbank.go.ke/annual-gdp/"
+    },
+    {
+      "source": "KNBS",
+      "source_url": "https://www.knbs.or.ke/download/economic-survey-2019/"
     }
   ],
   "debt_gdp_data": [
@@ -14,120 +18,120 @@
       "year": 2017,
       "month": "December",
       "total_debt": 4569629790000,
-      "nominal_gdp": 7749426000000,
-      "debt_to_gdp_ratio": "58.97"
+      "nominal_gdp": 8144372700000,
+      "debt_to_gdp_ratio": 56.11
     },
     {
       "year": 2016,
       "month": "December",
       "total_debt": 3827298060000,
-      "nominal_gdp": 7194147000000,
-      "debt_to_gdp_ratio": "53.20"
+      "nominal_gdp": 7022963100000,
+      "debt_to_gdp_ratio": 54.50
     },
     {
       "year": 2015,
       "month": "December",
       "total_debt": 3155763330000,
-      "nominal_gdp": 6284185000000,
-      "debt_to_gdp_ratio": "50.22"
+      "nominal_gdp": 6284184900000,
+      "debt_to_gdp_ratio": 50.22
     },
     {
       "year": 2014,
       "month": "December",
       "total_debt": 2478444990000,
-      "nominal_gdp": 5402647000000,
-      "debt_to_gdp_ratio": "45.87"
+      "nominal_gdp": 5402647500000,
+      "debt_to_gdp_ratio": 45.87
     },
     {
       "year": 2013,
       "month": "December",
       "total_debt": 2111551740000,
       "nominal_gdp": 4745090000000,
-      "debt_to_gdp_ratio": "44.50"
+      "debt_to_gdp_ratio": 44.50
     },
     {
       "year": 2012,
       "month": "December",
       "total_debt": 1793238260000,
       "nominal_gdp": 4261370000000,
-      "debt_to_gdp_ratio": "42.08"
+      "debt_to_gdp_ratio": 42.08
     },
     {
       "year": 2011,
       "month": "December",
       "total_debt": 1485487980000,
       "nominal_gdp": 3725918000000,
-      "debt_to_gdp_ratio": "39.87"
+      "debt_to_gdp_ratio": 39.87
     },
     {
       "year": 2010,
       "month": "December",
       "total_debt": 1320138430000,
       "nominal_gdp": 3169300000000,
-      "debt_to_gdp_ratio": "41.65"
+      "debt_to_gdp_ratio": 41.65
     },
     {
       "year": 2009,
       "month": "December",
       "total_debt": 1177940630000,
       "nominal_gdp": 2863690000000,
-      "debt_to_gdp_ratio": "41.13"
+      "debt_to_gdp_ratio": 41.13
     },
     {
       "year": 2008,
       "month": "December",
       "total_debt": 972899250000,
       "nominal_gdp": 2107589000000,
-      "debt_to_gdp_ratio": "46.16"
+      "debt_to_gdp_ratio": 46.16
     },
     {
       "year": 2007,
       "month": "December",
       "total_debt": 844982110000,
       "nominal_gdp": 1833511000000,
-      "debt_to_gdp_ratio": "46.09"
+      "debt_to_gdp_ratio": 46.09
     },
     {
       "year": 2006,
       "month": "December",
       "total_debt": 792863770000,
       "nominal_gdp": 1622565000000,
-      "debt_to_gdp_ratio": "48.86"
+      "debt_to_gdp_ratio": 48.86
     },
     {
       "year": 2005,
       "month": "December",
       "total_debt": 743603810000,
       "nominal_gdp": 1415823000000,
-      "debt_to_gdp_ratio": "52.52"
+      "debt_to_gdp_ratio": 52.52
     },
     {
       "year": 2004,
       "month": "December",
       "total_debt": 735367390000,
       "nominal_gdp": 1274328000000,
-      "debt_to_gdp_ratio": "57.71"
+      "debt_to_gdp_ratio": 57.71
     },
     {
       "year": 2003,
       "month": "December",
       "total_debt": 711339580000,
       "nominal_gdp": 1131783000000,
-      "debt_to_gdp_ratio": "62.85"
+      "debt_to_gdp_ratio": 62.85
     },
     {
       "year": 2002,
       "month": "December",
       "total_debt": 629558060000,
       "nominal_gdp": 1035374000000,
-      "debt_to_gdp_ratio": "60.80"
+      "debt_to_gdp_ratio": 60.80
     },
     {
       "year": 2001,
       "month": "December",
       "total_debt": 606286580000,
       "nominal_gdp": 1020022000000,
-      "debt_to_gdp_ratio": "59.44"
+      "debt_to_gdp_ratio": 59.44
     }
   ]
 }

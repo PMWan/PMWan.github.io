@@ -90,33 +90,33 @@
     },
     {
       "year": "2014",
-      "nominal_gdp": 5402647000000,
+      "nominal_gdp": 5402647500000,
       "gdp_growth": 5.4,
-      "real_gdp": 3842186000000
+      "real_gdp": 3842185800000
     },
     {
       "year": "2015",
-      "nominal_gdp": 6284185000000,
+      "nominal_gdp": 6284184900000,
       "gdp_growth": 5.7,
-      "real_gdp": 4061901000000
+      "real_gdp": 4061901500000
     },
     {
       "year": "2016",
-      "nominal_gdp": 7194147000000,
+      "nominal_gdp": 7022963100000,
       "gdp_growth": 5.9,
-      "real_gdp": 4300302000000
+      "real_gdp": 4300698600000
     },
     {
       "year": "2017",
-      "nominal_gdp": 7749426000000,
+      "nominal_gdp": 8144372700000,
       "gdp_growth": 4.9,
-      "real_gdp": 4510391000000
+      "real_gdp": 4509821700000
     },
     {
       "year": "2018",
-      "nominal_gdp": null,
+      "nominal_gdp": 8904983900000,
       "gdp_growth": 6.3,
-      "real_gdp": null
+      "real_gdp": 4794832600000
     }
   ]
 }

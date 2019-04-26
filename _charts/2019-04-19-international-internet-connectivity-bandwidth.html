@@ -1,32 +1,32 @@
 ---
 layout: chart
 author: Paul
-unit: "(%)"
-categories: [economy]
-description: "Kenya's public debt to GDP ratio from December 2001 to December 2017."
-title: "Debt-to-GDP Ratio [Chart]"
+unit: "(Gbps)"
+categories: [ict]
+description: "Kenya's international internet connectivity bandwidth from December 2008 to December 2018."
+title: "International Internet Connectivity Bandwidth [Chart]"
 excerpt_separator: <!--more-->
 chart_function: jsonToChart
 chart_type: line
-data_file: 2019-04-11-debt-gdp
-data_key: debt_gdp_data
+data_file: 2019-04-19-internet-bandwidth
+data_key: internet_bandwidth_data
 label_key: year
 label_values_prefix: month
-label_values_reversed: true
-x_axis_label_spacing: 4
-series_key: debt_to_gdp_ratio
-y_axis_offset: 25
+label_values_reversed: false
+x_axis_label_spacing: 2
+series_key: used_bandwidth_gbps
+y_axis_offset: 35
 series_divisor: null
-start_step: 16
-end_step: 0
-chart_id: debt-to-gdp-chart
+start_step: 1
+end_step: 11
+chart_id: internet-connectivity-bandwidth-chart
 smooth_line: true
-show_area: false
+show_area: true
 show_point: true
 table_col_1: Year
 table_col_2: Month
-table_col_3: Debt-to-GDP Ratio
-image: /assets/images/debt-gdp.png
+table_col_3: International Internet Connectivity Bandwidth
+image: /assets/images/international-internet-connectivity-bandwidth.png
 ---
 
 <div class="ct-chart ct-perfect-fifth" id="{{ page.chart_id }}"></div>
@@ -51,11 +51,11 @@ image: /assets/images/debt-gdp.png
             </tr>
         </thead>
         <tbody>
-            {% for i in (page.end_step..page.start_step) %}
+            {% for i in (page.start_step..page.end_step) reversed %}
                 <tr>
                     <td>{{ data[i][page.label_key] }} </td>
-                    <td>{{ data[i][page.label_values_prefix] | slice: 0, 3 }} </td>
-                    <td>{{ data[i][page.series_key] }}</td>
+                    <td>{{ data[i][page.label_values_prefix] }} </td>
+                    <td>{{ data[i][page.series_key] | slice: 0,6 }}</td>
                 </tr>
             {% endfor %}
         </tbody>
