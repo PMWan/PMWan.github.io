@@ -3,6 +3,10 @@
     {
       "source": "CBK",
       "source_url": "https://www.centralbank.go.ke/annual-gdp/"
+    },
+    {
+      "source": "KNBS",
+      "source_url": "https://www.knbs.or.ke/download/economic-survey-2019/"
     }
   ],
   "gdp_data": [
@@ -107,6 +111,12 @@
       "nominal_gdp": 7749426000000,
       "gdp_growth": 4.9,
       "real_gdp": 4510391000000
+    },
+    {
+      "year": "2018",
+      "nominal_gdp": null,
+      "gdp_growth": 6.3,
+      "real_gdp": null
     }
   ]
 }
