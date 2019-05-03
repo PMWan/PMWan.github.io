@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@dashibodi" />
+    <!-- Begin Jekyll SEO tag v2.6.0 -->
+<title>Public Debt - Domestic vs. External [Chart] | Dashibodi</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Public Debt - Domestic vs. External [Chart]" />
+<meta name="author" content="Paul" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kenya’s domestic versus external public debt from September 2000 to September 2018." />
+<meta property="og:description" content="Kenya’s domestic versus external public debt from September 2000 to September 2018." />
+<link rel="canonical" href="https://dashibodi.com/public-debt-domestic-external" />
+<meta property="og:url" content="https://dashibodi.com/public-debt-domestic-external" />
+<meta property="og:site_name" content="Dashibodi" />
+<meta property="og:image" content="https://dashibodi.com/assets/images/public-debt-domestic-external.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-04-12T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"Kenya’s domestic versus external public debt from September 2000 to September 2018.","headline":"Public Debt - Domestic vs. External [Chart]","dateModified":"2019-04-12T00:00:00+00:00","datePublished":"2019-04-12T00:00:00+00:00","@type":"BlogPosting","image":"https://dashibodi.com/assets/images/public-debt-domestic-external.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://dashibodi.com/public-debt-domestic-external"},"url":"https://dashibodi.com/public-debt-domestic-external","author":{"@type":"Person","name":"Paul"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="EFt2pjcy95sBVgtY9SE8uCCesDNms3HdaE26cpCzeVU" />
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css?1556883628">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <title>Public Debt - Domestic vs. External [Chart]</title>
+  </head>
+  <body>
+    <div class="nav-wrapper">
+      <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="navbar-brand">
+        <h3 id="logo"><a href="/">Dashibodi</a></h3>
+        <sup id="country-code">KE</sup>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!-- navbar links -->
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="/search.html" method="get">
+            <input class="form-control mr-sm-2" id="search-box" type="text" placeholder="" aria-label="Search" name="query">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit" value="search">Search</button>
+        </form>
+    </div>
+</nav>
+      </div>
+    </div>
+    <div class="content-wrapper">
+    <div class="container">
+        <div id="go-home-or-go-back-links-wrapper">
+    <a href="#" onclick="goBack()" id="link-to-go-back" class="hidden-element">Go back</a>
+    <a href="/" id="link-to-home" class="hidden-element">Home</a>
+</div>
+
+<h5>Public Debt - Domestic vs. External</h5>
+<div class="key-wrapper">
+    <div class="series-a-key"></div>
+    
+        <span>Domestic</span>
+    
+    
+    <div class="series-b-key"></div>
+    
+        <span>External</span>
+    
+    
+    
+</div>
+
+    <div class="unit">(KSh, trillion)</div>
+
+<div class="ct-chart ct-perfect-fifth" id="domestic-external-debt-chart"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        jsonToChart(
+            '/data/2019-04-12-debt.json',
+            'debt_data',
+            'year',
+            'month',
+            false,
+            '3',
+            false,
+            'domestic_debt',
+            'external_debt',
+            null,
+            30,
+            1e12,
+            null,
+            0,
+            18,
+            'domestic-external-debt-chart',
+            'line',
+            true,
+            true,
+            true,
+            false
+        );
+    });
+</script>
+
+<p class="chart-description">
+    Kenya's domestic versus external public debt from September 2000 to September 2018.
+</p>
+
+<!--more-->
+
+
+<div class="source-wrapper">
+    <span>Source:</span>
+    
+        <a href="https://www.centralbank.go.ke/public-debt/" target="_blank">CBK</a>
+        
+    
+
+    <p class="last-updated text-muted">
+        
+            Last updated on 12 Apr 2019
+        
+    </p>
+</div>
+
+<div class="data-table table-responsive">
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Year</th>
+                <th scope="col">Month</th>
+                <th scope="col">Public Debt - Domestic (KSh, trillion)</th>
+                <th scope="col">Public Debt - External (KSh, trillion)</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>2018 </td>
+                    <td>Sep </td>
+                    <td>2.54</td>
+                    <td>2.60</td>
+                </tr>
+            
+                <tr>
+                    <td>2017 </td>
+                    <td>Sep </td>
+                    <td>2.17</td>
+                    <td>2.31</td>
+                </tr>
+            
+                <tr>
+                    <td>2016 </td>
+                    <td>Sep </td>
+                    <td>1.85</td>
+                    <td>1.84</td>
+                </tr>
+            
+                <tr>
+                    <td>2015 </td>
+                    <td>Sep </td>
+                    <td>1.38</td>
+                    <td>1.55</td>
+                </tr>
+            
+                <tr>
+                    <td>2014 </td>
+                    <td>Sep </td>
+                    <td>1.26</td>
+                    <td>1.08</td>
+                </tr>
+            
+                <tr>
+                    <td>2013 </td>
+                    <td>Sep </td>
+                    <td>1.16</td>
+                    <td>0.88</td>
+                </tr>
+            
+                <tr>
+                    <td>2012 </td>
+                    <td>Sep </td>
+                    <td>0.92</td>
+                    <td>0.80</td>
+                </tr>
+            
+                <tr>
+                    <td>2011 </td>
+                    <td>Sep </td>
+                    <td>0.76</td>
+                    <td>0.79</td>
+                </tr>
+            
+                <tr>
+                    <td>2010 </td>
+                    <td>Sep </td>
+                    <td>0.70</td>
+                    <td>0.59</td>
+                </tr>
+            
+                <tr>
+                    <td>2009 </td>
+                    <td>Sep </td>
+                    <td>0.55</td>
+                    <td>0.52</td>
+                </tr>
+            
+                <tr>
+                    <td>2008 </td>
+                    <td>Sep </td>
+                    <td>0.44</td>
+                    <td>0.43</td>
+                </tr>
+            
+                <tr>
+                    <td>2007 </td>
+                    <td>Sep </td>
+                    <td>0.42</td>
+                    <td>0.40</td>
+                </tr>
+            
+                <tr>
+                    <td>2006 </td>
+                    <td>Sep </td>
+                    <td>0.37</td>
+                    <td>0.42</td>
+                </tr>
+            
+                <tr>
+                    <td>2005 </td>
+                    <td>Sep </td>
+                    <td>0.32</td>
+                    <td>0.41</td>
+                </tr>
+            
+                <tr>
+                    <td>2004 </td>
+                    <td>Sep </td>
+                    <td>0.29</td>
+                    <td>0.45</td>
+                </tr>
+            
+                <tr>
+                    <td>2003 </td>
+                    <td>Sep </td>
+                    <td>0.30</td>
+                    <td>0.41</td>
+                </tr>
+            
+                <tr>
+                    <td>2002 </td>
+                    <td>Sep </td>
+                    <td>0.25</td>
+                    <td>0.37</td>
+                </tr>
+            
+                <tr>
+                    <td>2001 </td>
+                    <td>Sep </td>
+                    <td>0.21</td>
+                    <td>0.39</td>
+                </tr>
+            
+                <tr>
+                    <td>2000 </td>
+                    <td>Sep </td>
+                    <td>0.19</td>
+                    <td>0.39</td>
+                </tr>
+            
+        </tbody>
+    </table>
+</div>
+    </div>
+</div>
+    <footer class="footer">
+    <div class="container">
+        <p>
+            
+                <a href="/contact">Get in touch</a>
+            
+        </p>
+        <p>
+            <a href="http://twitter.com/Dashibodi" target=_blank>Follow @Dashibodi</a>
+        </p>
+        <small>Dashibodi is a project by <a href="https://github.com/PMWan" target=_blank>PMWan</a> to develop and maintain a dashboard for Kenya.</small>
+    </div>
+</footer>
+    <script src="/assets/javascript/chartist.js"></script>
+    <script src="/assets/javascript/chartist-plugin-tooltip.min.js"></script>
+    <script src="/assets/javascript/main.js?1556883628"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/floatthead/2.1.3/jquery.floatThead.min.js"></script>
+      <script src="/assets/javascript/charts.js"></script>
+    
+  </body>
+</html>

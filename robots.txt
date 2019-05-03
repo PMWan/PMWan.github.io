@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /search
+Disallow: /*?
+
+Sitemap: https://dashibodi.com/sitemap.xml

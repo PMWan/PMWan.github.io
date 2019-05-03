@@ -1,0 +1,245 @@
+{
+  "sources": [
+    {
+      "source": "KNBS",
+      "source_url": "https://www.knbs.or.ke/download/gross-county-product-2019/"
+    }
+  ],
+  "gcp_growth_data": [
+    {
+      "code": 28,
+      "county": "Elgeyo Marakwet",
+      "avg_growth_rate_14_17": "10.02"
+    },
+    {
+      "code": 18,
+      "county": "Nyandarua",
+      "avg_growth_rate_14_17": "9.28"
+    },
+    {
+      "code": 31,
+      "county": "Laikipia",
+      "avg_growth_rate_14_17": "8.56"
+    },
+    {
+      "code": 41,
+      "county": "Siaya",
+      "avg_growth_rate_14_17": "8.36"
+    },
+    {
+      "code": 13,
+      "county": "Tharaka Nithi",
+      "avg_growth_rate_14_17": "8.32"
+    },
+    {
+      "code": 32,
+      "county": "Nakuru",
+      "avg_growth_rate_14_17": "7.68"
+    },
+    {
+      "code": 39,
+      "county": "Bungoma",
+      "avg_growth_rate_14_17": "7.58"
+    },
+    {
+      "code": 30,
+      "county": "Baringo",
+      "avg_growth_rate_14_17": "7.48"
+    },
+    {
+      "code": 40,
+      "county": "Busia",
+      "avg_growth_rate_14_17": "7.19"
+    },
+    {
+      "code": 44,
+      "county": "Migori",
+      "avg_growth_rate_14_17": "7.06"
+    },
+    {
+      "code": 19,
+      "county": "Nyeri",
+      "avg_growth_rate_14_17": "6.87"
+    },
+    {
+      "code": 22,
+      "county": "Kiambu",
+      "avg_growth_rate_14_17": "6.77"
+    },
+    {
+      "code": 1,
+      "county": "Mombasa",
+      "avg_growth_rate_14_17": "6.53"
+    },
+    {
+      "code": 6,
+      "county": "Taita Taveta",
+      "avg_growth_rate_14_17": "6.50"
+    },
+    {
+      "code": 38,
+      "county": "Vihiga",
+      "avg_growth_rate_14_17": "6.26"
+    },
+    {
+      "code": 34,
+      "county": "Kajiado",
+      "avg_growth_rate_14_17": "5.87"
+    },
+    {
+      "code": 36,
+      "county": "Bomet",
+      "avg_growth_rate_14_17": "5.86"
+    },
+    {
+      "code": 2,
+      "county": "Kwale",
+      "avg_growth_rate_14_17": "5.66"
+    },
+    {
+      "code": 47,
+      "county": "Nairobi",
+      "avg_growth_rate_14_17": "5.57"
+    },
+    {
+      "code": 25,
+      "county": "Samburu",
+      "avg_growth_rate_14_17": "5.37"
+    },
+    {
+      "code": 4,
+      "county": "Tana River",
+      "avg_growth_rate_14_17": "5.32"
+    },
+    {
+      "code": 43,
+      "county": "Homa Bay",
+      "avg_growth_rate_14_17": "5.32"
+    },
+    {
+      "code": 45,
+      "county": "Kisii",
+      "avg_growth_rate_14_17": "5.24"
+    },
+    {
+      "code": 12,
+      "county": "Meru",
+      "avg_growth_rate_14_17": "5.20"
+    },
+    {
+      "code": 16,
+      "county": "Machakos",
+      "avg_growth_rate_14_17": "5.06"
+    },
+    {
+      "code": 5,
+      "county": "Lamu",
+      "avg_growth_rate_14_17": "5.02"
+    },
+    {
+      "code": 24,
+      "county": "West Pokot",
+      "avg_growth_rate_14_17": "5.01"
+    },
+    {
+      "code": 27,
+      "county": "Uasin-Gishu",
+      "avg_growth_rate_14_17": "4.98"
+    },
+    {
+      "code": 11,
+      "county": "Isiolo",
+      "avg_growth_rate_14_17": "4.96"
+    },
+    {
+      "code": 10,
+      "county": "Marsabit",
+      "avg_growth_rate_14_17": "4.87"
+    },
+    {
+      "code": 3,
+      "county": "Kilifi",
+      "avg_growth_rate_14_17": "4.84"
+    },
+    {
+      "code": 46,
+      "county": "Nyamira",
+      "avg_growth_rate_14_17": "4.84"
+    },
+    {
+      "code": 20,
+      "county": "Kirinyaga",
+      "avg_growth_rate_14_17": "4.77"
+    },
+    {
+      "code": 21,
+      "county": "Muranga",
+      "avg_growth_rate_14_17": "4.62"
+    },
+    {
+      "code": 33,
+      "county": "Narok",
+      "avg_growth_rate_14_17": "4.62"
+    },
+    {
+      "code": 37,
+      "county": "Kakamega",
+      "avg_growth_rate_14_17": "4.46"
+    },
+    {
+      "code": 9,
+      "county": "Mandera",
+      "avg_growth_rate_14_17": "4.44"
+    },
+    {
+      "code": 23,
+      "county": "Turkana",
+      "avg_growth_rate_14_17": "4.22"
+    },
+    {
+      "code": 26,
+      "county": "Trans Nzoia",
+      "avg_growth_rate_14_17": "4.12"
+    },
+    {
+      "code": 35,
+      "county": "Kericho",
+      "avg_growth_rate_14_17": "3.94"
+    },
+    {
+      "code": 17,
+      "county": "Makueni",
+      "avg_growth_rate_14_17": "3.91"
+    },
+    {
+      "code": 8,
+      "county": "Wajir",
+      "avg_growth_rate_14_17": "3.68"
+    },
+    {
+      "code": 29,
+      "county": "Nandi",
+      "avg_growth_rate_14_17": "3.64"
+    },
+    {
+      "code": 15,
+      "county": "Kitui",
+      "avg_growth_rate_14_17": "3.51"
+    },
+    {
+      "code": 42,
+      "county": "Kisumu",
+      "avg_growth_rate_14_17": "3.50"
+    },
+    {
+      "code": 7,
+      "county": "Garissa",
+      "avg_growth_rate_14_17": "3.24"
+    },
+    {
+      "code": 14,
+      "county": "Embu",
+      "avg_growth_rate_14_17": "2.59"
+    }
+  ]
+}

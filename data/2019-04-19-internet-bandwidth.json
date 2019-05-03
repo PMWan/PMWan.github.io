@@ -1,0 +1,82 @@
+{
+  "sources": [
+    {
+      "source": "CA",
+      "source_url": "https://ca.go.ke/consumers/industry-research-statistics/statistics/"
+    }
+  ],
+  "internet_bandwidth_data": [
+    {
+      "year": 2007,
+      "month": "December",
+      "used_bandwidth_gbps": 0.5244,
+      "available_bandwidth_gbps": ""
+    },
+    {
+      "year": 2008,
+      "month": "December",
+      "used_bandwidth_gbps": 1.42115,
+      "available_bandwidth_gbps": ""
+    },
+    {
+      "year": 2009,
+      "month": "December",
+      "used_bandwidth_gbps": 18.99156,
+      "available_bandwidth_gbps": ""
+    },
+    {
+      "year": 2010,
+      "month": "December",
+      "used_bandwidth_gbps": 20.20956,
+      "available_bandwidth_gbps": 202.24
+    },
+    {
+      "year": 2011,
+      "month": "December",
+      "used_bandwidth_gbps": 52.938,
+      "available_bandwidth_gbps": ""
+    },
+    {
+      "year": 2012,
+      "month": "December",
+      "used_bandwidth_gbps": 328.641,
+      "available_bandwidth_gbps": 906.186
+    },
+    {
+      "year": 2013,
+      "month": "December",
+      "used_bandwidth_gbps": 365.413,
+      "available_bandwidth_gbps": 862.47398
+    },
+    {
+      "year": 2014,
+      "month": "December",
+      "used_bandwidth_gbps": 498.121,
+      "available_bandwidth_gbps": 847.523
+    },
+    {
+      "year": 2015,
+      "month": "December",
+      "used_bandwidth_gbps": 854.5509,
+      "available_bandwidth_gbps": 1550.771
+    },
+    {
+      "year": 2016,
+      "month": "December",
+      "used_bandwidth_gbps": 860.5702838,
+      "available_bandwidth_gbps": 2028.743283
+    },
+    {
+      "year": 2017,
+      "month": "December",
+      "used_bandwidth_gbps": 916.287,
+      "available_bandwidth_gbps": 3182.592
+    },
+    {
+      "year": 2018,
+      "month": "December",
+      "used_bandwidth_gbps": 1142.32,
+      "available_bandwidth_gbps": 4605.57
+    }
+  ]
+}

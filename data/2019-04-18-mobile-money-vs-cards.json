@@ -1,0 +1,59 @@
+{
+  "sources": [
+    {
+      "source": "CBK[1]",
+      "source_url": "https://www.centralbank.go.ke/national-payments-system/mobile-payments/"
+    },
+    {
+      "source": "CBK[2]",
+      "source_url": "https://www.centralbank.go.ke/national-payments-system/payment-cards/value-of-transactions-ksh-millions/"
+    }
+  ],
+  "mobile_money_card_data": [
+    {
+      "year": 2018,
+      "value_of_card_transactions": 1412769000000,
+      "value_of_mobile_money_transactions": 3984370000000
+    },
+    {
+      "year": 2017,
+      "value_of_card_transactions": 1389381000000,
+      "value_of_mobile_money_transactions": 3638474000000
+    },
+    {
+      "year": 2016,
+      "value_of_card_transactions": 1396522000000,
+      "value_of_mobile_money_transactions": 3355105000000
+    },
+    {
+      "year": 2015,
+      "value_of_card_transactions": 1348215000000,
+      "value_of_mobile_money_transactions": 2816099000000
+    },
+    {
+      "year": 2014,
+      "value_of_card_transactions": 1265261000000,
+      "value_of_mobile_money_transactions": 2371794000000
+    },
+    {
+      "year": 2013,
+      "value_of_card_transactions": 1532779000000,
+      "value_of_mobile_money_transactions": 1901559000000
+    },
+    {
+      "year": 2012,
+      "value_of_card_transactions": 1009760000000,
+      "value_of_mobile_money_transactions": 1544807000000
+    },
+    {
+      "year": 2011,
+      "value_of_card_transactions": 577852000000,
+      "value_of_mobile_money_transactions": 1169150200000
+    },
+    {
+      "year": 2010,
+      "value_of_card_transactions": 517324000000,
+      "value_of_mobile_money_transactions": 732219900000
+    }
+  ]
+}

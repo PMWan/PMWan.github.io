@@ -1,0 +1,54 @@
+{
+  "sources": [
+    {
+      "source": "CBK",
+      "source_url": "https://www.centralbank.go.ke/diaspora-remittances/"
+    }
+  ],
+  "diaspora_remittances_data": [
+    {
+      "year": 2018,
+      "total_remittances_usd": 2697462390
+    },
+    {
+      "year": 2017,
+      "total_remittances_usd": 1946903770
+    },
+    {
+      "year": 2016,
+      "total_remittances_usd": 1724303130
+    },
+    {
+      "year": 2015,
+      "total_remittances_usd": 1548032190
+    },
+    {
+      "year": 2014,
+      "total_remittances_usd": 1428481880
+    },
+    {
+      "year": 2013,
+      "total_remittances_usd": 1290574400
+    },
+    {
+      "year": 2012,
+      "total_remittances_usd": 1170894370
+    },
+    {
+      "year": 2011,
+      "total_remittances_usd": 891110450
+    },
+    {
+      "year": 2010,
+      "total_remittances_usd": 641943240
+    },
+    {
+      "year": 2009,
+      "total_remittances_usd": 609154960
+    },
+    {
+      "year": 2008,
+      "total_remittances_usd": 611240560
+    }
+  ]
+}

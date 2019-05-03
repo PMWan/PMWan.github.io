@@ -1,0 +1,14 @@
+- name: All
+  link: /
+
+- name: Economy
+  link: /economy
+
+- name: Demographics
+  link: /demographics
+
+- name: ICT
+  link: /ict
+
+- name: Counties
+  link: /counties

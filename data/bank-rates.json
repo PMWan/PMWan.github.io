@@ -1,0 +1,2642 @@
+{
+  "sources": [
+    {
+      "source": "CBK",
+      "source_url": "https://www.centralbank.go.ke/commercial-banks-weighted-average-rates/"
+    }
+  ],
+  "bank_rates_data": [
+    {
+      "Year": 2018,
+      "Month": "November",
+      "Deposit": 7.41,
+      "Savings": 5.38,
+      "Lending": 12.55,
+      "Overdraft": 12.11
+    },
+    {
+      "Year": 2018,
+      "Month": "October",
+      "Deposit": 7.63,
+      "Savings": 5.7,
+      "Lending": 12.61,
+      "Overdraft": 12.42
+    },
+    {
+      "Year": 2018,
+      "Month": "September",
+      "Deposit": 7.76,
+      "Savings": 6.33,
+      "Lending": 12.66,
+      "Overdraft": 12.52
+    },
+    {
+      "Year": 2018,
+      "Month": "August",
+      "Deposit": 7.78,
+      "Savings": 6.52,
+      "Lending": 12.78,
+      "Overdraft": 12.9
+    },
+    {
+      "Year": 2018,
+      "Month": "July",
+      "Deposit": 8.01,
+      "Savings": 6.53,
+      "Lending": 13.1,
+      "Overdraft": 13.16
+    },
+    {
+      "Year": 2018,
+      "Month": "June",
+      "Deposit": 8.04,
+      "Savings": 6.6,
+      "Lending": 13.22,
+      "Overdraft": 13.23
+    },
+    {
+      "Year": 2018,
+      "Month": "May",
+      "Deposit": 8.08,
+      "Savings": 6.64,
+      "Lending": 13.25,
+      "Overdraft": 13.3
+    },
+    {
+      "Year": 2018,
+      "Month": "April",
+      "Deposit": 8.17,
+      "Savings": 6.72,
+      "Lending": 13.24,
+      "Overdraft": 13.29
+    },
+    {
+      "Year": 2018,
+      "Month": "March",
+      "Deposit": 8.16,
+      "Savings": 6.85,
+      "Lending": 13.49,
+      "Overdraft": 13.4
+    },
+    {
+      "Year": 2018,
+      "Month": "February",
+      "Deposit": 8.25,
+      "Savings": 7.01,
+      "Lending": 13.68,
+      "Overdraft": 13.75
+    },
+    {
+      "Year": 2018,
+      "Month": "January",
+      "Deposit": 8.26,
+      "Savings": 6.97,
+      "Lending": 13.65,
+      "Overdraft": 13.61
+    },
+    {
+      "Year": 2017,
+      "Month": "December",
+      "Deposit": 8.22,
+      "Savings": 6.91,
+      "Lending": 13.64,
+      "Overdraft": 13.54
+    },
+    {
+      "Year": 2017,
+      "Month": "November",
+      "Deposit": 8.07,
+      "Savings": 6.93,
+      "Lending": 13.68,
+      "Overdraft": 13.6
+    },
+    {
+      "Year": 2017,
+      "Month": "October",
+      "Deposit": 8.01,
+      "Savings": 6.92,
+      "Lending": 13.71,
+      "Overdraft": 13.68
+    },
+    {
+      "Year": 2017,
+      "Month": "September",
+      "Deposit": 7.66,
+      "Savings": 6.43,
+      "Lending": 13.69,
+      "Overdraft": 13.65
+    },
+    {
+      "Year": 2017,
+      "Month": "August",
+      "Deposit": 7.67,
+      "Savings": 5.94,
+      "Lending": 13.65,
+      "Overdraft": 13.66
+    },
+    {
+      "Year": 2017,
+      "Month": "July",
+      "Deposit": 7.43,
+      "Savings": 6.4,
+      "Lending": 13.7,
+      "Overdraft": 13.65
+    },
+    {
+      "Year": 2017,
+      "Month": "June",
+      "Deposit": 7.15,
+      "Savings": 5.63,
+      "Lending": 13.66,
+      "Overdraft": 13.38
+    },
+    {
+      "Year": 2017,
+      "Month": "May",
+      "Deposit": 7.07,
+      "Savings": 5.85,
+      "Lending": 13.71,
+      "Overdraft": 13.44
+    },
+    {
+      "Year": 2017,
+      "Month": "April",
+      "Deposit": 6.97,
+      "Savings": 5.67,
+      "Lending": 13.61,
+      "Overdraft": 13.3
+    },
+    {
+      "Year": 2017,
+      "Month": "March",
+      "Deposit": 7.12,
+      "Savings": 5.89,
+      "Lending": 13.61,
+      "Overdraft": 13.29
+    },
+    {
+      "Year": 2017,
+      "Month": "February",
+      "Deposit": 7.65,
+      "Savings": 6.81,
+      "Lending": 13.69,
+      "Overdraft": 13.32
+    },
+    {
+      "Year": 2017,
+      "Month": "January",
+      "Deposit": 7.2,
+      "Savings": 6.09,
+      "Lending": 13.66,
+      "Overdraft": 13.3
+    },
+    {
+      "Year": 2016,
+      "Month": "December",
+      "Deposit": 7.33,
+      "Savings": 6.37,
+      "Lending": 13.66,
+      "Overdraft": 13.49
+    },
+    {
+      "Year": 2016,
+      "Month": "November",
+      "Deposit": 7.65,
+      "Savings": 6.52,
+      "Lending": 13.67,
+      "Overdraft": 13.49
+    },
+    {
+      "Year": 2016,
+      "Month": "October",
+      "Deposit": 7.82,
+      "Savings": 6.08,
+      "Lending": 13.73,
+      "Overdraft": 13.48
+    },
+    {
+      "Year": 2016,
+      "Month": "September",
+      "Deposit": 6.94,
+      "Savings": 3.78,
+      "Lending": 13.86,
+      "Overdraft": 13.74
+    },
+    {
+      "Year": 2016,
+      "Month": "August",
+      "Deposit": 6.42,
+      "Savings": 1.68,
+      "Lending": 17.66,
+      "Overdraft": 17.96
+    },
+    {
+      "Year": 2016,
+      "Month": "July",
+      "Deposit": 6.64,
+      "Savings": 1.67,
+      "Lending": 18.1,
+      "Overdraft": 17.84
+    },
+    {
+      "Year": 2016,
+      "Month": "June",
+      "Deposit": 6.78,
+      "Savings": 1.6,
+      "Lending": 18.18,
+      "Overdraft": 18.09
+    },
+    {
+      "Year": 2016,
+      "Month": "May",
+      "Deposit": 6.44,
+      "Savings": 1.59,
+      "Lending": 18.22,
+      "Overdraft": 18.2
+    },
+    {
+      "Year": 2016,
+      "Month": "April",
+      "Deposit": 6.89,
+      "Savings": 1.49,
+      "Lending": 18.04,
+      "Overdraft": 18.08
+    },
+    {
+      "Year": 2016,
+      "Month": "March",
+      "Deposit": 7.17,
+      "Savings": 1.35,
+      "Lending": 17.87,
+      "Overdraft": 18.14
+    },
+    {
+      "Year": 2016,
+      "Month": "February",
+      "Deposit": 7.49,
+      "Savings": 1.4,
+      "Lending": 17.91,
+      "Overdraft": 18.25
+    },
+    {
+      "Year": 2016,
+      "Month": "January",
+      "Deposit": 7.57,
+      "Savings": 1.56,
+      "Lending": 18,
+      "Overdraft": 18.45
+    },
+    {
+      "Year": 2015,
+      "Month": "December",
+      "Deposit": 8.02,
+      "Savings": 1.56,
+      "Lending": 18.3,
+      "Overdraft": 18.48
+    },
+    {
+      "Year": 2015,
+      "Month": "November",
+      "Deposit": 7.39,
+      "Savings": 1.32,
+      "Lending": 17.16,
+      "Overdraft": 17.44
+    },
+    {
+      "Year": 2015,
+      "Month": "October",
+      "Deposit": 7.54,
+      "Savings": 1.68,
+      "Lending": 16.58,
+      "Overdraft": 16.81
+    },
+    {
+      "Year": 2015,
+      "Month": "September",
+      "Deposit": 7.28,
+      "Savings": 1.71,
+      "Lending": 16.82,
+      "Overdraft": 16.61
+    },
+    {
+      "Year": 2015,
+      "Month": "August",
+      "Deposit": 6.91,
+      "Savings": 1.5,
+      "Lending": 15.68,
+      "Overdraft": 15.98
+    },
+    {
+      "Year": 2015,
+      "Month": "July",
+      "Deposit": 6.31,
+      "Savings": 1.37,
+      "Lending": 15.75,
+      "Overdraft": 16.05
+    },
+    {
+      "Year": 2015,
+      "Month": "June",
+      "Deposit": 6.64,
+      "Savings": 1.85,
+      "Lending": 16.06,
+      "Overdraft": 15.67
+    },
+    {
+      "Year": 2015,
+      "Month": "May",
+      "Deposit": 6.55,
+      "Savings": 1.48,
+      "Lending": 15.26,
+      "Overdraft": 15.1
+    },
+    {
+      "Year": 2015,
+      "Month": "April",
+      "Deposit": 6.6,
+      "Savings": 1.9,
+      "Lending": 15.4,
+      "Overdraft": 15.52
+    },
+    {
+      "Year": 2015,
+      "Month": "March",
+      "Deposit": 6.63,
+      "Savings": 1.53,
+      "Lending": 15.46,
+      "Overdraft": 15.68
+    },
+    {
+      "Year": 2015,
+      "Month": "February",
+      "Deposit": 6.68,
+      "Savings": 1.53,
+      "Lending": 15.47,
+      "Overdraft": 15.67
+    },
+    {
+      "Year": 2015,
+      "Month": "January",
+      "Deposit": 6.65,
+      "Savings": 1.58,
+      "Lending": 15.93,
+      "Overdraft": 15.95
+    },
+    {
+      "Year": 2014,
+      "Month": "December",
+      "Deposit": 6.81,
+      "Savings": 1.85,
+      "Lending": 15.99,
+      "Overdraft": 15.86
+    },
+    {
+      "Year": 2014,
+      "Month": "November",
+      "Deposit": 6.72,
+      "Savings": 1.52,
+      "Lending": 15.94,
+      "Overdraft": 15.66
+    },
+    {
+      "Year": 2014,
+      "Month": "October",
+      "Deposit": 6.64,
+      "Savings": 1.55,
+      "Lending": 16,
+      "Overdraft": 15.77
+    },
+    {
+      "Year": 2014,
+      "Month": "September",
+      "Deposit": 6.64,
+      "Savings": 1.51,
+      "Lending": 16.04,
+      "Overdraft": 15.79
+    },
+    {
+      "Year": 2014,
+      "Month": "August",
+      "Deposit": 6.51,
+      "Savings": 1.5,
+      "Lending": 16.26,
+      "Overdraft": 16.2
+    },
+    {
+      "Year": 2014,
+      "Month": "July",
+      "Deposit": 6.59,
+      "Savings": 1.33,
+      "Lending": 16.91,
+      "Overdraft": 17.12
+    },
+    {
+      "Year": 2014,
+      "Month": "June",
+      "Deposit": 6.56,
+      "Savings": 1.5,
+      "Lending": 16.36,
+      "Overdraft": 15.88
+    },
+    {
+      "Year": 2014,
+      "Month": "May",
+      "Deposit": 6.42,
+      "Savings": 1.54,
+      "Lending": 16.97,
+      "Overdraft": 17.85
+    },
+    {
+      "Year": 2014,
+      "Month": "April",
+      "Deposit": 6.48,
+      "Savings": 1.53,
+      "Lending": 16.7,
+      "Overdraft": 16.44
+    },
+    {
+      "Year": 2014,
+      "Month": "March",
+      "Deposit": 6.61,
+      "Savings": 1.56,
+      "Lending": 16.91,
+      "Overdraft": 16.44
+    },
+    {
+      "Year": 2014,
+      "Month": "February",
+      "Deposit": 6.57,
+      "Savings": 1.49,
+      "Lending": 17.06,
+      "Overdraft": 16.88
+    },
+    {
+      "Year": 2014,
+      "Month": "January",
+      "Deposit": 6.55,
+      "Savings": 1.56,
+      "Lending": 17.03,
+      "Overdraft": 16.82
+    },
+    {
+      "Year": 2013,
+      "Month": "December",
+      "Deposit": 6.65,
+      "Savings": 1.58,
+      "Lending": 16.99,
+      "Overdraft": 16.51
+    },
+    {
+      "Year": 2013,
+      "Month": "November",
+      "Deposit": 6.61,
+      "Savings": 1.58,
+      "Lending": 16.89,
+      "Overdraft": 16.5
+    },
+    {
+      "Year": 2013,
+      "Month": "October",
+      "Deposit": 6.43,
+      "Savings": 1.63,
+      "Lending": 17,
+      "Overdraft": 16.96
+    },
+    {
+      "Year": 2013,
+      "Month": "September",
+      "Deposit": 6.55,
+      "Savings": 1.64,
+      "Lending": 16.86,
+      "Overdraft": 16.42
+    },
+    {
+      "Year": 2013,
+      "Month": "August",
+      "Deposit": 6.36,
+      "Savings": 1.67,
+      "Lending": 16.96,
+      "Overdraft": 16.89
+    },
+    {
+      "Year": 2013,
+      "Month": "July",
+      "Deposit": 6.59,
+      "Savings": 1.64,
+      "Lending": 17.02,
+      "Overdraft": 17
+    },
+    {
+      "Year": 2013,
+      "Month": "June",
+      "Deposit": 6.65,
+      "Savings": 1.73,
+      "Lending": 16.97,
+      "Overdraft": 16.92
+    },
+    {
+      "Year": 2013,
+      "Month": "May",
+      "Deposit": 6.53,
+      "Savings": 1.53,
+      "Lending": 17.45,
+      "Overdraft": 17.6
+    },
+    {
+      "Year": 2013,
+      "Month": "April",
+      "Deposit": 6.39,
+      "Savings": 1.45,
+      "Lending": 17.87,
+      "Overdraft": 17.71
+    },
+    {
+      "Year": 2013,
+      "Month": "March",
+      "Deposit": 6.54,
+      "Savings": 1.42,
+      "Lending": 17.73,
+      "Overdraft": 17.54
+    },
+    {
+      "Year": 2013,
+      "Month": "February",
+      "Deposit": 6.29,
+      "Savings": 1.61,
+      "Lending": 17.84,
+      "Overdraft": 17.68
+    },
+    {
+      "Year": 2013,
+      "Month": "January",
+      "Deposit": 6.51,
+      "Savings": 1.65,
+      "Lending": 18.13,
+      "Overdraft": 17.97
+    },
+    {
+      "Year": 2012,
+      "Month": "December",
+      "Deposit": 6.8,
+      "Savings": 1.6,
+      "Lending": 18.15,
+      "Overdraft": 17.79
+    },
+    {
+      "Year": 2012,
+      "Month": "November",
+      "Deposit": 8.71,
+      "Savings": 1.58,
+      "Lending": 17.78,
+      "Overdraft": 18.77
+    },
+    {
+      "Year": 2012,
+      "Month": "October",
+      "Deposit": 6.86,
+      "Savings": 1.6,
+      "Lending": 19.04,
+      "Overdraft": 19.13
+    },
+    {
+      "Year": 2012,
+      "Month": "September",
+      "Deposit": 7.4,
+      "Savings": 1.55,
+      "Lending": 19.73,
+      "Overdraft": 19.8
+    },
+    {
+      "Year": 2012,
+      "Month": "August",
+      "Deposit": 7.85,
+      "Savings": 1.58,
+      "Lending": 20.13,
+      "Overdraft": 20.31
+    },
+    {
+      "Year": 2012,
+      "Month": "July",
+      "Deposit": 8.25,
+      "Savings": 1.66,
+      "Lending": 20.15,
+      "Overdraft": 19.96
+    },
+    {
+      "Year": 2012,
+      "Month": "June",
+      "Deposit": 7.88,
+      "Savings": 1.46,
+      "Lending": 20.3,
+      "Overdraft": 20.36
+    },
+    {
+      "Year": 2012,
+      "Month": "May",
+      "Deposit": 8.42,
+      "Savings": 1.59,
+      "Lending": 20.12,
+      "Overdraft": 20.41
+    },
+    {
+      "Year": 2012,
+      "Month": "April",
+      "Deposit": 9.04,
+      "Savings": 1.58,
+      "Lending": 20.22,
+      "Overdraft": 20.27
+    },
+    {
+      "Year": 2012,
+      "Month": "March",
+      "Deposit": 8.01,
+      "Savings": 1.72,
+      "Lending": 20.34,
+      "Overdraft": 20.53
+    },
+    {
+      "Year": 2012,
+      "Month": "February",
+      "Deposit": 8.01,
+      "Savings": 1.69,
+      "Lending": 20.28,
+      "Overdraft": 20.53
+    },
+    {
+      "Year": 2012,
+      "Month": "January",
+      "Deposit": 7.66,
+      "Savings": 1.62,
+      "Lending": 19.54,
+      "Overdraft": 20.38
+    },
+    {
+      "Year": 2011,
+      "Month": "December",
+      "Deposit": 6.99,
+      "Savings": 1.59,
+      "Lending": 20.04,
+      "Overdraft": 20.2
+    },
+    {
+      "Year": 2011,
+      "Month": "November",
+      "Deposit": 5.75,
+      "Savings": 1.41,
+      "Lending": 18.51,
+      "Overdraft": 18.67
+    },
+    {
+      "Year": 2011,
+      "Month": "October",
+      "Deposit": 4.83,
+      "Savings": 1.33,
+      "Lending": 15.21,
+      "Overdraft": 14.87
+    },
+    {
+      "Year": 2011,
+      "Month": "September",
+      "Deposit": 4.21,
+      "Savings": 1.35,
+      "Lending": 14.79,
+      "Overdraft": 14.64
+    },
+    {
+      "Year": 2011,
+      "Month": "August",
+      "Deposit": 4.07,
+      "Savings": 1.37,
+      "Lending": 14.32,
+      "Overdraft": 14.28
+    },
+    {
+      "Year": 2011,
+      "Month": "July",
+      "Deposit": 3.85,
+      "Savings": 1.37,
+      "Lending": 14.14,
+      "Overdraft": 13.89
+    },
+    {
+      "Year": 2011,
+      "Month": "June",
+      "Deposit": 3.68,
+      "Savings": 1.37,
+      "Lending": 13.91,
+      "Overdraft": 13.59
+    },
+    {
+      "Year": 2011,
+      "Month": "May",
+      "Deposit": 3.51,
+      "Savings": 1.38,
+      "Lending": 13.88,
+      "Overdraft": 13.72
+    },
+    {
+      "Year": 2011,
+      "Month": "April",
+      "Deposit": 3.47,
+      "Savings": 1.38,
+      "Lending": 13.92,
+      "Overdraft": 13.68
+    },
+    {
+      "Year": 2011,
+      "Month": "March",
+      "Deposit": 3.47,
+      "Savings": 1.37,
+      "Lending": 13.92,
+      "Overdraft": 13.6
+    },
+    {
+      "Year": 2011,
+      "Month": "February",
+      "Deposit": 3.41,
+      "Savings": 1.41,
+      "Lending": 13.92,
+      "Overdraft": 13.65
+    },
+    {
+      "Year": 2011,
+      "Month": "January",
+      "Deposit": 3.43,
+      "Savings": 1.25,
+      "Lending": 14.03,
+      "Overdraft": 13.93
+    },
+    {
+      "Year": 2010,
+      "Month": "December",
+      "Deposit": 3.59,
+      "Savings": 1.45,
+      "Lending": 13.87,
+      "Overdraft": 13.69
+    },
+    {
+      "Year": 2010,
+      "Month": "November",
+      "Deposit": 3.54,
+      "Savings": 1.4,
+      "Lending": 13.95,
+      "Overdraft": 13.77
+    },
+    {
+      "Year": 2010,
+      "Month": "October",
+      "Deposit": 3.58,
+      "Savings": 1.46,
+      "Lending": 13.85,
+      "Overdraft": 13.64
+    },
+    {
+      "Year": 2010,
+      "Month": "September",
+      "Deposit": 3.53,
+      "Savings": 1.47,
+      "Lending": 13.98,
+      "Overdraft": 13.81
+    },
+    {
+      "Year": 2010,
+      "Month": "August",
+      "Deposit": 3.74,
+      "Savings": 1.5,
+      "Lending": 14.18,
+      "Overdraft": 13.97
+    },
+    {
+      "Year": 2010,
+      "Month": "July",
+      "Deposit": 3.85,
+      "Savings": 1.55,
+      "Lending": 14.29,
+      "Overdraft": 14.03
+    },
+    {
+      "Year": 2010,
+      "Month": "June",
+      "Deposit": 4.45,
+      "Savings": 1.75,
+      "Lending": 14.39,
+      "Overdraft": 14.23
+    },
+    {
+      "Year": 2010,
+      "Month": "May",
+      "Deposit": 4.58,
+      "Savings": 1.76,
+      "Lending": 14.46,
+      "Overdraft": 14.38
+    },
+    {
+      "Year": 2010,
+      "Month": "April",
+      "Deposit": 4.49,
+      "Savings": 1.85,
+      "Lending": 14.58,
+      "Overdraft": 14.5
+    },
+    {
+      "Year": 2010,
+      "Month": "March",
+      "Deposit": 4.74,
+      "Savings": 1.81,
+      "Lending": 14.8,
+      "Overdraft": 13.59
+    },
+    {
+      "Year": 2010,
+      "Month": "February",
+      "Deposit": 4.89,
+      "Savings": 1.81,
+      "Lending": 14.98,
+      "Overdraft": 14.25
+    },
+    {
+      "Year": 2010,
+      "Month": "January",
+      "Deposit": 5,
+      "Savings": 1.75,
+      "Lending": 14.98,
+      "Overdraft": 14.25
+    },
+    {
+      "Year": 2009,
+      "Month": "December",
+      "Deposit": 4.84,
+      "Savings": 1.73,
+      "Lending": 14.76,
+      "Overdraft": 14.13
+    },
+    {
+      "Year": 2009,
+      "Month": "November",
+      "Deposit": 5.06,
+      "Savings": 1.71,
+      "Lending": 14.85,
+      "Overdraft": 14.24
+    },
+    {
+      "Year": 2009,
+      "Month": "October",
+      "Deposit": 5.03,
+      "Savings": 1.85,
+      "Lending": 14.78,
+      "Overdraft": 14.03
+    },
+    {
+      "Year": 2009,
+      "Month": "September",
+      "Deposit": 5.05,
+      "Savings": 1.65,
+      "Lending": 14.74,
+      "Overdraft": 13.76
+    },
+    {
+      "Year": 2009,
+      "Month": "August",
+      "Deposit": 5,
+      "Savings": 1.65,
+      "Lending": 14.76,
+      "Overdraft": 13.9
+    },
+    {
+      "Year": 2009,
+      "Month": "July",
+      "Deposit": 5.09,
+      "Savings": 1.67,
+      "Lending": 14.79,
+      "Overdraft": 13.94
+    },
+    {
+      "Year": 2009,
+      "Month": "June",
+      "Deposit": 5.28,
+      "Savings": 2.08,
+      "Lending": 15.09,
+      "Overdraft": 14.41
+    },
+    {
+      "Year": 2009,
+      "Month": "May",
+      "Deposit": 5.1,
+      "Savings": 1.67,
+      "Lending": 14.85,
+      "Overdraft": 14.13
+    },
+    {
+      "Year": 2009,
+      "Month": "April",
+      "Deposit": 5.12,
+      "Savings": 1.91,
+      "Lending": 14.71,
+      "Overdraft": 13.66
+    },
+    {
+      "Year": 2009,
+      "Month": "March",
+      "Deposit": 5.09,
+      "Savings": 1.9,
+      "Lending": 14.87,
+      "Overdraft": 13.78
+    },
+    {
+      "Year": 2009,
+      "Month": "February",
+      "Deposit": 5.23,
+      "Savings": 2.13,
+      "Lending": 14.67,
+      "Overdraft": 13.46
+    },
+    {
+      "Year": 2009,
+      "Month": "January",
+      "Deposit": 5.19,
+      "Savings": 2.1,
+      "Lending": 14.78,
+      "Overdraft": 13.84
+    },
+    {
+      "Year": 2008,
+      "Month": "December",
+      "Deposit": 4.89,
+      "Savings": 1.65,
+      "Lending": 14.87,
+      "Overdraft": 14.39
+    },
+    {
+      "Year": 2008,
+      "Month": "November",
+      "Deposit": 4.86,
+      "Savings": 1.61,
+      "Lending": 14.33,
+      "Overdraft": 13.85
+    },
+    {
+      "Year": 2008,
+      "Month": "October",
+      "Deposit": 4.65,
+      "Savings": 1.74,
+      "Lending": 14.12,
+      "Overdraft": 13.91
+    },
+    {
+      "Year": 2008,
+      "Month": "September",
+      "Deposit": 4.62,
+      "Savings": 1.73,
+      "Lending": 13.66,
+      "Overdraft": 13.43
+    },
+    {
+      "Year": 2008,
+      "Month": "August",
+      "Deposit": 4.65,
+      "Savings": 1.68,
+      "Lending": 13.66,
+      "Overdraft": 13.11
+    },
+    {
+      "Year": 2008,
+      "Month": "July",
+      "Deposit": 4.54,
+      "Savings": 1.67,
+      "Lending": 13.9,
+      "Overdraft": 13.46
+    },
+    {
+      "Year": 2008,
+      "Month": "June",
+      "Deposit": 4.48,
+      "Savings": 1.7,
+      "Lending": 14.06,
+      "Overdraft": 13.3
+    },
+    {
+      "Year": 2008,
+      "Month": "May",
+      "Deposit": 4.45,
+      "Savings": 1.71,
+      "Lending": 14.01,
+      "Overdraft": 13.53
+    },
+    {
+      "Year": 2008,
+      "Month": "April",
+      "Deposit": 4.41,
+      "Savings": 1.71,
+      "Lending": 13.91,
+      "Overdraft": 13.46
+    },
+    {
+      "Year": 2008,
+      "Month": "March",
+      "Deposit": 4.43,
+      "Savings": 1.72,
+      "Lending": 14.06,
+      "Overdraft": 13.48
+    },
+    {
+      "Year": 2008,
+      "Month": "February",
+      "Deposit": 4.37,
+      "Savings": 1.7,
+      "Lending": 13.84,
+      "Overdraft": 13.26
+    },
+    {
+      "Year": 2008,
+      "Month": "January",
+      "Deposit": 4.37,
+      "Savings": 1.72,
+      "Lending": 13.78,
+      "Overdraft": 13.41
+    },
+    {
+      "Year": 2007,
+      "Month": "December",
+      "Deposit": 4.32,
+      "Savings": 1.67,
+      "Lending": 13.32,
+      "Overdraft": 12.96
+    },
+    {
+      "Year": 2007,
+      "Month": "November",
+      "Deposit": 4.33,
+      "Savings": 1.65,
+      "Lending": 13.39,
+      "Overdraft": 13.43
+    },
+    {
+      "Year": 2007,
+      "Month": "October",
+      "Deposit": 4.27,
+      "Savings": 1.64,
+      "Lending": 13.24,
+      "Overdraft": 13.29
+    },
+    {
+      "Year": 2007,
+      "Month": "September",
+      "Deposit": 4.34,
+      "Savings": 1.67,
+      "Lending": 12.87,
+      "Overdraft": 13.26
+    },
+    {
+      "Year": 2007,
+      "Month": "August",
+      "Deposit": 4.31,
+      "Savings": 1.6,
+      "Lending": 13.04,
+      "Overdraft": 13.39
+    },
+    {
+      "Year": 2007,
+      "Month": "July",
+      "Deposit": 4.33,
+      "Savings": 1.65,
+      "Lending": 13.29,
+      "Overdraft": 13.34
+    },
+    {
+      "Year": 2007,
+      "Month": "June",
+      "Deposit": 4.18,
+      "Savings": 1.54,
+      "Lending": 13.14,
+      "Overdraft": 13.2
+    },
+    {
+      "Year": 2007,
+      "Month": "May",
+      "Deposit": 4.14,
+      "Savings": 1.57,
+      "Lending": 13.38,
+      "Overdraft": 13.35
+    },
+    {
+      "Year": 2007,
+      "Month": "April",
+      "Deposit": 4.11,
+      "Savings": 1.35,
+      "Lending": 13.33,
+      "Overdraft": 13.26
+    },
+    {
+      "Year": 2007,
+      "Month": "March",
+      "Deposit": 4.19,
+      "Savings": 1.43,
+      "Lending": 13.56,
+      "Overdraft": 13.95
+    },
+    {
+      "Year": 2007,
+      "Month": "February",
+      "Deposit": 4.21,
+      "Savings": 1.41,
+      "Lending": 13.64,
+      "Overdraft": 14.05
+    },
+    {
+      "Year": 2007,
+      "Month": "January",
+      "Deposit": 4.35,
+      "Savings": 1.42,
+      "Lending": 13.78,
+      "Overdraft": 14.11
+    },
+    {
+      "Year": 2006,
+      "Month": "December",
+      "Deposit": 4.11,
+      "Savings": 1.35,
+      "Lending": 13.74,
+      "Overdraft": 13.91
+    },
+    {
+      "Year": 2006,
+      "Month": "November",
+      "Deposit": 4.15,
+      "Savings": 1.37,
+      "Lending": 13.93,
+      "Overdraft": 13.96
+    },
+    {
+      "Year": 2006,
+      "Month": "October",
+      "Deposit": 4.11,
+      "Savings": 1.35,
+      "Lending": 14.01,
+      "Overdraft": 13.94
+    },
+    {
+      "Year": 2006,
+      "Month": "September",
+      "Deposit": 4.04,
+      "Savings": 1.36,
+      "Lending": 13.54,
+      "Overdraft": 13.42
+    },
+    {
+      "Year": 2006,
+      "Month": "August",
+      "Deposit": 4.08,
+      "Savings": 1.41,
+      "Lending": 13.64,
+      "Overdraft": 13.43
+    },
+    {
+      "Year": 2006,
+      "Month": "July",
+      "Deposit": 4.31,
+      "Savings": 1.32,
+      "Lending": 13.72,
+      "Overdraft": 13.48
+    },
+    {
+      "Year": 2006,
+      "Month": "June",
+      "Deposit": 4.35,
+      "Savings": 1.27,
+      "Lending": 13.79,
+      "Overdraft": 13.78
+    },
+    {
+      "Year": 2006,
+      "Month": "May",
+      "Deposit": 4.36,
+      "Savings": 1.31,
+      "Lending": 13.95,
+      "Overdraft": 14.02
+    },
+    {
+      "Year": 2006,
+      "Month": "April",
+      "Deposit": 4.35,
+      "Savings": 1.33,
+      "Lending": 13.51,
+      "Overdraft": 13.81
+    },
+    {
+      "Year": 2006,
+      "Month": "March",
+      "Deposit": 4.28,
+      "Savings": 1.34,
+      "Lending": 13.33,
+      "Overdraft": 13.26
+    },
+    {
+      "Year": 2006,
+      "Month": "February",
+      "Deposit": 4.48,
+      "Savings": 1.36,
+      "Lending": 13.27,
+      "Overdraft": 13.34
+    },
+    {
+      "Year": 2006,
+      "Month": "January",
+      "Deposit": 4.48,
+      "Savings": 1.33,
+      "Lending": 13.2,
+      "Overdraft": 13.81
+    },
+    {
+      "Year": 2005,
+      "Month": "December",
+      "Deposit": 4.52,
+      "Savings": 1.38,
+      "Lending": 13.16,
+      "Overdraft": 13.67
+    },
+    {
+      "Year": 2005,
+      "Month": "November",
+      "Deposit": 4.5,
+      "Savings": 1.37,
+      "Lending": 12.93,
+      "Overdraft": 13.33
+    },
+    {
+      "Year": 2005,
+      "Month": "October",
+      "Deposit": 4.43,
+      "Savings": 1.32,
+      "Lending": 12.97,
+      "Overdraft": 13.56
+    },
+    {
+      "Year": 2005,
+      "Month": "September",
+      "Deposit": 4.35,
+      "Savings": 1.34,
+      "Lending": 12.83,
+      "Overdraft": 13.5
+    },
+    {
+      "Year": 2005,
+      "Month": "August",
+      "Deposit": 4.3,
+      "Savings": 1.3,
+      "Lending": 13.03,
+      "Overdraft": 13.81
+    },
+    {
+      "Year": 2005,
+      "Month": "July",
+      "Deposit": 4.14,
+      "Savings": 1.3,
+      "Lending": 13.09,
+      "Overdraft": 13.54
+    },
+    {
+      "Year": 2005,
+      "Month": "June",
+      "Deposit": 4.21,
+      "Savings": 1.24,
+      "Lending": 13.09,
+      "Overdraft": 13.83
+    },
+    {
+      "Year": 2005,
+      "Month": "May",
+      "Deposit": 4.05,
+      "Savings": 1.07,
+      "Lending": 13.11,
+      "Overdraft": 13.94
+    },
+    {
+      "Year": 2005,
+      "Month": "April",
+      "Deposit": 3.91,
+      "Savings": 1.1,
+      "Lending": 13.12,
+      "Overdraft": 14
+    },
+    {
+      "Year": 2005,
+      "Month": "March",
+      "Deposit": 3.75,
+      "Savings": 0.98,
+      "Lending": 12.84,
+      "Overdraft": 14.03
+    },
+    {
+      "Year": 2005,
+      "Month": "February",
+      "Deposit": 3.47,
+      "Savings": 0.96,
+      "Lending": 12.35,
+      "Overdraft": 13.82
+    },
+    {
+      "Year": 2005,
+      "Month": "January",
+      "Deposit": 3.08,
+      "Savings": 0.97,
+      "Lending": 12.12,
+      "Overdraft": 13.14
+    },
+    {
+      "Year": 2004,
+      "Month": "December",
+      "Deposit": 2.77,
+      "Savings": 0.98,
+      "Lending": 12.25,
+      "Overdraft": 12.69
+    },
+    {
+      "Year": 2004,
+      "Month": "November",
+      "Deposit": 2.66,
+      "Savings": 1.3,
+      "Lending": 11.97,
+      "Overdraft": 12.21
+    },
+    {
+      "Year": 2004,
+      "Month": "October",
+      "Deposit": 2.33,
+      "Savings": 1.07,
+      "Lending": 12.39,
+      "Overdraft": 11.85
+    },
+    {
+      "Year": 2004,
+      "Month": "September",
+      "Deposit": 2.63,
+      "Savings": 1.03,
+      "Lending": 12.27,
+      "Overdraft": 10.95
+    },
+    {
+      "Year": 2004,
+      "Month": "August",
+      "Deposit": 2.26,
+      "Savings": 1.08,
+      "Lending": 12.19,
+      "Overdraft": 10.81
+    },
+    {
+      "Year": 2004,
+      "Month": "July",
+      "Deposit": 2.25,
+      "Savings": 1.1,
+      "Lending": 12.31,
+      "Overdraft": 11.1
+    },
+    {
+      "Year": 2004,
+      "Month": "June",
+      "Deposit": 2.2,
+      "Savings": 1.15,
+      "Lending": 12.17,
+      "Overdraft": 10.72
+    },
+    {
+      "Year": 2004,
+      "Month": "May",
+      "Deposit": 2.22,
+      "Savings": 1.15,
+      "Lending": 12.55,
+      "Overdraft": 10.79
+    },
+    {
+      "Year": 2004,
+      "Month": "April",
+      "Deposit": 1.96,
+      "Savings": 1.24,
+      "Lending": 12.67,
+      "Overdraft": 11.08
+    },
+    {
+      "Year": 2004,
+      "Month": "March",
+      "Deposit": 2.32,
+      "Savings": 1.3,
+      "Lending": 13.12,
+      "Overdraft": 11.65
+    },
+    {
+      "Year": 2004,
+      "Month": "February",
+      "Deposit": 2.47,
+      "Savings": 1.47,
+      "Lending": 13.01,
+      "Overdraft": 12.3
+    },
+    {
+      "Year": 2004,
+      "Month": "January",
+      "Deposit": 3.12,
+      "Savings": 1.22,
+      "Lending": 13.48,
+      "Overdraft": 13.3
+    },
+    {
+      "Year": 2003,
+      "Month": "December",
+      "Deposit": 3.29,
+      "Savings": 1.38,
+      "Lending": 13.47,
+      "Overdraft": 13.74
+    },
+    {
+      "Year": 2003,
+      "Month": "November",
+      "Deposit": 3.32,
+      "Savings": 1.44,
+      "Lending": 14.07,
+      "Overdraft": 14.02
+    },
+    {
+      "Year": 2003,
+      "Month": "October",
+      "Deposit": 3.13,
+      "Savings": 1.43,
+      "Lending": 14.75,
+      "Overdraft": 14.13
+    },
+    {
+      "Year": 2003,
+      "Month": "September",
+      "Deposit": 3.07,
+      "Savings": 1.44,
+      "Lending": 14.82,
+      "Overdraft": 14.31
+    },
+    {
+      "Year": 2003,
+      "Month": "August",
+      "Deposit": 3.37,
+      "Savings": 1.72,
+      "Lending": 14.81,
+      "Overdraft": 14.96
+    },
+    {
+      "Year": 2003,
+      "Month": "July",
+      "Deposit": 4.49,
+      "Savings": 1.79,
+      "Lending": 15.3,
+      "Overdraft": 14.43
+    },
+    {
+      "Year": 2003,
+      "Month": "June",
+      "Deposit": 4.84,
+      "Savings": 3.07,
+      "Lending": 15.73,
+      "Overdraft": 14.93
+    },
+    {
+      "Year": 2003,
+      "Month": "May",
+      "Deposit": 3.71,
+      "Savings": 3.14,
+      "Lending": 18.52,
+      "Overdraft": 17.18
+    },
+    {
+      "Year": 2003,
+      "Month": "April",
+      "Deposit": 4.06,
+      "Savings": 3.27,
+      "Lending": 18.57,
+      "Overdraft": 17.27
+    },
+    {
+      "Year": 2003,
+      "Month": "March",
+      "Deposit": 3.99,
+      "Savings": 3.28,
+      "Lending": 18.49,
+      "Overdraft": 17.26
+    },
+    {
+      "Year": 2003,
+      "Month": "February",
+      "Deposit": 4.4,
+      "Savings": 3.42,
+      "Lending": 18.83,
+      "Overdraft": 17.81
+    },
+    {
+      "Year": 2003,
+      "Month": "January",
+      "Deposit": 4.68,
+      "Savings": 3.41,
+      "Lending": 19.02,
+      "Overdraft": 18.52
+    },
+    {
+      "Year": 2002,
+      "Month": "December",
+      "Deposit": 4.75,
+      "Savings": 3.47,
+      "Lending": 18.34,
+      "Overdraft": 18.56
+    },
+    {
+      "Year": 2002,
+      "Month": "November",
+      "Deposit": 4.75,
+      "Savings": 3.81,
+      "Lending": 18.05,
+      "Overdraft": 18.56
+    },
+    {
+      "Year": 2002,
+      "Month": "October",
+      "Deposit": 4.66,
+      "Savings": 3.79,
+      "Lending": 18.34,
+      "Overdraft": 18.89
+    },
+    {
+      "Year": 2002,
+      "Month": "September",
+      "Deposit": 4.8,
+      "Savings": 3.53,
+      "Lending": 18.14,
+      "Overdraft": 18.52
+    },
+    {
+      "Year": 2002,
+      "Month": "August",
+      "Deposit": 4.99,
+      "Savings": 3.74,
+      "Lending": 18.12,
+      "Overdraft": 18.56
+    },
+    {
+      "Year": 2002,
+      "Month": "July",
+      "Deposit": 5.08,
+      "Savings": 3.89,
+      "Lending": 18.12,
+      "Overdraft": 18.32
+    },
+    {
+      "Year": 2002,
+      "Month": "June",
+      "Deposit": 5.21,
+      "Savings": 4,
+      "Lending": 18.38,
+      "Overdraft": 18.46
+    },
+    {
+      "Year": 2002,
+      "Month": "May",
+      "Deposit": 5.31,
+      "Savings": 4.02,
+      "Lending": 18.54,
+      "Overdraft": 18.73
+    },
+    {
+      "Year": 2002,
+      "Month": "April",
+      "Deposit": 5.48,
+      "Savings": 4.12,
+      "Lending": 18.69,
+      "Overdraft": 18.88
+    },
+    {
+      "Year": 2002,
+      "Month": "March",
+      "Deposit": 5.42,
+      "Savings": 3.71,
+      "Lending": 18.86,
+      "Overdraft": 18.78
+    },
+    {
+      "Year": 2002,
+      "Month": "February",
+      "Deposit": 5.52,
+      "Savings": 3.54,
+      "Lending": 19.18,
+      "Overdraft": 19.19
+    },
+    {
+      "Year": 2002,
+      "Month": "January",
+      "Deposit": 5.72,
+      "Savings": 4.42,
+      "Lending": 19.3,
+      "Overdraft": 19.31
+    },
+    {
+      "Year": 2001,
+      "Month": "December",
+      "Deposit": 5.7,
+      "Savings": 4.4,
+      "Lending": 19.49,
+      "Overdraft": 20.04
+    },
+    {
+      "Year": 2001,
+      "Month": "November",
+      "Deposit": 5.87,
+      "Savings": 4.35,
+      "Lending": 19.44,
+      "Overdraft": 19.83
+    },
+    {
+      "Year": 2001,
+      "Month": "October",
+      "Deposit": 6.21,
+      "Savings": 4.37,
+      "Lending": 19.77,
+      "Overdraft": 19.8
+    },
+    {
+      "Year": 2001,
+      "Month": "September",
+      "Deposit": 6.27,
+      "Savings": 4.89,
+      "Lending": 19.44,
+      "Overdraft": 19.63
+    },
+    {
+      "Year": 2001,
+      "Month": "August",
+      "Deposit": 6.24,
+      "Savings": 4.43,
+      "Lending": 19.54,
+      "Overdraft": 19.71
+    },
+    {
+      "Year": 2001,
+      "Month": "July",
+      "Deposit": 6.22,
+      "Savings": 4.34,
+      "Lending": 19.71,
+      "Overdraft": 19.98
+    },
+    {
+      "Year": 2001,
+      "Month": "June",
+      "Deposit": 6.36,
+      "Savings": 4.39,
+      "Lending": 19.26,
+      "Overdraft": 19.65
+    },
+    {
+      "Year": 2001,
+      "Month": "May",
+      "Deposit": 6.44,
+      "Savings": 4.42,
+      "Lending": 19.2,
+      "Overdraft": 19.52
+    },
+    {
+      "Year": 2001,
+      "Month": "April",
+      "Deposit": 6.58,
+      "Savings": 4.64,
+      "Lending": 19.56,
+      "Overdraft": 19.89
+    },
+    {
+      "Year": 2001,
+      "Month": "March",
+      "Deposit": 6.92,
+      "Savings": 4.66,
+      "Lending": 20.19,
+      "Overdraft": 20.12
+    },
+    {
+      "Year": 2001,
+      "Month": "February",
+      "Deposit": 6.55,
+      "Savings": 4.63,
+      "Lending": 20.13,
+      "Overdraft": 20.48
+    },
+    {
+      "Year": 2001,
+      "Month": "January",
+      "Deposit": 6.54,
+      "Savings": 4.67,
+      "Lending": 20.27,
+      "Overdraft": 20.18
+    },
+    {
+      "Year": 2000,
+      "Month": "December",
+      "Deposit": 6.22,
+      "Savings": 4.51,
+      "Lending": 19.6,
+      "Overdraft": 19.73
+    },
+    {
+      "Year": 2000,
+      "Month": "November",
+      "Deposit": 6.2,
+      "Savings": 4.36,
+      "Lending": 19.79,
+      "Overdraft": 20.1
+    },
+    {
+      "Year": 2000,
+      "Month": "October",
+      "Deposit": 6.22,
+      "Savings": 4.31,
+      "Lending": 20.22,
+      "Overdraft": 19.94
+    },
+    {
+      "Year": 2000,
+      "Month": "September",
+      "Deposit": 6.22,
+      "Savings": 4.36,
+      "Lending": 20.57,
+      "Overdraft": 20.58
+    },
+    {
+      "Year": 2000,
+      "Month": "August",
+      "Deposit": 6.26,
+      "Savings": 4.53,
+      "Lending": 21.23,
+      "Overdraft": 20.93
+    },
+    {
+      "Year": 2000,
+      "Month": "July",
+      "Deposit": 6.67,
+      "Savings": 4.71,
+      "Lending": 22.39,
+      "Overdraft": 22.09
+    },
+    {
+      "Year": 2000,
+      "Month": "June",
+      "Deposit": 7.01,
+      "Savings": 4.89,
+      "Lending": 23.11,
+      "Overdraft": 22.86
+    },
+    {
+      "Year": 2000,
+      "Month": "May",
+      "Deposit": 7.21,
+      "Savings": 4.77,
+      "Lending": 23.4,
+      "Overdraft": 23.93
+    },
+    {
+      "Year": 2000,
+      "Month": "April",
+      "Deposit": 7.61,
+      "Savings": 5.3,
+      "Lending": 23.44,
+      "Overdraft": 24
+    },
+    {
+      "Year": 2000,
+      "Month": "March",
+      "Deposit": 8.01,
+      "Savings": 5.14,
+      "Lending": 23.76,
+      "Overdraft": 24.09
+    },
+    {
+      "Year": 2000,
+      "Month": "February",
+      "Deposit": 9.17,
+      "Savings": 6.04,
+      "Lending": 25.39,
+      "Overdraft": 25.67
+    },
+    {
+      "Year": 2000,
+      "Month": "January",
+      "Deposit": 10.38,
+      "Savings": 6.42,
+      "Lending": 25.14,
+      "Overdraft": 25.91
+    },
+    {
+      "Year": 1999,
+      "Month": "December",
+      "Deposit": 9.74,
+      "Savings": 6.15,
+      "Lending": 25.19,
+      "Overdraft": 25.58
+    },
+    {
+      "Year": 1999,
+      "Month": "November",
+      "Deposit": 9.48,
+      "Savings": 6.04,
+      "Lending": 24.43,
+      "Overdraft": 24.79
+    },
+    {
+      "Year": 1999,
+      "Month": "October",
+      "Deposit": 9.1,
+      "Savings": 5.72,
+      "Lending": 23.12,
+      "Overdraft": 23.14
+    },
+    {
+      "Year": 1999,
+      "Month": "September",
+      "Deposit": 8.44,
+      "Savings": 5.35,
+      "Lending": 22.45,
+      "Overdraft": 22.48
+    },
+    {
+      "Year": 1999,
+      "Month": "August",
+      "Deposit": 7.79,
+      "Savings": 4.81,
+      "Lending": 21.93,
+      "Overdraft": 21.95
+    },
+    {
+      "Year": 1999,
+      "Month": "July",
+      "Deposit": 7.65,
+      "Savings": 5.15,
+      "Lending": 21.12,
+      "Overdraft": 21.02
+    },
+    {
+      "Year": 1999,
+      "Month": "June",
+      "Deposit": 7.83,
+      "Savings": 4.57,
+      "Lending": 20.7,
+      "Overdraft": 20.86
+    },
+    {
+      "Year": 1999,
+      "Month": "May",
+      "Deposit": 7.55,
+      "Savings": 4.52,
+      "Lending": 20.86,
+      "Overdraft": 20.81
+    },
+    {
+      "Year": 1999,
+      "Month": "April",
+      "Deposit": 8.18,
+      "Savings": 5.14,
+      "Lending": 20.9,
+      "Overdraft": 20.9
+    },
+    {
+      "Year": 1999,
+      "Month": "March",
+      "Deposit": 8.93,
+      "Savings": 5.49,
+      "Lending": 21.36,
+      "Overdraft": 21.07
+    },
+    {
+      "Year": 1999,
+      "Month": "February",
+      "Deposit": 9.66,
+      "Savings": 5.93,
+      "Lending": 22.83,
+      "Overdraft": 22.94
+    },
+    {
+      "Year": 1999,
+      "Month": "January",
+      "Deposit": 11.25,
+      "Savings": 6.54,
+      "Lending": 23.67,
+      "Overdraft": 23.88
+    },
+    {
+      "Year": 1998,
+      "Month": "December",
+      "Deposit": 12.99,
+      "Savings": 7.96,
+      "Lending": 26.16,
+      "Overdraft": 26.66
+    },
+    {
+      "Year": 1998,
+      "Month": "November",
+      "Deposit": 14.67,
+      "Savings": 9.57,
+      "Lending": 28.19,
+      "Overdraft": 28.84
+    },
+    {
+      "Year": 1998,
+      "Month": "October",
+      "Deposit": 15.39,
+      "Savings": 9.74,
+      "Lending": 28.99,
+      "Overdraft": 29.58
+    },
+    {
+      "Year": 1998,
+      "Month": "September",
+      "Deposit": 15.96,
+      "Savings": 10.46,
+      "Lending": 29.08,
+      "Overdraft": 29.76
+    },
+    {
+      "Year": 1998,
+      "Month": "August",
+      "Deposit": 16.35,
+      "Savings": 10.81,
+      "Lending": 29.77,
+      "Overdraft": 30.59
+    },
+    {
+      "Year": 1998,
+      "Month": "July",
+      "Deposit": 16.67,
+      "Savings": 11.56,
+      "Lending": 30.37,
+      "Overdraft": 30.69
+    },
+    {
+      "Year": 1998,
+      "Month": "June",
+      "Deposit": 16.87,
+      "Savings": 12.27,
+      "Lending": 30.46,
+      "Overdraft": 30.74
+    },
+    {
+      "Year": 1998,
+      "Month": "May",
+      "Deposit": 17.85,
+      "Savings": 11.23,
+      "Lending": 30.54,
+      "Overdraft": 30.69
+    },
+    {
+      "Year": 1998,
+      "Month": "April",
+      "Deposit": 18.37,
+      "Savings": 10.81,
+      "Lending": 30.41,
+      "Overdraft": 29.28
+    },
+    {
+      "Year": 1998,
+      "Month": "March",
+      "Deposit": 15.89,
+      "Savings": 9.8,
+      "Lending": 30.2,
+      "Overdraft": 30.81
+    },
+    {
+      "Year": 1998,
+      "Month": "February",
+      "Deposit": 15.88,
+      "Savings": 9.77,
+      "Lending": 29.9,
+      "Overdraft": 30.43
+    },
+    {
+      "Year": 1998,
+      "Month": "January",
+      "Deposit": 15.94,
+      "Savings": 9.77,
+      "Lending": 29.81,
+      "Overdraft": 30.43
+    },
+    {
+      "Year": 1997,
+      "Month": "December",
+      "Deposit": 16.02,
+      "Savings": 9.73,
+      "Lending": 29.85,
+      "Overdraft": 30.4
+    },
+    {
+      "Year": 1997,
+      "Month": "November",
+      "Deposit": 15.88,
+      "Savings": 10.19,
+      "Lending": 29.8,
+      "Overdraft": 30.25
+    },
+    {
+      "Year": 1997,
+      "Month": "October",
+      "Deposit": 15.21,
+      "Savings": 10.92,
+      "Lending": 29.07,
+      "Overdraft": 29.66
+    },
+    {
+      "Year": 1997,
+      "Month": "September",
+      "Deposit": 14.53,
+      "Savings": 10.71,
+      "Lending": 28.21,
+      "Overdraft": 28.96
+    },
+    {
+      "Year": 1997,
+      "Month": "August",
+      "Deposit": 14.06,
+      "Savings": 10.82,
+      "Lending": 26.48,
+      "Overdraft": 27.37
+    },
+    {
+      "Year": 1997,
+      "Month": "July",
+      "Deposit": 14.11,
+      "Savings": 10.79,
+      "Lending": 26.86,
+      "Overdraft": 27.72
+    },
+    {
+      "Year": 1997,
+      "Month": "June",
+      "Deposit": 13.89,
+      "Savings": 10.59,
+      "Lending": 27.49,
+      "Overdraft": 28.52
+    },
+    {
+      "Year": 1997,
+      "Month": "May",
+      "Deposit": 14.95,
+      "Savings": 12.43,
+      "Lending": 27.26,
+      "Overdraft": 28.78
+    },
+    {
+      "Year": 1997,
+      "Month": "April",
+      "Deposit": 14.24,
+      "Savings": 10.99,
+      "Lending": 28.57,
+      "Overdraft": 28.16
+    },
+    {
+      "Year": 1997,
+      "Month": "March",
+      "Deposit": 14.33,
+      "Savings": 10.88,
+      "Lending": 28.57,
+      "Overdraft": 28.46
+    },
+    {
+      "Year": 1997,
+      "Month": "February",
+      "Deposit": 14.47,
+      "Savings": 10.87,
+      "Lending": 28.6,
+      "Overdraft": 28.43
+    },
+    {
+      "Year": 1997,
+      "Month": "January",
+      "Deposit": 14.54,
+      "Savings": 10.91,
+      "Lending": 28.81,
+      "Overdraft": 28.71
+    },
+    {
+      "Year": 1996,
+      "Month": "December",
+      "Deposit": 14.65,
+      "Savings": 11.22,
+      "Lending": 28.58,
+      "Overdraft": 28.9
+    },
+    {
+      "Year": 1996,
+      "Month": "November",
+      "Deposit": 14.29,
+      "Savings": 10.97,
+      "Lending": 28.7,
+      "Overdraft": 28.87
+    },
+    {
+      "Year": 1996,
+      "Month": "October",
+      "Deposit": 14.19,
+      "Savings": 10.78,
+      "Lending": 28.78,
+      "Overdraft": 28.91
+    },
+    {
+      "Year": 1996,
+      "Month": "September",
+      "Deposit": 14.28,
+      "Savings": 10.74,
+      "Lending": 28.44,
+      "Overdraft": 28.12
+    },
+    {
+      "Year": 1996,
+      "Month": "August",
+      "Deposit": 13.9,
+      "Savings": 10.55,
+      "Lending": 28.17,
+      "Overdraft": 27.99
+    },
+    {
+      "Year": 1996,
+      "Month": "July",
+      "Deposit": 14.05,
+      "Savings": 10.67,
+      "Lending": 28.15,
+      "Overdraft": 27.87
+    },
+    {
+      "Year": 1996,
+      "Month": "June",
+      "Deposit": 14.17,
+      "Savings": 10.74,
+      "Lending": 28.34,
+      "Overdraft": 28.54
+    },
+    {
+      "Year": 1996,
+      "Month": "May",
+      "Deposit": 14.19,
+      "Savings": 10.65,
+      "Lending": 28.06,
+      "Overdraft": 28.39
+    },
+    {
+      "Year": 1996,
+      "Month": "April",
+      "Deposit": 14.23,
+      "Savings": 10.06,
+      "Lending": 27.99,
+      "Overdraft": 28.53
+    },
+    {
+      "Year": 1996,
+      "Month": "March",
+      "Deposit": 13.89,
+      "Savings": 10.18,
+      "Lending": 28.06,
+      "Overdraft": 28.42
+    },
+    {
+      "Year": 1996,
+      "Month": "February",
+      "Deposit": 13.62,
+      "Savings": 9.7,
+      "Lending": 27.79,
+      "Overdraft": 27.97
+    },
+    {
+      "Year": 1996,
+      "Month": "January",
+      "Deposit": 13.33,
+      "Savings": 9.64,
+      "Lending": 27.81,
+      "Overdraft": 27.94
+    },
+    {
+      "Year": 1995,
+      "Month": "December",
+      "Deposit": 12.77,
+      "Savings": 9.49,
+      "Lending": 28.99,
+      "Overdraft": 29.23
+    },
+    {
+      "Year": 1995,
+      "Month": "November",
+      "Deposit": 12.46,
+      "Savings": 9.26,
+      "Lending": 28.38,
+      "Overdraft": 28.57
+    },
+    {
+      "Year": 1995,
+      "Month": "October",
+      "Deposit": 11.97,
+      "Savings": 9.13,
+      "Lending": 26.43,
+      "Overdraft": 26.44
+    },
+    {
+      "Year": 1995,
+      "Month": "September",
+      "Deposit": 11.8,
+      "Savings": 9.22,
+      "Lending": 26.19,
+      "Overdraft": 25.91
+    },
+    {
+      "Year": 1995,
+      "Month": "August",
+      "Deposit": 11.9,
+      "Savings": 8.96,
+      "Lending": 24.72,
+      "Overdraft": 24.64
+    },
+    {
+      "Year": 1995,
+      "Month": "July",
+      "Deposit": 10.32,
+      "Savings": 9.07,
+      "Lending": 22.96,
+      "Overdraft": 23.04
+    },
+    {
+      "Year": 1995,
+      "Month": "June",
+      "Deposit": 10.13,
+      "Savings": 9.31,
+      "Lending": 23.32,
+      "Overdraft": 23.08
+    },
+    {
+      "Year": 1995,
+      "Month": "May",
+      "Deposit": 9.81,
+      "Savings": 9.08,
+      "Lending": 23.09,
+      "Overdraft": 22.61
+    },
+    {
+      "Year": 1995,
+      "Month": "April",
+      "Deposit": 10.83,
+      "Savings": 9.21,
+      "Lending": 23.32,
+      "Overdraft": 22.78
+    },
+    {
+      "Year": 1995,
+      "Month": "March",
+      "Deposit": 11.3,
+      "Savings": 11.66,
+      "Lending": 23.61,
+      "Overdraft": 23.33
+    },
+    {
+      "Year": 1995,
+      "Month": "February",
+      "Deposit": 12.08,
+      "Savings": 11.81,
+      "Lending": 24.09,
+      "Overdraft": 24
+    },
+    {
+      "Year": 1995,
+      "Month": "January",
+      "Deposit": 12.2,
+      "Savings": 12.16,
+      "Lending": 25.24,
+      "Overdraft": 26.03
+    },
+    {
+      "Year": 1994,
+      "Month": "December",
+      "Deposit": 13.05,
+      "Savings": 12.15,
+      "Lending": 25.91,
+      "Overdraft": 26.87
+    },
+    {
+      "Year": 1994,
+      "Month": "November",
+      "Deposit": 14.05,
+      "Savings": 12.4,
+      "Lending": 25.96,
+      "Overdraft": 26.98
+    },
+    {
+      "Year": 1994,
+      "Month": "October",
+      "Deposit": 15.11,
+      "Savings": 13.9,
+      "Lending": 29.21,
+      "Overdraft": 29.76
+    },
+    {
+      "Year": 1994,
+      "Month": "September",
+      "Deposit": 16.76,
+      "Savings": 14.97,
+      "Lending": 31.37,
+      "Overdraft": 32.66
+    },
+    {
+      "Year": 1994,
+      "Month": "August",
+      "Deposit": 16.67,
+      "Savings": 15.07,
+      "Lending": 32.18,
+      "Overdraft": 32.94
+    },
+    {
+      "Year": 1994,
+      "Month": "July",
+      "Deposit": 16.69,
+      "Savings": 15.07,
+      "Lending": 32.17,
+      "Overdraft": 32.94
+    },
+    {
+      "Year": 1994,
+      "Month": "June",
+      "Deposit": 17.42,
+      "Savings": 16.11,
+      "Lending": 31.49,
+      "Overdraft": 33.17
+    },
+    {
+      "Year": 1994,
+      "Month": "May",
+      "Deposit": 17.76,
+      "Savings": 17.44,
+      "Lending": 30.97,
+      "Overdraft": 32.3
+    },
+    {
+      "Year": 1994,
+      "Month": "April",
+      "Deposit": 18.61,
+      "Savings": 18,
+      "Lending": 32.28,
+      "Overdraft": 33.28
+    },
+    {
+      "Year": 1994,
+      "Month": "March",
+      "Deposit": 19.98,
+      "Savings": 17.46,
+      "Lending": 30.68,
+      "Overdraft": 32.62
+    },
+    {
+      "Year": 1994,
+      "Month": "February",
+      "Deposit": 20.84,
+      "Savings": 18.4,
+      "Lending": 32.16,
+      "Overdraft": 33.24
+    },
+    {
+      "Year": 1994,
+      "Month": "January",
+      "Deposit": 23.27,
+      "Savings": 18.62,
+      "Lending": 32.18,
+      "Overdraft": 33.31
+    },
+    {
+      "Year": 1993,
+      "Month": "December",
+      "Deposit": 22.36,
+      "Savings": 17.37,
+      "Lending": 31.64,
+      "Overdraft": 33.5
+    },
+    {
+      "Year": 1993,
+      "Month": "November",
+      "Deposit": 23.43,
+      "Savings": 17.28,
+      "Lending": 30.81,
+      "Overdraft": 32.86
+    },
+    {
+      "Year": 1993,
+      "Month": "October",
+      "Deposit": 23.04,
+      "Savings": 16.51,
+      "Lending": 30.06,
+      "Overdraft": 32.23
+    },
+    {
+      "Year": 1993,
+      "Month": "September",
+      "Deposit": 23.03,
+      "Savings": 15.45,
+      "Lending": 27.04,
+      "Overdraft": 28.27
+    },
+    {
+      "Year": 1993,
+      "Month": "August",
+      "Deposit": 22.51,
+      "Savings": 14.81,
+      "Lending": 26.37,
+      "Overdraft": 27.73
+    },
+    {
+      "Year": 1993,
+      "Month": "July",
+      "Deposit": 18.47,
+      "Savings": 14.22,
+      "Lending": 25.45,
+      "Overdraft": 26.73
+    },
+    {
+      "Year": 1993,
+      "Month": "June",
+      "Deposit": 17.28,
+      "Savings": 13.43,
+      "Lending": 24.51,
+      "Overdraft": 25.28
+    },
+    {
+      "Year": 1993,
+      "Month": "May",
+      "Deposit": 15.49,
+      "Savings": 13.34,
+      "Lending": 24.16,
+      "Overdraft": 24.2
+    },
+    {
+      "Year": 1993,
+      "Month": "April",
+      "Deposit": 15.32,
+      "Savings": 14.38,
+      "Lending": 20.77,
+      "Overdraft": 21.35
+    },
+    {
+      "Year": 1993,
+      "Month": "March",
+      "Deposit": 14.45,
+      "Savings": 13.19,
+      "Lending": 19.82,
+      "Overdraft": 19.96
+    },
+    {
+      "Year": 1993,
+      "Month": "February",
+      "Deposit": 14.25,
+      "Savings": 13.28,
+      "Lending": 19.7,
+      "Overdraft": 19.86
+    },
+    {
+      "Year": 1993,
+      "Month": "January",
+      "Deposit": 14.24,
+      "Savings": 13.15,
+      "Lending": 19.57,
+      "Overdraft": 19.75
+    },
+    {
+      "Year": 1992,
+      "Month": "December",
+      "Deposit": 14.39,
+      "Savings": 13.23,
+      "Lending": 19.51,
+      "Overdraft": 19.76
+    },
+    {
+      "Year": 1992,
+      "Month": "November",
+      "Deposit": 14.29,
+      "Savings": 13.28,
+      "Lending": 19.15,
+      "Overdraft": 19.64
+    },
+    {
+      "Year": 1992,
+      "Month": "October",
+      "Deposit": 14.23,
+      "Savings": 13.41,
+      "Lending": 19.47,
+      "Overdraft": 19.73
+    },
+    {
+      "Year": 1992,
+      "Month": "September",
+      "Deposit": 13.81,
+      "Savings": 13.47,
+      "Lending": 18.95,
+      "Overdraft": 19.07
+    },
+    {
+      "Year": 1992,
+      "Month": "August",
+      "Deposit": 13.61,
+      "Savings": 13.4,
+      "Lending": 18.62,
+      "Overdraft": 19.02
+    },
+    {
+      "Year": 1992,
+      "Month": "July",
+      "Deposit": 13.61,
+      "Savings": 13.5,
+      "Lending": 18.68,
+      "Overdraft": 18.95
+    },
+    {
+      "Year": 1992,
+      "Month": "June",
+      "Deposit": 13.65,
+      "Savings": 13.43,
+      "Lending": 18.54,
+      "Overdraft": 18.7
+    },
+    {
+      "Year": 1992,
+      "Month": "May",
+      "Deposit": 13.66,
+      "Savings": 13.16,
+      "Lending": 18.53,
+      "Overdraft": 18.81
+    },
+    {
+      "Year": 1992,
+      "Month": "April",
+      "Deposit": 13.76,
+      "Savings": 13.38,
+      "Lending": 17.37,
+      "Overdraft": 15.3
+    },
+    {
+      "Year": 1992,
+      "Month": "March",
+      "Deposit": 13.85,
+      "Savings": 13.45,
+      "Lending": 18.12,
+      "Overdraft": 18.47
+    },
+    {
+      "Year": 1992,
+      "Month": "February",
+      "Deposit": 13.83,
+      "Savings": 13.3,
+      "Lending": 17.61,
+      "Overdraft": 16.37
+    },
+    {
+      "Year": 1992,
+      "Month": "January",
+      "Deposit": 13.71,
+      "Savings": 13.18,
+      "Lending": 17.13,
+      "Overdraft": 15.05
+    },
+    {
+      "Year": 1991,
+      "Month": "December",
+      "Deposit": 13.73,
+      "Savings": 13.22,
+      "Lending": 17.87,
+      "Overdraft": 17.91
+    },
+    {
+      "Year": 1991,
+      "Month": "November",
+      "Deposit": 13.7,
+      "Savings": 13.37,
+      "Lending": 17.94,
+      "Overdraft": 18
+    },
+    {
+      "Year": 1991,
+      "Month": "October",
+      "Deposit": 13.47,
+      "Savings": 13.3,
+      "Lending": 17.78,
+      "Overdraft": 17.53
+    },
+    {
+      "Year": 1991,
+      "Month": "September",
+      "Deposit": 13.49,
+      "Savings": 13.1,
+      "Lending": 17.26,
+      "Overdraft": 16.95
+    },
+    {
+      "Year": 1991,
+      "Month": "August",
+      "Deposit": 13.59,
+      "Savings": 13.24,
+      "Lending": 16.42,
+      "Overdraft": 13.79
+    },
+    {
+      "Year": 1991,
+      "Month": "July",
+      "Deposit": 13.5,
+      "Savings": 12.97,
+      "Lending": 16.71,
+      "Overdraft": 16.15
+    }
+  ]
+}
