@@ -4,22 +4,22 @@ html {
 
 body {
     background-color: #000;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-h5 {
-    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
 }
 
 #logo {
-    font-weight: 700;
+    font-weight: 900;
     a {
-        color: #212529;
+        color: slategray;
         &:hover {
             text-decoration: none;
         }
     }
     display: inline;
+}
+
+#country-code {
+    color: slategray;
 }
 
 .nav-wrapper {
@@ -136,7 +136,7 @@ h5 {
 .more-link-wrapper {
     text-align: right;
     a {
-        text-decoration: underline dotted darkgray;
+        text-decoration: underline;
     }
 }
 
@@ -197,7 +197,7 @@ table.floatThead-table {
 }
 
 .btn {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .unit {
